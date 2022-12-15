@@ -1,0 +1,5 @@
+# Link (Atom)
+
+```svelte
+<Link />
+```

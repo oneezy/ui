@@ -1,0 +1,5 @@
+# Theme (Molecule)
+
+```svelte
+<Theme />
+```

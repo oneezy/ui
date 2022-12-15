@@ -1,0 +1,5 @@
+# CountUp (Molecule)
+
+```svelte
+<CountUp />
+```

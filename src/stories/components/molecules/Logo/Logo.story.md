@@ -1,0 +1,5 @@
+# Logo (Molecule)
+
+```svelte
+<Logo />
+```

@@ -1,0 +1,5 @@
+# Intro (Atom)
+
+```svelte
+<Intro />
+```

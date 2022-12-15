@@ -1,0 +1,62 @@
+html, body { will-change: scroll-position; }
+/* Tron Controls 
+**************************************/
+html .tron-grid-wrapper {
+  --tronColorLeft:      #3f86ff;
+  --tronColorRight:     #ff0077;
+
+  --tronGradientFrom:     0%;     /* top    */
+  --tronGradientVia:      55%;    /* center */
+  --tronGradientTo:       100%;   /* bottom */
+
+  /* 
+  --tronGridPerspective:  1000px; */
+  --tronGridRotate:       80deg;  /* 75deg */
+
+  --tronLineVertical:     2px;
+  --tronLineHorizontal:   2px;
+
+  --tronSquareWidth:      60px;   /* 60px */
+  --tronSquareHeight:     60px;   /* 60px */
+
+  --tronFadeLeft:         45%;
+  --tronFadeRight:        55%;
+
+  --tronAnimationTime:    160s;
+}
+
+html.dark .tron-grid-wrapper {
+
+  --tronColorLeft:      #1c4997;
+  --tronColorRight:     #85365b;
+
+  --tronGradientFrom:     0%;     /* top    */
+  --tronGradientVia:      55%;    /* center */
+  --tronGradientTo:       100%;   /* bottom */
+
+  --tronLineVertical:     2px;
+  --tronLineHorizontal:   2px;
+
+  --tronFadeLeft:         45%;
+  --tronFadeRight:        55%;
+}
+
+@media (min-width: 768px) {
+  .tron-grid {
+    animation: tron-grid-animation var(--tronAnimationTime) linear infinite var(--tronAnimationState);
+  }
+
+  .tron-grid--paused {
+    will-change: transform, animation, animation-play-state, scroll-position;
+    --tronAnimationState: paused;
+  }
+
+  .tron-grid--playing {
+    --tronAnimationState: running;
+  }
+}
+
+@keyframes tron-grid-animation {
+  from { transform: translateY(0); }
+  to   { transform: translateY(calc(50% + 28px)); }
+}

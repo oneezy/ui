@@ -1,0 +1,5 @@
+# Content (Atom)
+
+```svelte
+<Content />
+```

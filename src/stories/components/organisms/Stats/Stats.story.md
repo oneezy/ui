@@ -1,0 +1,5 @@
+# Stats (Organism)
+
+```svelte
+<Stats />
+```
