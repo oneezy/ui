@@ -6,6 +6,13 @@
 
 <Hst.Story group="components" title="Atoms/App">
   
-	<App />
+	<App>
+    App
+  </App>
   
 </Hst.Story>
+
+<style>
+  /* this works */
+  /* :global(.app) { background: yellow; } */
+</style>

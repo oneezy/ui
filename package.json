@@ -2,7 +2,7 @@
 	"name": "@oneezy/ui",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "run-s package story:dev",
+		"dev": "run-p package story:dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package --watch",
