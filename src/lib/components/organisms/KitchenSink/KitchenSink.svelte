@@ -1,5 +1,5 @@
 <script>
-  import { Section, Container, Content, Title, Button } from '@oneezy/ui'
+  import { Section, Container, Content, Title, Button } from '$lib'
   
   function pressMe() {
     alert('that was pressing');

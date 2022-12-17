@@ -3,7 +3,7 @@
 
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
-  import { Content } from '@oneezy/ui';
+  import { Content } from '$lib';
 
   const items = writable({});
 

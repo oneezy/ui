@@ -1,5 +1,5 @@
 <script>
-	import { Content, CountUp, viewport } from '@oneezy/ui'
+	import { Content, CountUp, viewport } from '$lib'
 
 
 // export let stats = writable(
@@ -22,7 +22,7 @@ export let stats = [
   **********************************************************************************
 
 	// import { env } from '$env/dynamic/public'
-	import { describe } from '@oneezy/ui'
+	import { describe } from '$lib'
   import { stats } from '../stores/stats'
 
 	async function fetchData() {

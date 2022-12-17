@@ -1,5 +1,5 @@
 <script>
-  import { Container } from '@oneezy/ui'
+  import { Container } from '$lib'
 
   export let position = 'top';
 

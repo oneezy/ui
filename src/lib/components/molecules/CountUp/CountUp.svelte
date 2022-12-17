@@ -1,5 +1,5 @@
 <script>
-	import { viewport } from '@oneezy/ui'
+	import { viewport } from '$lib'
 
   const uuid = Date.now()
   

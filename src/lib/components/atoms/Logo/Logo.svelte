@@ -1,5 +1,5 @@
 <script>
-  // import { Link, Icon } from '@oneezy/ui'
+  // import { Link, Icon } from '$lib'
 </script>
 
 <!-- <Link href="/">

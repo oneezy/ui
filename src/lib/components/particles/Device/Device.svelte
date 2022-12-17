@@ -6,7 +6,7 @@
  -->
 
 <script>
-	import { screenH, screenW, scrollY, scrollDir, scrollUp, scrollDown, scrollTop, scrollBottom, mouse, mouseMove } from '@oneezy/ui';
+	import { screenH, screenW, scrollY, scrollDir, scrollUp, scrollDown, scrollTop, scrollBottom, mouse, mouseMove } from '$lib';
 	
 	export let device;
 	

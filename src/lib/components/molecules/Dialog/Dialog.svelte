@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte'
   import { fade, fly, scale } from 'svelte/transition'
-  import { Button } from '@oneezy/ui'
+  import { Button } from '$lib'
 	import clickOutside from '../../../actions/useClickOutside'
 
   // Props

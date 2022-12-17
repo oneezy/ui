@@ -1,5 +1,5 @@
 <script>
-  import { Link } from '@oneezy/ui';
+  import { Link } from '$lib';
 
   export let links = [
     { label: 'home', href: '/'},

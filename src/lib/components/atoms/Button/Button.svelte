@@ -1,7 +1,7 @@
 <script>
   // import { base } from '$app/paths'
   import { current_component } from 'svelte/internal'
-  import { Icon, useEventsAction } from '@oneezy/ui'
+  import { Icon, useEventsAction } from '$lib'
 
   /* Props
   *************************/

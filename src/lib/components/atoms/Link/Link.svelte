@@ -1,5 +1,5 @@
 <script>
-	import { activeSectionId } from '@oneezy/ui';
+	import { activeSectionId } from '$lib';
 
   /* Props
   *************************/

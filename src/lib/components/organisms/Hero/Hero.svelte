@@ -1,5 +1,5 @@
 <script>
-  import { Section, Container, Content, Button, TextAnimate } from '@oneezy/ui'
+  import { Section, Container, Content, Button, TextAnimate } from '$lib'
 </script>
 
 
