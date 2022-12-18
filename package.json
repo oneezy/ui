@@ -2,8 +2,8 @@
 	"name": "@oneezy/ui",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "run-p story:dev package:dev",
-		"build": "histoire build",
+		"dev": "run-p story:dev",
+		"build": "run-s package:build package:css",
 		"preview": "histoire preview",
 
 		"app:dev": "vite dev",
@@ -14,30 +14,25 @@
 		"story:build": "histoire build",
 		"story:preview": "histoire preview",
 
-		"package": "svelte-package",
+		"package": "svelte-kit sync && svelte-package",
 		"package:dev": "svelte-kit sync && svelte-package --watch",
 		"package:build": "svelte-kit sync && svelte-package",
+    "package:css": "pnpx tailwindcss -o packages/ui/app.css --minify",
 
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 
-    "preinstall": "pnpm exec ./.sh/preinstall.sh",
-    "install": "pnpm package:build",
-    "postinstall": "pnpm exec ./.sh/postinstall.sh",
+    "postinstall": "svelte-kit sync && svelte-package",
+
 		"clean": "git clean -fXd"
 	},
-
 	"license": "MIT",
 	"main": "index.js",
 	"module": "index.js",
 	"svelte": "index.js",
-	"workspaces": [
-		"packages/*"
-	],
   "dependencies": {
-    "@oneezy/ui": "workspace:*",
 		"svelte-accessible-accordion": "^2.1.0",
 		"svelte-collapsible": "^0.2.1",
 		"svelte-inview": "^3.0.1",
@@ -50,6 +45,7 @@
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"@sveltejs/package": "^1.0.0",
+		"@tailwindcss/typography": "^0.5.8",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
@@ -64,6 +60,11 @@
 		"svelte-check": "^2.10.2",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
+		"postcss": "^8.4.14",
+		"postcss-load-config": "^4.0.1",
+		"autoprefixer": "^10.4.7",
+		"svelte-preprocess": "^4.10.6",
+		"tailwindcss": "^3.1.5",
 		"vite": "^4.0.1"
 	},
 	"type": "module"

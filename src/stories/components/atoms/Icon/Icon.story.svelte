@@ -1,6 +1,6 @@
 <script>
   export let Hst
-  import { Icon } from '@oneezy/ui'
+  import { Icon } from '$lib'
   let size = 100;
   let width;
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { CountUp } from '@oneezy/ui';
+  import { CountUp } from '$lib';
 
 	export let Hst
 </script>

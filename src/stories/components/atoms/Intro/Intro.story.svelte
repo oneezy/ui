@@ -1,5 +1,5 @@
 <script>
-  import { Intro } from '@oneezy/ui';
+  import { Intro } from '$lib';
   import { fly, fade } from 'svelte/transition'
 
   // window.requestAnimationFrame = requestAnimationFrame;

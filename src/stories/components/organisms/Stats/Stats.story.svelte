@@ -1,5 +1,5 @@
 <script>
-  import { Stats } from '@oneezy/ui';
+  import { Stats } from '$lib';
 
 	export let Hst
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { Block } from '@oneezy/ui';
+  import { Block } from '$lib';
 
 	export let Hst
 </script>

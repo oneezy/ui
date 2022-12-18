@@ -1,6 +1,5 @@
 <script>
 	// import { onMount } from 'svelte';
-  // import Theme from '@oneezy/ui/src/components/Theme/Theme.svelte';
 	export let Hst
 
 	// let loaded = false;

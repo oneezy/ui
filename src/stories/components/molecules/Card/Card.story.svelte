@@ -1,5 +1,5 @@
 <script>
-  import { Card } from '@oneezy/ui';
+  import { Card } from '$lib';
 
 	export let Hst
 </script>

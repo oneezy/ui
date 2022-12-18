@@ -1,5 +1,5 @@
 <script>
-  import { Device } from '@oneezy/ui';
+  import { Device } from '$lib';
 
 	export let Hst
   let device;

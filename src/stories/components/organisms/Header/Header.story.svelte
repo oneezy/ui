@@ -1,5 +1,5 @@
 <script>
-  import { Header, Title, Nav, Link, Icon, Button } from '@oneezy/ui';
+  import { Header, Title, Nav, Link, Icon, Button } from '$lib';
 
 	export let Hst
 </script>

@@ -1,9 +1,5 @@
 <script>
-  // import Accordion from '@oneezy/ui/src/components/Accordion/Accordion.svelte';
-  // import AccordionItem from '@oneezy/ui/src/components/Accordion/AccordionItem.svelte';
-  import { Accordion, AccordionItem } from '@oneezy/ui';
-
-  // import { Accordion, AccordionItem } from '@oneezy/ui'
+  import { Accordion, AccordionItem } from '$lib';
 
 	export let Hst
   let expanded

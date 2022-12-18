@@ -1,5 +1,5 @@
 <script>
-  import { Title } from '@oneezy/ui';
+  import { Title } from '$lib';
 	export let Hst
 </script>
 

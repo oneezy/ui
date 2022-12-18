@@ -1,6 +1,6 @@
 <script>
   import { hstEvent } from 'histoire/client'
-  import { Button } from '@oneezy/ui'
+  import { Button } from '$lib'
 
   export let Hst
 

@@ -10,7 +10,7 @@ pnpm add @oneezy/ui
 Then use in your project
 ```html
 <script>
-  import { Section, Container, Link } from '@oneezy/ui'
+  import { Section, Container, Link } from '$lib'
 </script>
 
 <Section>

@@ -1,5 +1,5 @@
 <script>
-  import { KitchenSink } from '@oneezy/ui';
+  import { KitchenSink } from '$lib';
 
 	export let Hst
 </script>

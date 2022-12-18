@@ -1,5 +1,5 @@
 <script>
-  import { BG } from '@oneezy/ui';
+  import { BG } from '$lib';
 
 	export let Hst
 </script>

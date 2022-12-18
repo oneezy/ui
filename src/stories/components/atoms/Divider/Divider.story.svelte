@@ -1,5 +1,5 @@
 <script>
-  import { Divider } from '@oneezy/ui';
+  import { Divider } from '$lib';
 
 	export let Hst
 </script>

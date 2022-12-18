@@ -1,5 +1,5 @@
 <script>
-  import { Social } from '@oneezy/ui';
+  import { Social } from '$lib';
 
 	export let Hst
 </script>

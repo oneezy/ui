@@ -1,5 +1,5 @@
 <script>
-  import { Nav } from '@oneezy/ui';
+  import { Nav } from '$lib';
 
 	export let Hst
   

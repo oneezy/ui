@@ -1,5 +1,5 @@
 <script>
-  import { AppBar } from '@oneezy/ui';
+  import { AppBar } from '$lib';
 
 	export let Hst
   let position;

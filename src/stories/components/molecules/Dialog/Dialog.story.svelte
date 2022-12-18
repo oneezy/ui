@@ -1,5 +1,5 @@
 <script>
-  import { Dialog } from '@oneezy/ui';
+  import { Dialog } from '$lib';
 
 	export let Hst
 </script>
