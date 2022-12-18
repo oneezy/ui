@@ -6,7 +6,7 @@
 
 <Hst.Story group="components" title="Atoms/App">
   
-	<App>
+	<App class="app">
     App
   </App>
   
