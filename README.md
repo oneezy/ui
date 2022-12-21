@@ -1,4 +1,4 @@
-# @oneezy/ui
+# @oneezy/ui (EARLY BETA!! BUGSSSS)
 This is a shared UI component lib powered by Svelte, Tailwindcss, and Histoire.
 
 ## install
