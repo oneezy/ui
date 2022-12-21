@@ -1,8 +1,9 @@
 {
 	"name": "@oneezy/ui",
 	"version": "0.0.1",
+  "private": true,
 	"scripts": {
-		"dev": "run-p story:dev",
+		"dev": "run-p app:dev story:dev",
 		"build": "run-s package:build package:css",
 		"preview": "histoire preview",
 
@@ -39,8 +40,8 @@
 		"svrollbar": "^0.12.0"
   },
 	"devDependencies": {
-		"@histoire/controls": "^0.11.9",
-		"@histoire/plugin-svelte": "^0.11.9",
+		"@histoire/controls": "^0.12.2",
+		"@histoire/plugin-svelte": "^0.12.2",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
@@ -52,7 +53,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"histoire": "^0.11.9",
+		"histoire": "^0.12.2",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
@@ -64,7 +65,7 @@
 		"postcss-load-config": "^4.0.1",
 		"autoprefixer": "^10.4.7",
 		"svelte-preprocess": "^4.10.6",
-		"tailwindcss": "^3.1.5",
+		"tailwindcss": "^3.2.4",
 		"vite": "^4.0.1"
 	},
 	"type": "module"

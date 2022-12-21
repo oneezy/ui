@@ -6,7 +6,7 @@ icon: 'carbon:bookmark'
 # Design System
 Components are built using the Atomic Design system.
 
-![image](../assets/atomic-design.png)
+![image](../../static/atomic-design.png)
 
 ## Learn
 - [Atomic Design: What is it and why is it important in 2022? (P+S)](https://youtu.be/Yi-A20x2dcA)

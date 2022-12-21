@@ -5,9 +5,9 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    './src/**/*.{html,js,svelte,ts}',
-    './package/**/*.{html,js,svelte,ts}',
-    './packages/ui/**/*.{html,js,svelte,ts}'
+    './src/**/*.{html,md,js,svelte,ts}',
+    './package/**/*.{html,md,js,svelte,ts}',
+    './packages/ui/**/*.{html,md,js,svelte,ts}'
   ],
 
 	darkMode: 'class',

@@ -6,7 +6,7 @@ import { defineConfig as defineHistoireConfig, defaultColors } from 'histoire';
 import { HstSvelte } from '@histoire/plugin-svelte';
 
 /** @type {import('vite').UserConfig} */
-const config = defineViteConfig(async () => ({
+const config = defineViteConfig({
   // ssr: {
   //   noExternal: Object.keys.apply(pkg.dependencies || {})
   // },
@@ -16,13 +16,13 @@ const config = defineViteConfig(async () => ({
   },
 
 	plugins: [
-		await sveltekit(),
+		sveltekit(),
 	],
 
   histoire: defineHistoireConfig({
     plugins: [HstSvelte()],
-		viteIgnorePlugins: ['vite-plugin-sveltekit-compile'],
-    setupFile: '/histoire.setup.js',
+		// viteIgnorePlugins: ['vite-plugin-sveltekit-compile'],
+    setupFile: './histoire.setup.js',
     tree: {
       groups: [
         { id: 'top',        title: '' },
@@ -32,18 +32,18 @@ const config = defineViteConfig(async () => ({
     },
     theme: {
       title: 'Oneezy, Inc.',
-      logo: {
-        square: '/assets/logo.svg',
-        light: '/assets/logo.svg',
-        dark: '/assets/logo.svg'
-      },
       logoHref: '/',
-      favicon: '/assets/favicon.png',
-
       colors: {
         gray: defaultColors.gray,
         primary: defaultColors.blue,
-      }
+      },
+      logo: {
+        square: './static/logo.svg',
+        light: './static/logo.svg',
+        dark: './static/logo.svg'
+      },
+
+      favicon: './static/favicon.ico',
     }
   }),
 
@@ -51,6 +51,6 @@ const config = defineViteConfig(async () => ({
     host: '0.0.0.0',
     open: '/story/src-stories-introduction-story-js'
   }
-}));
+});
 
 export default config;
