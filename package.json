@@ -1,7 +1,6 @@
 {
 	"name": "@oneezy/ui",
 	"version": "0.0.1",
-  "private": true,
 	"scripts": {
 		"dev": "story:dev",
 		"build": "run-s story:build package:build package:css",
