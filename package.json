@@ -3,9 +3,9 @@
 	"version": "0.0.1",
   "private": true,
 	"scripts": {
-		"dev": "run-p app:dev story:dev",
-		"build": "run-s package:build package:css",
-		"preview": "histoire preview",
+		"dev": "story:dev",
+		"build": "run-s story:build package:build package:css",
+		"preview": "story:preview",
 
 		"app:dev": "vite dev",
 		"app:build": "vite build",
@@ -26,7 +26,6 @@
 		"format": "prettier --plugin-search-dir . --write .",
 
     "postinstall": "svelte-kit sync && svelte-package",
-
 		"clean": "git clean -fXd"
 	},
 	"license": "MIT",
