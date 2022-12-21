@@ -3,8 +3,8 @@ import './app.css';
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
-export { default as Block } from './components/atoms/Block/Block.svelte'
 export { default as App } from './components/atoms/App/App.svelte'
+export { default as Block } from './components/atoms/Block/Block.svelte'
 export { default as Button } from './components/atoms/Button/Button.svelte'
 export { default as Container } from './components/atoms/Container/Container.svelte'
 export { default as Content } from './components/atoms/Content/Content.svelte'
