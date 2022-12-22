@@ -28,9 +28,9 @@
 		"clean": "git clean -fXd"
 	},
 	"license": "MIT",
-	"main": "index.js",
-	"module": "index.js",
-	"svelte": "index.js",
+	"main": "./src/lib/index.js",
+	"module": "./src/lib/index.js",
+	"svelte": "./src/lib/index.js",
   "dependencies": {
 		"svelte-accessible-accordion": "^2.1.0",
 		"svelte-collapsible": "^0.2.1",
