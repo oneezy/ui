@@ -20,7 +20,8 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"postinstall": "svelte-kit sync",
-		"clean": "git clean -fXd"
+		"clean": "git clean -fXd",
+		"publish": "pnpm exec ./.sh/publish.sh"
 	},
 	"license": "MIT",
 	"main": "index.js",
