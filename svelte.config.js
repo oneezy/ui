@@ -26,7 +26,7 @@ const config = {
 	},
   
   package: {
-    dir: "./packages/ui",
+    // dir: "./packages/ui",
     files: (filepath) => !filepath.includes("story"),
     // files: (filepath) => !filepath.match(/story|images/)
   }
