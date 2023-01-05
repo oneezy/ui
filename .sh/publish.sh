@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Bump npm version and create git tag with the new version
-npm version
+npm version patch
 
 # Add all changes to git
 git add .
