@@ -15,7 +15,7 @@ git commit -m "Updated version"
 # Change directory to package
 cd package
 
-# Publish the package to npm with public access
+# Publish the package to npm with public accesss
 # npm publish --access public
 
 # Change directory to root

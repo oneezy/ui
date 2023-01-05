@@ -21,7 +21,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"postinstall": "svelte-kit sync",
 		"clean": "git clean -fXd",
-		"publish": "pnpm exec ./.sh/publish.sh"
+		"bump": "pnpm exec ./.sh/publish.sh"
 	},
 	"license": "MIT",
 	"main": "index.js",
