@@ -10,13 +10,13 @@ git add .
 git commit -m "Updated version"
 
 # Push the changes to the remote repository
-# git push
+git push
 
 # Change directory to package
 cd package
 
 # Publish the package to npm with public accesss
-# npm publish --access public
+npm publish --access public
 
 # Change directory to root
 cd ..
