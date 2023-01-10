@@ -48,7 +48,7 @@ const config = defineViteConfig({
   }),
 
   server: {
-    open: '/story/src-stories-introduction-story-js'
+    open: 'story/src-lib-components-introduction-story-js'
   }
 });
 

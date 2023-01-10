@@ -12,7 +12,10 @@ git commit -m "Updated version"
 # Push the changes to the remote repository
 git push
 
-# Change directory to package
+# Build package.
+pnpm package
+
+# Change directory to packagez
 cd package
 
 # Publish the package to npm with public accesss
