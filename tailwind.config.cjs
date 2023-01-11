@@ -7,8 +7,7 @@ const config = {
   content: [
     './src/**/*.{html,md,js,svelte,ts}',
     './package/**/*.{html,md,js,svelte,ts}',
-    './packages/ui/**/*.{html,md,js,svelte,ts}',
-    '@oneezy/ui/app.css'
+    './node_modules/@oneezy/ui/**/*.{html,js,svelte,ts}'
   ],
 
 	darkMode: 'class',

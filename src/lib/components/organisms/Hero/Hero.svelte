@@ -4,7 +4,7 @@
 
 
 <Section {...$$restProps} class="min-h-screen pt-20 md:pt-32 md:pb-[10vh] {$$props.class || ''}">
-  <Container class="h-full bg-blue-500/0">
+  <Container class="h-full">
     <Content class="h-full flex flex-col justify-around gap-4">
       <h1 class="text-black dark:text-white text-4xl font-bold sr-only"><slot>Oneezy, Inc.</slot></h1>
     
