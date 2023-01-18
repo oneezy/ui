@@ -6,7 +6,7 @@
  -->
 
 <script>
-	import { screenH, screenW, scrollY, scrollDir, scrollUp, scrollDown, scrollTop, scrollBottom, mouse, mouseMove } from '$lib';
+	import { screenH, screenW, scrollY, scrollDir, scrollUp, scrollDown, scrollTop, scrollBottom, mouse, mouseMove } from '$ui';
 	
 	export let device;
 	

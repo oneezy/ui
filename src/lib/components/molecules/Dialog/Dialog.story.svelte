@@ -1,5 +1,5 @@
 <script>
-  import { Dialog } from '$lib';
+  import { Dialog } from '$ui';
 
 	export let Hst
 </script>

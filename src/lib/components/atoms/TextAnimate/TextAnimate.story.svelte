@@ -1,5 +1,5 @@
 <script>
-  import { TextAnimate } from '$lib';
+  import { TextAnimate } from '$ui';
 	export let Hst
 </script>
 

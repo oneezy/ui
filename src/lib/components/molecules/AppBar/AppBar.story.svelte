@@ -1,5 +1,5 @@
 <script>
-  import { AppBar } from '$lib';
+  import { AppBar } from '$ui';
 
 	export let Hst
   let position;

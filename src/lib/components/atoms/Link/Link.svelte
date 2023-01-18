@@ -1,5 +1,5 @@
 <script>
-	import { activeSectionId } from '$lib';
+	import { activeSectionId } from '$ui';
 
   /* Props
   *************************/

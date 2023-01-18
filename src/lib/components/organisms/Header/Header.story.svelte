@@ -1,5 +1,5 @@
 <script>
-  import { Header, Title, Nav, Link, Icon, Button } from '$lib';
+  import { Header, Title, Nav, Link, Icon, Button } from '$ui';
 
 	export let Hst
 </script>

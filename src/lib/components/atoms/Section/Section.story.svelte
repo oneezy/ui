@@ -1,5 +1,5 @@
 <script>
-  import { Section } from '$lib';
+  import { Section } from '$ui';
 
 	export let Hst
 </script>

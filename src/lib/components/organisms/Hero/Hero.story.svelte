@@ -1,5 +1,5 @@
 <script>
-  import { Hero } from '$lib';
+  import { Hero } from '$ui';
 
 	export let Hst
 </script>

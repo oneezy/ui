@@ -1,5 +1,5 @@
 <script>
-  import { Device } from '$lib';
+  import { Device } from '$ui';
 
 	export let Hst
   let device;

@@ -1,5 +1,5 @@
 <script>
-  import { Divider } from '$lib';
+  import { Divider } from '$ui';
 
 	export let Hst
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { Social } from '$lib';
+  import { Social } from '$ui';
 
 	export let Hst
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { Block } from '$lib';
+  import { Block } from '$ui';
 
 	export let Hst
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { Section, Container, Content, Button, TextAnimate } from '$lib'
+  import { Section, Container, Content, Button, TextAnimate } from '$ui'
 </script>
 
 

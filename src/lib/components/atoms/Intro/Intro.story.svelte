@@ -1,5 +1,5 @@
 <script>
-  import { Intro } from '$lib';
+  import { Intro } from '$ui';
   import { fly, fade } from 'svelte/transition'
 
   // window.requestAnimationFrame = requestAnimationFrame;

@@ -5,11 +5,8 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    './lib/**/*.{html,md,js,svelte,ts}',
-    './src/**/*.{html,md,js,svelte,ts}',
-    './package/**/*.{html,md,js,svelte,ts}',
-    '../package/**/*.{html,md,js,svelte,ts}',
-    './node_modules/@oneezy/ui/**/*.{html,js,svelte,ts}'
+    './src/**/*.{html,md,js,ts,svelte}',
+    'node_modules/@oneezy/ui/src/**/*.{html,md,js,ts,svelte}'
   ],
 
 	darkMode: 'class',

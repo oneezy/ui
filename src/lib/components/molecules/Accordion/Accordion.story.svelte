@@ -1,5 +1,5 @@
 <script>
-  import { Accordion, AccordionItem } from '$lib';
+  import { Accordion, AccordionItem } from '$ui';
 
 	export let Hst
   let expanded

@@ -1,6 +1,6 @@
 <script>
   import { inview } from "svelte-inview";
-	import { activeSectionId } from '$lib'
+	import { activeSectionId } from '$ui'
 	
 	const options = { threshold: 0.5 }
   const handleEnter = id => ($activeSectionId = id);

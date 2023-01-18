@@ -1,5 +1,5 @@
 <script>
-  import { Copyright } from '$lib';
+  import { Copyright } from '$ui';
 
 	export let Hst
 </script>

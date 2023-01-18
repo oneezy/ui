@@ -29,9 +29,44 @@
 		"bump": "run-s bump:prepublish bump:prepare bump:prepack bump:postpack bump:postpublish"
 	},
 	"license": "MIT",
-	"main": "index.js",
-	"module": "index.js",
-	"svelte": "index.js",
+	"svelte": "./src/lib/index.js",
+	"exports": {
+    ".": {
+      "production": {
+        "import": "./index.js",
+        "require": "./index.cjs"
+      },
+      "default": {
+        "import": "./src/lib/index.js",
+        "require": "./src/lib/index.cjs"
+      }
+    },
+    "./app.css": {
+      "production": {
+        "import": "./app.css"
+      },
+      "default": {
+        "import": "./src/lib/app.css"
+      }
+    },
+    "./tailwind.config.cjs": {
+      "production": {
+        "require": "./tailwind.config.cjs"
+      },
+      "default": {
+        "require": "./src/lib/tailwind.config.cjs"
+      }
+    },
+    "./postcss.config.cjs": {
+      "production": {
+        "require": "./postcss.config.cjs"
+      },
+      "default": {
+        "require": "./src/lib/postcss.config.cjs"
+      }
+    }
+	},
+	"type": "module",
 	"dependencies": {
 		"@tailwindcss/typography": "^0.5.8",
 		"svelte-accessible-accordion": "^2.1.0",
@@ -67,6 +102,5 @@
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.4",
 		"vite": "^4.0.3"
-	},
-	"type": "module"
+	}
 }

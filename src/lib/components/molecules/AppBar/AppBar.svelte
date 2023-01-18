@@ -1,5 +1,5 @@
 <script>
-  import { Container } from '$lib'
+  import { Container } from '$ui'
   export let position = 'top';
 
   let _top    = 'top-0 left-0 right-0 w-full'

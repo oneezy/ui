@@ -1,5 +1,5 @@
 <script>
-  import { Card } from '$lib';
+  import { Card } from '$ui';
 
 	export let Hst
 </script>

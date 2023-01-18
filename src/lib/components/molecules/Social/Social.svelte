@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '$lib'
+	import { Button } from '$ui'
   export const socials = [
     { "id": "1", "view": "", "name": "facebook", "url": "https://www.facebook.com/TheScavengerBot/" },
     { "id": "2", "view": "", "name": "twitter", "url":  "https://twitter.com/BotScavenger" },

@@ -1,5 +1,5 @@
 <script>
-  import { Stats } from '$lib';
+  import { Stats } from '$ui';
 
 	export let Hst
 </script>

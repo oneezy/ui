@@ -1,5 +1,5 @@
 <script>
-  import { Logo } from '$lib';
+  import { Logo } from '$ui';
 
 	export let Hst
 </script>

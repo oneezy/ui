@@ -1,5 +1,5 @@
 <script>
-  import { Section, Container, Content } from '$lib'
+  import { Section, Container, Content } from '$ui'
 </script>
 
 <Section {...$$restProps} class="h-screen pt-20 md:pt-32 md:pb-[10vh] {$$props.class || ''}">

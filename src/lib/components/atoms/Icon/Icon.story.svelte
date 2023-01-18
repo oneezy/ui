@@ -1,6 +1,6 @@
 <script>
   export let Hst
-  import { Icon } from '$lib'
+  import { Icon } from '$ui'
   let size = 100;
   let width;
 </script>

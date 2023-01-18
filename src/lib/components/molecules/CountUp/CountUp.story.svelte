@@ -1,5 +1,5 @@
 <script>
-  import { CountUp } from '$lib';
+  import { CountUp } from '$ui';
 
 	export let Hst
 </script>

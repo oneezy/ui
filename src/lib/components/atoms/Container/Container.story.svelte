@@ -1,5 +1,5 @@
 <script>
-  import { Container } from '$lib';
+  import { Container } from '$ui';
 
 	export let Hst
 </script>

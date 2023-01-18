@@ -1,7 +1,7 @@
 <script>
   import { getContext, onMount } from "svelte";
 	import { slide } from "svelte/transition";
-  import { Icon } from '$lib';
+  import { Icon } from '$ui';
   /**
    * Specify the accordion item title text.
    * Alternatively, use the "title" slot

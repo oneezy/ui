@@ -1,5 +1,5 @@
 <script>
-  import { Section, Container, Content, Title, Button } from '$lib'
+  import { Section, Container, Content, Title, Button } from '$ui'
   
   function pressMe() {
     alert('that was pressing');

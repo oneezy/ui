@@ -1,5 +1,5 @@
 <script>
-  import { Nav } from '$lib';
+  import { Nav } from '$ui';
 
 	export let Hst
   

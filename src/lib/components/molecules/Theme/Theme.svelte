@@ -1,7 +1,7 @@
 <script>
   import { scale, fade, fly } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
-  import { Button } from '$lib';
+  import { Button } from '$ui';
 	let isDark;
 
 	if (typeof localStorage !== 'undefined') {
