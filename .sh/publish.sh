@@ -24,10 +24,12 @@ npm publish --access public
 # Change directory to root
 cd ..
 
-# - npm version patch
-# - svelte-kit sync && svelte-package
+# STEPS
+###################################################
+# - pnpm version patch
+# - pnpm package
 # - cd package
-# - npm publish --access public
+# - pnpm publish --access public
 # - cd ..
 # - git add .
 # - git commit -m "chore: updated package"
