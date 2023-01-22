@@ -7,7 +7,7 @@
 
   { /* Prose 
     *************************/
-    prose ? 'prose prose-scavenger lg:prose-xl dark:prose-invert' : 
+    prose ? 'prose prose-oneezy lg:prose-xl dark:prose-invert' : 
     noprose ? '' : ''
   }">
 
