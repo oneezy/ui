@@ -12,6 +12,12 @@
     Also check out the <KitchenSink> component
     */
 
+    /* fonts
+    ************************************************************/
+    --font-sans:  "Custom Sans Font";
+    --font-serif: "Custom Serif Font";
+    --font-mono:  "Custom Monospace Font";
+
     /* brand
     ************************************************************/
     --color-brand:                37 99 235;     /* blue-600 */

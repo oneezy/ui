@@ -16,7 +16,7 @@ const config = defineViteConfig({
   },
 
 	plugins: [
-		sveltekit(),
+		sveltekit()
 	],
 
   histoire: defineHistoireConfig({

@@ -1,14 +1,9 @@
 import { resolve } from 'path';
-import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// preprocess: vitePreprocess(),
-	preprocess: preprocess({
-    postcss: true,
-	}),
 
 	kit: {
 		adapter: adapter(),
@@ -16,7 +11,7 @@ const config = {
       $ui: resolve('./src/lib')
     }
 	},
-  
+  preprocess: vitePreprocess(),
   package: {
     // dir: "./packages/ui",
     files: (filepath) => !filepath.includes("story"),

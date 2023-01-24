@@ -13,9 +13,9 @@ const config = {
 
 	theme: {
 		fontFamily: {
-			'sans': ['Custom Font', ...defaultTheme.fontFamily.sans],
-			'serif': ['Custom Font', ...defaultTheme.fontFamily.serif],
-			'mono': ['Custom Font', ...defaultTheme.fontFamily.mono]
+			'sans':   ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+			'serif':  ['var(--font-serif)', ...defaultTheme.fontFamily.serif],
+			'mono':   ['var(--font-mono)', ...defaultTheme.fontFamily.mono]
 		},
 
 		extend: {
