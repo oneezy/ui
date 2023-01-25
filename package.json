@@ -3,70 +3,58 @@
 	"version": "0.0.12",
 	"scripts": {
 		"dev": "histoire dev",
-		"build": "run-s story:build package:build package:clean",
-		"preview": "story:preview",
+		"build": "histoire build",
+		"preview": "histoire preview",
+		"package": "run-s package:build package:clean",
+
 		"app:dev": "vite dev",
 		"app:build": "vite build",
 		"app:preview": "vite preview",
+
 		"story:dev": "histoire dev",
 		"story:build": "histoire build",
 		"story:preview": "histoire preview",
-		"package": "svelte-kit sync && svelte-package",
-		"package:dev": "svelte-kit sync && svelte-package --watch",
-		"package:watch": "svelte-package --watch",
+
+		"package:dev": "svelte-package --watch",
 		"package:build": "svelte-kit sync && svelte-package",
 		"package:css": "pnpx tailwindcss -o packages/ui/app.css --minify",
 		"package:clean": "trash package/**/*.cts",
+
 		"check": "svelte-kit sync && svelte-check --tsconfig tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"postinstall": "svelte-kit sync",
+
 		"clean": "git clean -fXd"
 	},
 	"license": "MIT",
-	"main": "./index.cjs",
-	"module": "./index.js",
-	"svelte": [
-		"./src/lib/index.js",
-		"./index.js"
-	],
-	"exports": {
-		"./package.json": "./package.json",
-		".": [
-			{
-				"import": "./index.js",
-				"require": "./index.cjs"
-			},
-			{
-				"import": "./src/lib/index.js",
-				"require": "./src/lib/index.cjs"
-			}
-		],
-		"./app.css": [
-			{
-				"import": "./app.css"
-			},
-			{
-				"import": "./src/lib/app.css"
-			}
-		],
-		"./tailwind.config.cjs": [
-			{
-				"require": "./tailwind.config.cjs"
-			},
-			{
-				"require": "./src/lib/tailwind.config.cjs"
-			}
-		],
-		"./postcss.config.cjs": [
-			{
-				"require": "./postcss.config.cjs"
-			},
-			{
-				"require": "./src/lib/postcss.config.cjs"
-			}
-		]
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "svelte": [
+    "./index.js", 
+    "./src/lib/index.js"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": [
+      "./index.js",
+      "./index.cjs",
+      "./src/lib/index.js",
+      "./src/lib/index.cjs"
+    ],
+    "./app.css": [
+      "./app.css",
+      "./src/lib/app.css"
+    ],
+    "./tailwind.config.cjs": [
+      "./tailwind.config.cjs",
+      "./src/lib/tailwind.config.cjs"
+    ],
+    "./postcss.config.cjs": [
+      "./postcss.config.cjs",
+      "./src/lib/postcss.config.cjs"
+    ]
 	},
 	"type": "module",
 	"dependencies": {
@@ -87,7 +75,6 @@
 		"@typescript-eslint/eslint-plugin": "^5.47.0",
 		"@typescript-eslint/parser": "^5.47.0",
 		"autoprefixer": "^10.4.13",
-		"del": "^7.0.0",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -98,7 +85,6 @@
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.1",
 		"prettier-plugin-svelte": "^2.9.0",
-		"rimraf": "^4.1.2",
 		"svelte": "^3.55.0",
 		"svelte-check": "^2.10.3",
 		"svelte-preprocess": "^5.0.0",
