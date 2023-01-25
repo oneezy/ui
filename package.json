@@ -27,7 +27,7 @@
 	"license": "MIT",
 	"main": "./index.cjs",
 	"module": "./index.js",
-	"svelte": "./src/lib/index.js",
+	"svelte": ["./src/lib/index.js", "./index.js"],
 	"exports": {
 		"./package.json": "./package.json",
 		".": [

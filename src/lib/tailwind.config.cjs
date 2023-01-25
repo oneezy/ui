@@ -6,7 +6,8 @@ const plugin = require('tailwindcss/plugin');
 const config = {
   content: [
     './src/**/*.{html,md,js,ts,svelte}',
-    'node_modules/@oneezy/ui/src/**/*.{html,md,js,ts,svelte}'
+    'node_modules/@oneezy/ui/**/*.{html,md,js,ts,svelte}',
+    '!node_modules/@oneezy/ui/node_modules/**'
   ],
 
 	darkMode: 'class',
