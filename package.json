@@ -34,10 +34,12 @@
 		"./package.json": "./package.json",
 		".": [
 			"./index.js",
-			"./index.cjs",
-			"./src/lib/index.js",
-			"./src/lib/index.cjs"
+			"./src/lib/index.js"
 		],
+    "./index.cjs": [
+      "./index.cjs",
+      "./src/lib/index.cjs"
+    ],
 		"./app.css": [
 			"./app.css",
 			"./src/lib/app.css"
