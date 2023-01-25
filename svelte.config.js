@@ -11,11 +11,19 @@ const config = {
       $ui: resolve('./src/lib')
     }
 	},
+
   preprocess: vitePreprocess(),
+
   package: {
-    // dir: "./packages/ui",
-    files: (filepath) => !filepath.includes("story"),
+    emitTypes: {
+        exclude: ['*.cjs','*.cts']
+    },
+    files: (filepath) => !filepath.includes("story")
   }
+
+
+
+
 };
 
 export default config;
