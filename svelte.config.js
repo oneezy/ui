@@ -20,10 +20,6 @@ const config = {
     },
     files: (filepath) => !filepath.includes("story")
   }
-
-
-
-
 };
 
 export default config;
