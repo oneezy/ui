@@ -1,0 +1,5 @@
+# Page (Page)
+
+```svelte
+<Page />
+```

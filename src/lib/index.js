@@ -37,18 +37,20 @@ export { default as Header } from './components/organisms/Header/Header.svelte'
 export { default as KitchenSink } from './components/organisms/KitchenSink/KitchenSink.svelte'
 
 /* {pages} */
+export { default as Page } from './components/pages/Page/Page.svelte'
 
 /* {particles} */
 export { default as Device } from './components/particles/Device/Device.svelte'
 
 /* {templates} */
+export { default as Template } from './components/templates/Template/Template.svelte'
 
 
 /* STORES
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {stores} */
 export * from './stores/deviceStore'
-export { describe } from './stores/describe'
+// export { describe } from './stores/describe'
 export { activeSectionId } from './stores/activeSectionId'
 export { mediaQuery } from './stores/mediaQuery'
 
