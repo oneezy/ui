@@ -1,26 +1,31 @@
-# name: Publish Package
+name: Publish Package
+run-name: Publishing @oneezy/ui 
 
-# on:
-#   push:
-#     branches:
-#       - main
+on: [push]
+jobs:
+  check-pnpm-version:
+    runs-on: ubuntu-latest
 
-# jobs:
-#   build-and-publish:
-#     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-#     steps:
-#     - name: Checkout code
-#       uses: actions/checkout@v2
-#     - name: Version package
-#       run: pnpm version
-#     - name: Add git tags
-#       run: git tag -a v$(pnpm run version) -m "Version $(pnpm run version)"
-#     - name: Create changelog
-#       run: <command to create changelog>
-#     - name: Build package
-#       run: pnpm build
-#     - name: Publish package
-#       run: cd package && npm publish --access public
-#     - name: Go back to root
-#       run: cd ..
+      - name: Install PNPM
+      - run: npm install -g pnpm
+
+      - name: Bump Version
+      - run: pnpm version patch
+
+      - name: Build Package
+      - run: pnpm build
+
+      - name: Publish Package
+      - run: cd package && npm publish --access public
+
+      - name: Go Back To Root
+      - run: cd ..
