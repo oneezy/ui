@@ -1,0 +1,26 @@
+# name: Publish Package
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build-and-publish:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
+#     - name: Version package
+#       run: pnpm version
+#     - name: Add git tags
+#       run: git tag -a v$(pnpm run version) -m "Version $(pnpm run version)"
+#     - name: Create changelog
+#       run: <command to create changelog>
+#     - name: Build package
+#       run: pnpm build
+#     - name: Publish package
+#       run: cd package && npm publish --access public
+#     - name: Go back to root
+#       run: cd ..
