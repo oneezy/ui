@@ -5,27 +5,20 @@ on: [push]
 jobs:
   check-pnpm-version:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
       - uses: actions/checkout@v3
-      
       - name: Setup Node
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-
       - name: Install PNPM
       - run: npm install -g pnpm
-
       - name: Bump Version
       - run: pnpm version patch
-
       - name: Build Package
       - run: pnpm build
-
       - name: Publish Package
       - run: cd package && npm publish --access public
-
       - name: Go Back To Root
       - run: cd ..
