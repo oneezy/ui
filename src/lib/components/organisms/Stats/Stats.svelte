@@ -1,6 +1,10 @@
 <script>
 	import { Content, CountUp, viewport } from '$ui'
 
+  export let theme;
+  export let textColor;
+  export let statColor; 
+
   export let stats = [
     { name: 'Users', value: '8956', type: 'decimal', duration: 1000 },
     { name: 'Bots', value: '2740', type: 'decimal', duration: 1000 },
@@ -13,14 +17,14 @@
 	{#each stats as stat}
 		<div class="w-1/2 lg:w-auto grid lg:gap-4">
 			<h4
-				class="text--primary text-center font-mono font-black min-w-[4ch] tracking-tight
+				class="{theme ? 'text--primary' : ''} text-center font-mono font-black min-w-[4ch] tracking-tight
 
          text-3xl 
       sm:text-5xl 
       md:text-6xl
       lg:text-7xl  
-      "
-			>
+      {statColor ? statColor : ''}">
+
 				<CountUp
 					initial={1}
 					value={stat.value}
@@ -30,11 +34,11 @@
 					notation={'compact'}
 					display={'short'}
 					symbol={'symbol'}
-					type={'decimal'}
-				/>
+					type={'decimal'} />
+
 			</h4>
 
-			<p class="text-xs mt-1 text-center text--dim font-normal lg:text-lg lg:-mt-2 capitalize">
+			<p class="text-xs mt-1 text-center text--dim font-normal lg:text-lg lg:-mt-2 capitalize {textColor ? textColor : ''}">
 				{stat.name}
 			</p>
 		</div>

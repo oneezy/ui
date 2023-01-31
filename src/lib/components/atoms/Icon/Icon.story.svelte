@@ -12,16 +12,25 @@
   icon="carbon:home"
   iconColor="gray"
 >
+
   <Hst.Variant title="Check">
     <Icon name="check" viewBox="0 0 20 20" {size} />
   </Hst.Variant>
+
   <Hst.Variant title="Discord">
     <Icon name="discord" {size} />
   </Hst.Variant>
+
   <Hst.Variant title="Oneezy">
     <Icon name="oneezy-icon" {size} />
   </Hst.Variant>
-  <Hst.Variant title="Oneezy Logo">
-    <Icon name="oneezy-logo" />
+
+  <Hst.Variant title="Phone">
+    <Icon name="phone" />
   </Hst.Variant>
+
+  <Hst.Variant title="Phone Outline">
+    <Icon name="phone-outline" box="24"/>
+  </Hst.Variant>
+
 </Hst.Story>

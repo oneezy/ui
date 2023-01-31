@@ -21,9 +21,9 @@
   // $: iconStatus = disabled ? "noactive" : type === "filled" ? "white" : status;
 
   let _default = `
-    flex items-center justify-center
+    flex 
     w-full lg:w-auto 
-    font-semibold rounded-full relative whitespace-nowrap overflow-hidden no-underline`;
+    font-semibold relative whitespace-nowrap overflow-hidden no-underline`;
   
   let _focusButton = `
     focus:outline-none focus:ring-4 focus:ring-offset-2 
@@ -59,7 +59,7 @@
   // Button
   let _icon        = `${_focusIcon} px-0 gap-0 h-auto w-auto bg-dark/0 dark:bg-lite/0 fill-dark dark:fill-lite hover:bg-dark/0 dark:hover:bg-lite/0`;
   let _text        = `${_focusText} bg-transparent fill--primary text--primary`;
-  let _outline     = `${_focusButton} bg-white/20 dark:bg-black/0 backdrop-blur-md fill--primary text--primary border--primary text-dark dark:text-lite`;
+  let _outline     = `${_focusButton} bg-white/0 dark:bg-black/0 fill--primary text--primary border--primary text-dark dark:text-lite`;
   let _filled      = `${_focusButton} bg-dark 
                       text-lite
                       fill-lite

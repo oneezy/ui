@@ -5,8 +5,8 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    './src/**/*.{html,md,js,ts,svelte}',
-    'node_modules/@oneezy/ui/**/*.{html,md,js,ts,svelte}',
+    './src/**/*.{html,svg,md,js,ts,svelte}',
+    'node_modules/@oneezy/ui/**/*.{html,svg,md,js,ts,svelte}',
     '!node_modules/@oneezy/ui/node_modules/**'
   ],
 

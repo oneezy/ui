@@ -1,20 +1,19 @@
 <script>
-  export let height;
-  export let color = 'fill-lite dark:fill-dark';
+  export let height = '';
+  export let color = 'fill-dark dark:fill-lite';
   export let position = 'bottom';
-  export let shape = 'waves';
+  export let shape = '';
   export let flip = null;
   export let invert = null;
 </script>
 
-<div 
-  class="absolute w-full overflow-hidden" style="
+<div class="absolute w-full overflow-hidden" style="
 
   { /* Invert 
     *************************/
     invert == 'true' || invert ? 'transform: rotate(180deg); ' : 'transform: rotate(0deg);'} 
 
-  { /* Position 
+  { /* Position S
     *************************/
     position == 'top' ? 'top: 0;' : 
     position == 'bottom' ? 'bottom: 0;' : '' }">
@@ -43,10 +42,15 @@
       <!-- Triangle -->
       {:else if shape == 'triangle'}
       <path class="{color}" d="M599,5.3L0,120h1200L599,5.3z"/>
+      
+      <!-- arrow -->
+      {:else if shape == 'arrow'}
+      <path d="M1184.7 85.1 629.5 2a245 245 0 0 0-61.7 0l-555 83.1C4.1 86.4 0 88.1 0 89.8V120l1200-.1V89.7c-2.8-1.6-7-3.3-15.5-4.6h.2z"/>
 
-      <!-- Waves -->
+      <!-- Custom -->
       {:else}
-      <path class="{color}" d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+
+      <slot></slot>
       {/if}
     </svg>
 

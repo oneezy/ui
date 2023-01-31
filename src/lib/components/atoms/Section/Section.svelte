@@ -12,7 +12,7 @@
   
   /* Private Variables 
   *************************/
-  let _default = `relative w-full min-h-[50vh] py-20`;
+  let _default = `relative w-full min-h-[50vh]`;
 
   // State
   let _normal      = `text-black dark:text-white`;
