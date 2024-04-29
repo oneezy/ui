@@ -36,10 +36,18 @@
 			"./index.js",
 			"./src/lib/index.js"
 		],
-    "./index.cjs": [
-      "./index.cjs",
-      "./src/lib/index.cjs"
-    ],
+		"./index.cjs": [
+			"./index.cjs",
+			"./src/lib/index.cjs"
+		],
+		"./indexx.js": [
+			"./indexx.js",
+			"./src/lib/indexx.js"
+		],
+		"./index.js": [
+			"./index.js",
+			"./src/lib/index.js"
+		],
 		"./app.css": [
 			"./app.css",
 			"./src/lib/app.css"
@@ -48,9 +56,17 @@
 			"./tailwind.config.cjs",
 			"./src/lib/tailwind.config.cjs"
 		],
+		"./tailwind.config.js": [
+			"./tailwind.config.js",
+			"./src/lib/tailwind.config.js"
+		],
 		"./postcss.config.cjs": [
 			"./postcss.config.cjs",
 			"./src/lib/postcss.config.cjs"
+		],
+		"./postcss.config.js": [
+			"./postcss.config.js",
+			"./src/lib/postcss.config.js"
 		]
 	},
 	"type": "module",
