@@ -1,6 +1,6 @@
 {
 	"name": "@oneezy/ui",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"scripts": {
 		"dev": "histoire dev",
 		"build": "histoire build",
