@@ -12,7 +12,7 @@
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "copy-package": "node ./scripts/copy-package.js",
-    "next": "node ./scripts/version-bump.js",
+    "next": "node ./scripts/version-bump.js  && npm run build",
     "clean": "git clean -fXd"
   },
   "exports": {

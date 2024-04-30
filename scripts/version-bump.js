@@ -1,4 +1,3 @@
-// publish-next.js
 import fs from 'fs';
 import { execSync } from 'child_process';
 
@@ -41,6 +40,3 @@ execSync(`git push v${newVersion}`);
 
 // Push changes to GitHub
 execSync(`git push`);
-
-// Publish to npm with the "next" tag
-execSync('npm publish --tag next');
