@@ -1,5 +1,0 @@
-# Copyright (Atom)
-
-```svelte
-<Copyright />
-```

@@ -1,5 +1,0 @@
-# Content (Atom)
-
-```svelte
-<Content />
-```

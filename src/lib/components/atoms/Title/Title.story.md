@@ -1,5 +1,0 @@
-# Title (Molecule)
-
-```svelte
-<Title />
-```

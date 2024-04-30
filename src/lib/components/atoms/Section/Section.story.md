@@ -1,5 +1,0 @@
-# Section (Atom)
-
-```svelte
-<Section />
-```

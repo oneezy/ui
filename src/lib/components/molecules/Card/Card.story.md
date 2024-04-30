@@ -1,5 +1,0 @@
-# Card (Atom)
-
-```svelte
-<Card />
-```

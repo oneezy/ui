@@ -1,5 +1,0 @@
-# Accordion (Molecule)
-
-```svelte
-<Accordion />
-```

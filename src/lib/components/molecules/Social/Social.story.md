@@ -1,5 +1,0 @@
-# Social (Organism)
-
-```svelte
-<Social />
-```

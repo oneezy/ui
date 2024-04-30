@@ -1,5 +1,0 @@
-# Template (Template)
-
-```svelte
-<Template />
-```

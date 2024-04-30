@@ -1,5 +1,0 @@
-# AppBar (Molecule)
-
-```svelte
-<AppBar />
-```

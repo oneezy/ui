@@ -1,5 +1,0 @@
-# Dialog (Molecule)
-
-```svelte
-<Dialog />
-```

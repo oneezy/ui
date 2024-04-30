@@ -1,5 +1,0 @@
-# Theme (Molecule)
-
-```svelte
-<Theme />
-```

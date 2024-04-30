@@ -1,5 +1,0 @@
-# Divider (Atom)
-
-```svelte
-<Divider />
-```

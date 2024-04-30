@@ -1,5 +1,0 @@
-# App (Atom)
-
-```svelte
-<App />
-```

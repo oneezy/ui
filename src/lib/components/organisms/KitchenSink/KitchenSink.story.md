@@ -1,5 +1,0 @@
-# KitchenSink (Organism)
-
-```svelte
-<KitchenSink />
-```

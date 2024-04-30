@@ -1,5 +1,0 @@
-# Link (Atom)
-
-```svelte
-<Link />
-```

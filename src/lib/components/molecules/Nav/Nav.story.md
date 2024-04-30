@@ -1,5 +1,0 @@
-# Nav (Molecule)
-
-```svelte
-<Nav />
-```

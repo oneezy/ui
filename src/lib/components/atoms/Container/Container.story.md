@@ -1,5 +1,0 @@
-# Container (Atom)
-
-```svelte
-<Container />
-```

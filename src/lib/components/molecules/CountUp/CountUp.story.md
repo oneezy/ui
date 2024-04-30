@@ -1,5 +1,0 @@
-# CountUp (Molecule)
-
-```svelte
-<CountUp />
-```

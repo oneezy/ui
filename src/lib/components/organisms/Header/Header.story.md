@@ -1,5 +1,0 @@
-# Header (Organism)
-
-```svelte
-<Header />
-```

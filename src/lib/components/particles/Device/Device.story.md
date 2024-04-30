@@ -1,5 +1,0 @@
-# Device (Particle)
-
-```svelte
-<Device />
-```

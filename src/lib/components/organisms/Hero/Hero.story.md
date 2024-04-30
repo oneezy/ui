@@ -1,5 +1,0 @@
-# Hero (Organism)
-
-```svelte
-<Hero />
-```

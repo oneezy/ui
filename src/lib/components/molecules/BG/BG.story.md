@@ -1,5 +1,0 @@
-# BG (Molecule)
-
-```svelte
-<BG />
-```
