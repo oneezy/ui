@@ -1,1 +1,2 @@
-export { default as Test } from './test/Test.svelte';
+export { default as Test } from './Test/Test.svelte';
+export { default as Version } from './Version/Version.svelte';
