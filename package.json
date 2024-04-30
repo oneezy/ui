@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.7",
+  "version": "2.0.0-next.8",
   "scripts": {
     "dev": "vite dev --port 1111",
     "build": "vite build && npm run package",
@@ -20,7 +20,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
-    }
+    },
+    "./ui.css": "./dist/ui.css"
   },
   "files": [
     "dist",
