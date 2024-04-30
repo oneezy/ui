@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.10",
+  "version": "2.0.0-next.11",
   "scripts": {
     "dev": "vite dev --port 1111",
     "build": "vite build && npm run package",
@@ -32,10 +32,7 @@
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
-  "peerDependencies": {
-    "svelte": "^5.0.0-next.1",
-    "tailwindcss": "^3.4.3",
-    "postcss": "^8.4.38",
+  "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "@tailwindcss/container-queries": "^0.1.1"
@@ -60,6 +57,14 @@
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.10"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0-next.1",
+    "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.38",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/container-queries": "^0.1.1"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
