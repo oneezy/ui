@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.1",
+  "version": "2.0.0-next.2",
   "scripts": {
     "dev": "vite dev --port 1111",
     "build": "vite build && npm run package",
