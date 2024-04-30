@@ -31,11 +31,16 @@ function updatePackageVersion() {
 // Update the package version and get the new version string
 const newVersion = updatePackageVersion();
 
-// Create a git tag for the new version
-execSync(`git tag -a v${newVersion} -m "Pre-release v${newVersion}"`);
+// Commit changes
+execSync(`git add package.json`);
+execSync(`git commit -m "Bump version to ${newVersion}"`);
 
-// Push the tag to the repository
-// execSync(`git push origin v${newVersion}`);
+// Create a git tag and push it
+execSync(`git tag -a v${newVersion} -m "Pre-release v${newVersion}"`);
+execSync(`git push v${newVersion}`);
+
+// Push changes to GitHub
+execSync(`git push`);
 
 // Publish to npm with the "next" tag
-// execSync('npm publish --tag next');
+execSync('npm publish --tag next');
