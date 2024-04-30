@@ -30,13 +30,15 @@ function updatePackageVersion() {
 // Update the package version and get the new version string
 const newVersion = updatePackageVersion();
 
+// Check if we're on the `next` branch and switch if needed
+execSync('git checkout next');
+
 // Commit changes
 execSync(`git add package.json`);
 execSync(`git commit -m "Bump version to ${newVersion}"`);
 
 // Create a git tag and push it
 execSync(`git tag -a v${newVersion} -m "Pre-release v${newVersion}"`);
-execSync(`git push v${newVersion}`);
 
 // Push changes to GitHub
-execSync(`git push`);
+execSync(`git push origin next`); 
