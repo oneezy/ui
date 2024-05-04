@@ -1,5 +1,6 @@
 <script>
 	import '../lib/ui.css';
+	let { children } = $props();
 </script>
 
-<slot />
+{@render children()}

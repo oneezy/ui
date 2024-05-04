@@ -1,12 +1,38 @@
 <script>
 	import Version from '$lib/Version/Version.svelte';
 	import App from '$lib/components/atoms/App/App.svelte';
+	import Section from '$lib/components/atoms/Section/Section.svelte';
+	import Container from '$lib/components/atoms/Container/Container.svelte';
+	import Content from '$lib/components/atoms/Content/Content.svelte';
+	import Title from '$lib/components/atoms/Title/Title.svelte';
+	import Block from '$lib/components/atoms/Block/Block.svelte';
+	import Button from '$lib/components/atoms/Button/Button.svelte';
+	import Divider from '$src/lib/components/atoms/Divider/Divider.svelte';
+
+	function hi() {
+		alert('hi');
+	}
 </script>
 
-<h1 class="text-3xl font-bold underline">Welcome to your library project</h1>
-<App class="bg-green-500">
-	<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-	<Version />
+<App class="bg-gray-300">
+	<Block>
+		<!-- <Divider shape="waves" /> -->
+		<Title title="title" subtitle="subtitle" subheader="subheader" tagline="tagline" />
+		<Version class="bg-white" />
+		<Button onclick={hi}>Click Me</Button>
+	</Block>
+	<Section id="yo" class="bg-white" state="normal">
+		<!-- Divider shape="waves curve tilt triangle arrow" -->
+		<Divider
+			height="200"
+			color="fill-dark dark:fill-lite"
+			position="top"
+			shape="arrow"
+			flip={true}
+			invert={true}
+		/>
+		<Container class="p-10">
+			<Content></Content>
+		</Container>
+	</Section>
 </App>

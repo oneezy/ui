@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "./lib/fonts/font-mercenary.css";
+@import "./lib/fonts/mercenary/font-mercenary.css";
 
 
 

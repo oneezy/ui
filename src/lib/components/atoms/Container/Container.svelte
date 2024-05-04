@@ -1,10 +1,11 @@
 <script>
 	let { children, ...props } = $props();
+	let defaultClass = `container mx-auto px-4 md:px-5 max-w-screen-xl`;
 </script>
 
-<main {...props} class="min-h-svh w-full grid gap-24 relative {props.class}">
+<div {...props} class={(defaultClass, props.class)}>
 	{#snippet content()}
-		App Template
+		Container
 	{/snippet}
 
 	{#if children}
@@ -12,4 +13,4 @@
 	{:else}
 		{@render content()}
 	{/if}
-</main>
+</div>
