@@ -1,6 +1,6 @@
 <script>
 	// import { Long } from './sample/Long.svelte';
-	let { children, typography = true, ...props } = $props();
+	let { children = null, typography = true, ...props } = $props();
 </script>
 
 <article
