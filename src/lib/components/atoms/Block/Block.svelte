@@ -3,7 +3,7 @@
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Content from '$lib/components/atoms/Content/Content.svelte';
 
-	let { children, ...props } = $props();
+	let { children = null, ...props } = $props();
 </script>
 
 <Section {...props} class="h-svh pt-20 md:pt-32 md:pb-[10vh] {props.class}">

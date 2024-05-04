@@ -1,6 +1,6 @@
 <script>
 	let {
-		children,
+		children = null,
 		height = '',
 		color = 'fill-dark dark:fill-lite',
 		position = 'bottom',

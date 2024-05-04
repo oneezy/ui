@@ -1,5 +1,5 @@
 <script>
-	let { children, ...props } = $props();
+	let { children = null, ...props } = $props();
 </script>
 
 <main {...props} class="min-h-svh w-full grid gap-24 relative {props.class}">

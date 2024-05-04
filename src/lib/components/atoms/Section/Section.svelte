@@ -1,7 +1,7 @@
 <script>
 	/* Props
 	 *************************/
-	let { children, id = null, state = null, ...props } = $props();
+	let { children = null, id = null, state = null, ...props } = $props();
 
 	/* Private Variables
 	 *************************/

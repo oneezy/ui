@@ -2,15 +2,15 @@
 	/* Props
 	 *************************/
 	let {
-		children,
-		href,
+		children = null,
+		href = null,
 		display = 'normal',
-		button,
-		position,
-		state,
-		icon,
-		box,
-		siz = 42,
+		button = null,
+		position = null,
+		state = null,
+		icon = null,
+		box = null,
+		size = 42,
 		...props
 	} = $props();
 

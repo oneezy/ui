@@ -1,5 +1,5 @@
 <script>
-	let { children, ...props } = $props();
+	let { children = null, ...props } = $props();
 	let defaultClass = `container mx-auto px-4 md:px-5 max-w-screen-xl`;
 </script>
 

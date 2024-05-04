@@ -7,7 +7,7 @@
 		subheader = null,
 		subheading = null,
 		tagline = null,
-		children,
+		children = null,
 		...props
 	} = $props();
 
