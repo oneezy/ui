@@ -6,7 +6,6 @@ export { default as Test } from './Test/Test.svelte';
 export { default as Version } from './Version/Version.svelte';
 export { default as App } from './components/atoms/App/App.svelte';
 
-export { default as App } from './components/atoms/App/App.svelte'
 export { default as Block } from './components/atoms/Block/Block.svelte'
 export { default as Button } from './components/atoms/Button/Button.svelte'
 export { default as Container } from './components/atoms/Container/Container.svelte'
