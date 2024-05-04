@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="absolute w-full overflow-hidden"
+	class="absolute w-full overflow-hidden z-10"
 	style="
 
   {/* Invert

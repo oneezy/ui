@@ -14,8 +14,17 @@
 	}
 </script>
 
-<App class="bg-gray-300">
-	<Block>
+<App class="bg-gray-300 p-4">
+	<Divider
+		class="z-10 block"
+		height="200"
+		color="fill-dark dark:fill-lite"
+		position="top"
+		shape="arrow"
+		flip={false}
+		invert={false}
+	/>
+	<Block class="bg-green-500 p-4">
 		<!-- <Divider shape="waves" /> -->
 		<Title title="title" subtitle="subtitle" subheader="subheader" tagline="tagline" />
 		<Version class="bg-white" />
