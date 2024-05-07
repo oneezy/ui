@@ -21,7 +21,7 @@
 
   {/* Position
 	 *************************/
-	position == 'top' ? 'top: 0;' : position == 'bottom' ? 'bottom: 0;' : ''}"
+	position == 'top' ? 'bottom: -100%;' : position == 'bottom' ? 'top: -100%;' : ''}"
 >
 	<svg
 		class="w-full"

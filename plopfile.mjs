@@ -7,7 +7,7 @@
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 // global
 let lib        = `./src/lib`;
-let templates  = `.templates`;
+let templates  = `+templates`;
 let index      = `${lib}/index.js`;
 
 // component

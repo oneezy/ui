@@ -11,9 +11,9 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
     "lint": "prettier --check .",
     "format": "prettier --write .",
-    "copy-package": "node ./scripts/copy-package.js",
-    "remove-tag": "node ./scripts/remove-tag.js",
-    "next": "node ./scripts/version-bump.js && npm run build && npm publish --tag next",
+    "copy-package": "node ./+scripts/copy-package.js",
+    "remove-tag": "node ./+scripts/remove-tag.js",
+    "next": "node ./+scripts/version-bump.js && npm run build && npm publish --tag next",
     "clean": "git clean -fXd"
   },
   "exports": {

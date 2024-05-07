@@ -14,34 +14,14 @@
 	}
 </script>
 
-<App class="bg-gray-300 p-4">
-	<Divider
-		class="z-10 block"
-		height="200"
-		color="fill-dark dark:fill-lite"
-		position="top"
-		shape="arrow"
-		flip={false}
-		invert={false}
-	/>
-	<Block class="bg-green-500 p-4">
-		<!-- <Divider shape="waves" /> -->
-		<Title title="title" subtitle="subtitle" subheader="subheader" tagline="tagline" />
-		<Version class="bg-white" />
-		<Button onclick={hi}>Click Me</Button>
-	</Block>
+<App class="bg-gray-300">
 	<Section id="yo" class="bg-white" state="normal">
-		<!-- Divider shape="waves curve tilt triangle arrow" -->
-		<Divider
-			height="200"
-			color="fill-dark dark:fill-lite"
-			position="top"
-			shape="arrow"
-			flip={true}
-			invert={true}
-		/>
-		<Container class="p-10">
+		<Divider position="top" color="fill-dark dark:fill-lite" shape="arrow" invert={false} />
+
+		<Container>
 			<Content></Content>
 		</Container>
+
+		<Divider position="bottom" color="fill-dark dark:fill-lite" shape="arrow" invert={true} />
 	</Section>
 </App>
