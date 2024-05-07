@@ -8,14 +8,17 @@
 	import Block from '$lib/components/atoms/Block/Block.svelte';
 	import Button from '$lib/components/atoms/Button/Button.svelte';
 	import Divider from '$src/lib/components/atoms/Divider/Divider.svelte';
+	import Copyright from '$src/lib/components/molecules/Copyright/Copyright.svelte';
 
 	function hi() {
 		alert('hi');
 	}
 </script>
 
+<Title title="hello world" />
+
 <App class="bg-gray-300">
-	<Section id="yo" class="bg-white" state="normal">
+	<Section id="yo" class="bg-white " state="normal">
 		<Divider position="top" color="fill-dark dark:fill-lite" shape="arrow" invert={false} />
 
 		<Container>
@@ -25,3 +28,5 @@
 		<Divider position="bottom" color="fill-dark dark:fill-lite" shape="arrow" invert={true} />
 	</Section>
 </App>
+
+<Copyright></Copyright>

@@ -1,7 +1,7 @@
 
-
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
+/* {atoms} */
 export { default as Test } from './Test/Test.svelte';
 export { default as Version } from './Version/Version.svelte';
 export { default as App } from './components/atoms/App/App.svelte';
@@ -20,3 +20,31 @@ export { default as Title } from './components/atoms/Title/Title.svelte'
 // export { default as Scrollbar } from './components/atoms/Scrollbar/Scrollbar.svelte'
 // export { default as Img } from './components/atoms/Img/Img.svelte'
 // export { default as Logo } from './components/atoms/Logo/Logo.svelte'
+
+/* {molecules} */
+// export { default as Accordion } from './components/molecules/Accordion/Accordion.svelte'
+// export { default as AccordionItem } from './components/molecules/Accordion/AccordionItem.svelte'
+// export { default as AppBar } from './components/molecules/AppBar/AppBar.svelte'
+// export { default as BG } from './components/molecules/BG/BG.svelte'
+export { default as Card } from './components/molecules/Card/Card.svelte'
+export { default as Copyright } from './components/molecules/Copyright/Copyright.svelte'
+export { default as Dialog } from './components/molecules/Dialog/Dialog.svelte'
+export { default as Nav } from './components/molecules/Nav/Nav.svelte'
+export { default as Social } from './components/molecules/Social/Social.svelte'
+export { default as Theme } from './components/molecules/Theme/Theme.svelte'
+// export { default as CountUp } from './components/molecules/CountUp/CountUp.svelte'
+
+/* {organisms} */
+// export { default as Stats } from './components/organisms/Stats/Stats.svelte'
+// export { default as Hero } from './components/organisms/Hero/Hero.svelte'
+// export { default as Header } from './components/organisms/Header/Header.svelte'
+// export { default as KitchenSink } from './components/organisms/KitchenSink/KitchenSink.svelte'
+
+/* {pages} */
+// export { default as Page } from './components/pages/Page/Page.svelte'
+
+/* {particles} */
+// export { default as Device } from './components/particles/Device/Device.svelte'
+
+/* {templates} */
+// export { default as Template } from './components/templates/Template/Template.svelte'
