@@ -2,7 +2,7 @@ import { pages } from './data.js'
 
 export function load() {
 	return {
-		summaries: pages.map((page) => ({
+		pageData: pages.map((page) => ({
 			slug: page.slug,
 			label: page.label,
 			title: page.title,

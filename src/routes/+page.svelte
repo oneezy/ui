@@ -4,7 +4,7 @@
 	let { data } = $props();
 </script>
 
-{#each data.summaries as { slug, title, content }}
+{#each data.pageData as { slug, title, content }}
 	<Section id={slug} class="" state="normal">
 		<Divider position="top" shape="arrow" invert={true} />
 
