@@ -2,10 +2,7 @@
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
-export { default as Test } from './Test/Test.svelte';
-export { default as Version } from './Version/Version.svelte';
 export { default as App } from './components/atoms/App/App.svelte';
-
 export { default as Block } from './components/atoms/Block/Block.svelte'
 export { default as Button } from './components/atoms/Button/Button.svelte'
 export { default as Container } from './components/atoms/Container/Container.svelte'
@@ -28,10 +25,10 @@ export { default as Title } from './components/atoms/Title/Title.svelte'
 // export { default as BG } from './components/molecules/BG/BG.svelte'
 export { default as Card } from './components/molecules/Card/Card.svelte'
 export { default as Copyright } from './components/molecules/Copyright/Copyright.svelte'
-export { default as Dialog } from './components/molecules/Dialog/Dialog.svelte'
+// export { default as Dialog } from './components/molecules/Dialog/Dialog.svelte'
 export { default as Nav } from './components/molecules/Nav/Nav.svelte'
-export { default as Social } from './components/molecules/Social/Social.svelte'
-export { default as Theme } from './components/molecules/Theme/Theme.svelte'
+// export { default as Social } from './components/molecules/Social/Social.svelte'
+// export { default as Theme } from './components/molecules/Theme/Theme.svelte'
 // export { default as CountUp } from './components/molecules/CountUp/CountUp.svelte'
 
 /* {organisms} */

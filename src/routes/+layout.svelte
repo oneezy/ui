@@ -1,16 +1,12 @@
 <script>
 	import '$lib/ui.css';
-	let { data, children } = $props();
+	import { App, Nav } from '$lib';
+	let { summaries, children } = $props();
 </script>
 
-<nav class="flex items-center justify-center gap-4 p-8 bg-black text-white sticky top-0">
-	{#each data.summaries as { slug, title }}
-		{#if slug === 'home'}
-			<a href="/">Home</a>
-		{:else}
-			<a href="/pages/{slug}">{title}</a>
-		{/if}
-	{/each}
-</nav>
+<!-- This nav is the one i want to use but don't know how! -->
+<Nav links={summaries} />
 
-{@render children()}
+<App id="site">
+	{@render children()}
+</App>
