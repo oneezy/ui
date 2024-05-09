@@ -1,18 +1,17 @@
 <script>
 	import { page } from '$app/stores';
-	let { href = '#', active, state, children, ...props } = $props();
-
-	let isActive = $derived($page.url.pathname === href);
-	// aria-current=       {$page.url.pathname == link.slug ? true : false}
+	let { slug, href, label, active, state, children, ...props } = $props();
 </script>
 
-<a {href} {...props} class={props.class} aria-current={isActive ? true : undefined}>
-	{#snippet content()}
-		link
-	{/snippet}
-	{#if children}
-		{@render children()}
+<a
+	{href}
+	{...props}
+	class={props.class}
+	aria-current={$page.url.pathname == href ? true : undefined}
+>
+	{#if label}
+		{label}
 	{:else}
-		{@render content()}
+		{@render children()}
 	{/if}
 </a>

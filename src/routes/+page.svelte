@@ -1,15 +1,15 @@
 <script>
 	import { Section, Container, Content, Title, Divider } from '$lib';
 
-	let { data } = $props();
+	let { data, pageData } = $props();
 </script>
 
-{#each data.pageData as { slug, title, content }}
+{#each data.pageData as { slug, title, tagline, content }}
 	<Section id={slug} class="" state="normal">
 		<Divider position="top" shape="arrow" invert={true} />
 
 		<Container>
-			<Title {title} />
+			<Title {title} {tagline} />
 			<Content>{@html content}</Content>
 		</Container>
 
