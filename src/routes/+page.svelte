@@ -1,5 +1,6 @@
 <script>
 	import { Section, Container, Content, Title, Divider } from '$lib';
+	import IconAirplane from '~icons/bi/airplane';
 
 	let { data, pageData } = $props();
 </script>
@@ -10,6 +11,8 @@
 
 		<Container>
 			<Title {title} {tagline} />
+
+			<IconAirplane />
 			<Content>{@html content}</Content>
 		</Container>
 
