@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.22",
+  "version": "2.0.0-next.21",
   "scripts": {
     "dev": "vite dev --port 1111",
     "build": "vite build && npm run package",
@@ -21,14 +21,14 @@
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     },
-    "./vite.config.js": "./dist/vite.config.js",
-    "./vite.config.d.ts": "./dist/vite.config.d.ts",
-    "./svelte.config.js": "./dist/svelte.config.js",
-    "./svelte.config.d.ts": "./dist/svelte.config.d.ts",
-    "./tailwind.config.js": "./dist/tailwind.config.js",
-    "./tailwind.config.d.ts": "./dist/tailwind.config.d.ts",
-    "./postcss.config.js": "./dist/postcss.config.js",
-    "./postcss.config.d.ts": "./dist/postcss.config.d.ts",
+    "./vite.config.js": "./dist/config/vite.config.js",
+    "./vite.config.d.ts": "./dist/config/vite.config.d.ts",
+    "./svelte.config.js": "./dist/config/svelte.config.js",
+    "./svelte.config.d.ts": "./dist/config/svelte.config.d.ts",
+    "./tailwind.config.js": "./dist/config/tailwind.config.js",
+    "./tailwind.config.d.ts": "./dist/config/tailwind.config.d.ts",
+    "./postcss.config.js": "./dist/config/postcss.config.js",
+    "./postcss.config.d.ts": "./dist/config/postcss.config.d.ts",
     "./ui.css": "./dist/ui.css"
   },
   "files": [
