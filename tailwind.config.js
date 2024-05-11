@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindConfig from './src/lib/tailwind.config.js';
+import tailwindConfig from './src/lib/config/tailwind.config.js';
 
 const config = {
-  ...tailwindConfig
+	...tailwindConfig
 };
 
 export default config;

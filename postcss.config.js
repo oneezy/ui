@@ -1,8 +1,8 @@
-import postcssConfig from './src/lib/postcss.config.js';
+import postcssConfig from './src/lib/config/postcss.config.js';
 
 /** @type {import('postcss').Config} */
 const config = {
-  ...postcssConfig
+	...postcssConfig
 };
 
-export default config; 
+export default config;

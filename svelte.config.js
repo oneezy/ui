@@ -1,5 +1,5 @@
 /** @type {import('svelte').Config} */
-import svelteConfig from './src/lib/svelte.config.js';
+import svelteConfig from './src/lib/config/svelte.config.js';
 
 const config = {
 	...svelteConfig

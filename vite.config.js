@@ -1,5 +1,5 @@
 /** @type {import('vite').Config} */
-import viteConfig from './src/lib/vite.config.js';
+import viteConfig from './src/lib/config/vite.config.js';
 
 const config = {
 	...viteConfig
