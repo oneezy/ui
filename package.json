@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.21",
+  "version": "2.0.0-next.20",
   "scripts": {
     "dev": "vite dev --port 1111",
     "build": "vite build && npm run package",
@@ -66,12 +66,11 @@
     "vite": "^5.2.11"
   },
   "peerDependencies": {
-    "@sveltejs/vite-plugin-svelte": "next",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "postcss": "^8.4.38",
-    "svelte": "next",
+    "svelte": "^5.0.0-next.128",
     "tailwindcss": "^3.4.3"
   },
   "svelte": "./dist/index.js",
