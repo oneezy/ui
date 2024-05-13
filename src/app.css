@@ -3,16 +3,12 @@
 @import "tailwindcss/utilities";
 @import "./lib/fonts/mercenary/font-mercenary.css";
 
-
-
 /* Add any custom CSS here */
-
-
 @layer base {
   :root {
 
     /* fonts */
-    --font-sans: "Mercenary";
+    --font-sans: "";
     --font-serif: "";
     --font-mono: "";
     --font-diplay: "";
