@@ -4,7 +4,8 @@
 	import { App, Header, Logo, Nav, Button, Component } from '$lib';
 	let { data, pageData, children } = $props();
 
-	// let text = $state('hi mom!');
+	let text = $state('hi mom!');
+	let texttt = $state('hi mommm!');
 </script>
 
 <!-- expected output: "text") -->
@@ -18,6 +19,14 @@
 
 <!-- expected output: "goodbye, world!" -->
 <Component unstyled>goodbye, world!</Component>
+
+<!-- expected output: "him mom!" -->
+<Component unstyled>{text}</Component>
+<Component unstyled {text} />
+
+<!-- expected output: "hi mommm!" -->
+<Component unstyled text={texttt} />
+<Component unstyled>{texttt}</Component>
 
 <!-- 
 
