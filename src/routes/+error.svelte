@@ -1,7 +1,5 @@
 <script>
 	import { Section, Container, Content, Title } from '$lib';
-
-	let { data } = $props();
 </script>
 
 <Section id="error" class="bg-white " state="normal">

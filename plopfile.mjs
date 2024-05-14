@@ -7,6 +7,7 @@
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 // global
 let lib = `./src/lib`;
+let routes = `./src/routes/(docs)/docs`;
 let templates = `+templates`;
 let index = `${lib}/index.js`;
 
@@ -32,7 +33,7 @@ let actionDestination = `${lib}/actions`;
 // story
 let storyBase = `${templates}/story/`;
 let storyFiles = `${templates}/story/**/*`;
-let storyDestination = `${lib}/components/{{lowerCaseNoSpace component}}s/{{name}}`;
+let storyDestination = `${routes}/{{name}}`;
 
 export default function (plop) {
 	/* Component
@@ -80,12 +81,12 @@ export default function (plop) {
 						pattern: /\/\* {atoms} \*\//i
 					});
 					// create story
-					// actions.push({
-					//   type          : "addMany",
-					//   base          : storyBase,
-					//   templateFiles : storyFiles,
-					//   destination   : storyDestination
-					// });
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 					break;
 
 				/* 2. Molecules
@@ -106,12 +107,12 @@ export default function (plop) {
 						pattern: /\/\* {molecules} \*\//i
 					});
 					// create story
-					// actions.push({
-					//   type          : "addMany",
-					//   base          : storyBase,
-					//   templateFiles : storyFiles,
-					//   destination   : storyDestination
-					// });
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 					break;
 
 				/* 3. Organisms
@@ -132,12 +133,12 @@ export default function (plop) {
 						pattern: /\/\* {organisms} \*\//i
 					});
 					// create story
-					// actions.push({
-					//   type          : "addMany",
-					//   base          : storyBase,
-					//   templateFiles : storyFiles,
-					//   destination   : storyDestination
-					// });
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 					break;
 
 				/* 4. Pages
@@ -158,12 +159,12 @@ export default function (plop) {
 						pattern: /\/\* {pages} \*\//i
 					});
 					// create story
-					// actions.push({
-					//   type          : "addMany",
-					//   base          : storyBase,
-					//   templateFiles : storyFiles,
-					//   destination   : storyDestination
-					// });
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 					break;
 
 				/* 5. Particles
@@ -184,12 +185,12 @@ export default function (plop) {
 						pattern: /\/\* {particles} \*\//i
 					});
 					// create story
-					// actions.push({
-					//   type          : "addMany",
-					//   base          : storyBase,
-					//   templateFiles : storyFiles,
-					//   destination   : storyDestination
-					// });
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 					break;
 
 				/* 6. Templates
@@ -210,12 +211,12 @@ export default function (plop) {
 						pattern: /\/\* {templates} \*\//i
 					});
 					// create story
-					// actions.push({
-					//   type          : "addMany",
-					//   base          : storyBase,
-					//   templateFiles : storyFiles,
-					//   destination   : storyDestination
-					// });
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 					break;
 
 				/* default
@@ -235,13 +236,13 @@ export default function (plop) {
 						templateFile: componentExport,
 						pattern: /\/\* components \*\//i
 					});
-				// create story
-				// actions.push({
-				//   type          : "addMany",
-				//   base          : storyBase,
-				//   templateFiles : storyFiles,
-				//   destination   : storyDestination
-				// });
+					// create story
+					actions.push({
+						type: 'addMany',
+						base: storyBase,
+						templateFiles: storyFiles,
+						destination: storyDestination
+					});
 			}
 
 			return actions;

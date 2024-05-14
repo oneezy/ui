@@ -10,9 +10,9 @@
 		<Divider position="top" shape="arrow" invert={true} />
 
 		<Container>
+			<IconAirplane />
 			<Title {title} {tagline} />
 
-			<IconAirplane />
 			<Content>{@html content}</Content>
 		</Container>
 
