@@ -2,6 +2,10 @@
 	let { text = '{{ name }}', unstyled = false, children, ...props } = $props();
 </script>
 
+{#snippet textContent(content)}
+	{content}
+{/snippet}
+
 <div {...props} class="{unstyled ? '' : 'bg-brand text-white'} {props.class}">
 	{#if children}
 		{@render children()}
