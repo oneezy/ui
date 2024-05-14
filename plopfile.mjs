@@ -33,7 +33,7 @@ let actionDestination = `${lib}/actions`;
 // story
 let storyBase = `${templates}/story/`;
 let storyFiles = `${templates}/story/**/*`;
-let storyDestination = `${routes}/{{name}}`;
+let storyDestination = `${routes}/{{lowerCaseNoSpace name}}`;
 
 export default function (plop) {
 	/* Component

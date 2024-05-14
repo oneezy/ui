@@ -1,5 +1,5 @@
 <script>
-	let { text = 'text', unstyled = false, children, ...props } = $props();
+	let { text = 'Footer', unstyled = false, children, ...props } = $props();
 </script>
 
 {#snippet textContent(content)}

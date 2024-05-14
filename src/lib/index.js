@@ -1,7 +1,7 @@
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
-export { default as Component } from './components/atoms/+template/Component.svelte';
+export { default as Grid } from './components/atoms/Grid/Grid.svelte'
 export { default as App } from './components/atoms/App/App.svelte';
 export { default as Block } from './components/atoms/Block/Block.svelte';
 export { default as Button } from './components/atoms/Button/Button.svelte';
@@ -35,6 +35,7 @@ export { default as Nav } from './components/molecules/Nav/Nav.svelte';
 // export { default as Stats } from './components/organisms/Stats/Stats.svelte'
 // export { default as Hero } from './components/organisms/Hero/Hero.svelte'
 export { default as Header } from './components/organisms/Header/Header.svelte';
+export { default as Footer } from './components/organisms/Footer/Footer.svelte';
 // export { default as KitchenSink } from './components/organisms/KitchenSink/KitchenSink.svelte'
 
 /* {pages} */

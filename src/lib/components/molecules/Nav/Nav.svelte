@@ -5,19 +5,23 @@
 		links = [
 			{ label: 'home', href: '/' },
 			{ label: 'about', href: '/about' },
-			{ label: 'contact', href: '/contact' }
+			{ label: 'contact', href: '/contact' },
+			{ label: 'docs', href: '/docs' }
 		],
+		row = true,
+		col = true,
+		center = true,
 		children,
 		...props
 	} = $props();
 </script>
 
-<nav {...props} class="flex flex-col items-center justify-center md:flex-row gap-6 {props.class}">
+<nav {...props} class="flex gap-4 {props.class}">
 	{#each links as link}
 		<Link
 			href={link.href}
 			label={link.label}
-			class="bg-gray-200 text-black aria-[current=true]:bg-blue-500 aria-[current=true]:text-white"
+			class="bg-gray-200 text-black aria-[current=true]:bg-blue-500 aria-[current=true]:text-white capitalize"
 		/>
 	{/each}
 </nav>

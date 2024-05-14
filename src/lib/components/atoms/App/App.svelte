@@ -2,7 +2,7 @@
 	let { children = null, ...props } = $props();
 </script>
 
-<main {...props} class="min-h-svh w-full grid relative {props.class}">
+<main {...props} class="min-h-svh w-full relative {props.class}">
 	{#snippet content()}
 		App Template
 	{/snippet}

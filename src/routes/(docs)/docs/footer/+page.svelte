@@ -1,20 +1,20 @@
 <script>
-	import { Component, Title } from '$lib';
+  import { Footer, Title } from '$lib';
 
-	let text = $state('hi mom!');
+	let text = $state('hi Footer!');
 </script>
 
 <Title subheader="unstyled prop" />
-<Component unstyled />
+<Footer unstyled />
 
 <Title subheader="default style" />
-<Component />
+<Footer />
 
 <Title subheader="text prop" />
-<Component text />
+<Footer text />
 
 <Title subheader="custom text prop" />
-<Component text="what up world!" />
+<Footer text="what up world!" />
 
 <Title subheader="children only" />
-<Component>goodbye, world!</Component>
+<Footer>goodbye, world!</Footer>
