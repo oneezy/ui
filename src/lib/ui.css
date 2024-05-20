@@ -22,6 +22,8 @@
 
     /* brand
     ************************************************************/
+    --primary: skyblue;
+    --secondary: hotpink;
     --color-brand: 37 99 235;
     /* blue-600 */
     --color-brand-1: 37 99 235;
@@ -245,6 +247,10 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+  
   button,
   textarea,
   input,

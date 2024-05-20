@@ -1,17 +1,19 @@
 <script>
-	let { text = '{{ name }}', unstyled = false, children, ...props } = $props();
+	let {
+		{{ lowerCaseNoSpace name }} = '⬜ default {{ lowerCaseNoSpace name }}',
+		children = null,
+		...props
+	} = $props();
 </script>
 
-{#snippet textContent(content)}
-	{content}
-{/snippet}
-
-<div {...props} class="{unstyled ? '' : 'bg-brand text-white'} {props.class}">
+<div {...props} class="bg-black text-white {props.class}">
 	{#if children}
 		{@render children()}
-	{:else if text.length}
-		{@render textContent(text)}
 	{:else}
-		{@render textContent('hello, world!')}
+		{#if typeof {{ lowerCaseNoSpace name }} === 'function'}
+			{@render {{ lowerCaseNoSpace name }}()}
+		{:else}
+			{{{ lowerCaseNoSpace name }}}
+		{/if}
 	{/if}
 </div>

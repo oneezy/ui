@@ -16,7 +16,7 @@
 	} = $props();
 </script>
 
-<nav {...props} class="flex gap-4 {props.class}">
+<nav {...props} class="navigation flex gap-4 {props.class}">
 	{#each links as link}
 		<Link
 			href={link.href}

@@ -1,15 +1,17 @@
 <script>
-	let { children = null, ...props } = $props();
+	let { text = 'Component', unstyled = false, children = null, ...props } = $props();
 </script>
 
-<main {...props} class="min-h-svh w-full relative {props.class}">
-	{#snippet content()}
-		App Template
-	{/snippet}
+{#snippet textContent(content)}
+	{content}
+{/snippet}
 
+<div {...props} class="{unstyled ? '' : 'component'} {props.class}">
 	{#if children}
 		{@render children()}
+	{:else if text.length}
+		{@render textContent(text)}
 	{:else}
-		{@render content()}
+		{@render textContent('hello, Component!')}
 	{/if}
-</main>
+</div>

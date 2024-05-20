@@ -1,20 +1,28 @@
 <script>
-  import { {{name}}, Title } from '$lib';
-
-	let text = $state('hi {{name}}!');
+	/* KEY:
+	======================================================
+	⬜ default    ⬛ prop    🟪 snippet    🟦 children
+	====================================================== */
+	
+  import { {{name}} } from '$lib';
 </script>
 
-<Title subheader="unstyled prop" />
-<{{name}} unstyled />
-
-<Title subheader="default style" />
+<!-- default 
+:::::::::::::::::::::::::::::::: -->
 <{{name}} />
 
-<Title subheader="text prop" />
-<{{name}} text />
+<!-- prop 
+:::::::::::::::::::::::::::::::: -->
+<{{name}} {{lowerCaseNoSpace name}}="⬛ prop {{lowerCaseNoSpace name}}" />
 
-<Title subheader="custom text prop" />
-<{{name}} text="what up world!" />
+<!-- snippets
+:::::::::::::::::::::::::::::::: -->
+<{{name}}>
+	{#snippet {{lowerCaseNoSpace name}}()}🟪 snippet {{lowerCaseNoSpace name}}{/snippet}
+</{{name}}>
 
-<Title subheader="children only" />
-<{{name}}>goodbye, world!</{{name}}>
+<!-- children
+:::::::::::::::::::::::::::::::: -->
+<{{name}} {{lowerCaseNoSpace name}}="i wont show up">
+	🟦 children {{lowerCaseNoSpace name}}
+</{{name}}>

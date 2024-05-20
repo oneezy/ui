@@ -16,7 +16,7 @@
 	let _class = `w-full not-prose`;
 </script>
 
-<div class="{_class} {!subheader || !subheading ? 'py-20' : ''} {props.class}">
+<div class="title {_class} {!subheader || !subheading ? 'py-20' : ''} {props.class}">
 	{#if title || subtitle || subheader || subheading || tagline}
 		<!-- Title -->
 		{#if title}
