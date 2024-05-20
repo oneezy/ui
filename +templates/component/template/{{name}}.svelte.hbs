@@ -13,7 +13,7 @@
 		{#if typeof {{ lowerCaseNoSpace name }} === 'function'}
 			{@render {{ lowerCaseNoSpace name }}()}
 		{:else}
-			{{{ lowerCaseNoSpace name }}}
+			{ {{ lowerCaseNoSpace name }} }
 		{/if}
 	{/if}
 </div>

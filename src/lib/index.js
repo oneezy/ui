@@ -47,4 +47,5 @@ export { default as Footer } from './components/organisms/Footer/Footer.svelte';
 // export { default as Device } from './components/particles/Device/Device.svelte'
 
 /* {templates} */
+export { default as Template } from './components/templates/Template/Template.svelte'
 // export { default as Template } from './components/templates/Template/Template.svelte'
