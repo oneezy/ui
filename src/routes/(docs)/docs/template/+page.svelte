@@ -3,26 +3,26 @@
 	======================================================
 	⬜ default    ⬛ prop    🟪 snippet    🟦 children
 	====================================================== */
-	
-  import { Template } from '$lib';
+
+	import {Template} from '$lib';
 </script>
 
-<!-- default 
-:::::::::::::::::::::::::::::::: -->
-<Template />
+<Template
+	class="bg-blue-500 mb-10"
+	header="header"
+	main="main"
+	leftside="leftside"
+	rightside="rightside"
+	footer="footer"
+/>
 
-<!-- prop 
-:::::::::::::::::::::::::::::::: -->
-<Template template="⬛ prop template" />
-
-<!-- snippets
-:::::::::::::::::::::::::::::::: -->
-<Template>
-	{#snippet template()}🟪 snippet template{/snippet}
+<Template class="bg-black mb-10">
+	{#snippet header()}header{/snippet}
+	{#snippet main()}main{/snippet}
+	{#snippet leftside()}leftside{/snippet}
+	{#snippet rightside()}rightside{/snippet}
+	{#snippet footer()}footer{/snippet}
 </Template>
 
-<!-- children
-:::::::::::::::::::::::::::::::: -->
-<Template template="i wont show up">
-	🟦 children template
-</Template>
+<Template class="bg-gray-300 mb-10" />
+ 

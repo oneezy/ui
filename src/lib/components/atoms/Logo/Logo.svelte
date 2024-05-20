@@ -1,27 +1,22 @@
 <script>
-	import { Link, Title } from '$lib';
-	import { render } from 'svelte/server';
+	import {Link, Title} from '$lib';
 	let {
+		name = 'LOGO',
 		href = '/',
-		text = '',
-		alt = '',
+		alt = null,
 		src = null,
 		svg = null,
-		width = '100',
-		height = '100',
 		children,
 		...props
 	} = $props();
 </script>
 
-<Link href="/">
-	{#snippet content()}
-		<Title>LOGO</Title>
-	{/snippet}
-
+<Link {...props} {href} class={props.class}>
 	{#if children}
 		{@render children()}
+	{:else if src}
+		<img {src} alt={name} />
 	{:else}
-		{@render content()}
+		<h2 class="text-4xl font-bold">{name}</h2>
 	{/if}
 </Link>

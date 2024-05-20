@@ -1,16 +1,13 @@
 <script>
-	import { Link } from '$lib';
+	import {Link} from '$lib';
 
 	let {
 		links = [
-			{ label: 'home', href: '/' },
-			{ label: 'about', href: '/about' },
-			{ label: 'contact', href: '/contact' },
-			{ label: 'docs', href: '/docs' }
+			{label: 'home', href: '/'},
+			{label: 'about', href: '/about'},
+			{label: 'contact', href: '/contact'},
+			{label: 'docs', href: '/docs'}
 		],
-		row = true,
-		col = true,
-		center = true,
 		children,
 		...props
 	} = $props();

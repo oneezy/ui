@@ -1,7 +1,6 @@
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
-export { default as Test } from './components/atoms/Test/Test.svelte';
 export { default as Text } from './components/atoms/Text/Text.svelte';
 export { default as Grid } from './components/atoms/Grid/Grid.svelte';
 export { default as App } from './components/atoms/App/App.svelte';

@@ -1,8 +1,8 @@
 <script>
-	let { children = null, ...props } = $props();
+	let {children = null, ...props} = $props();
 </script>
 
-<div {...props} class="container mx-auto px-4 md:px-5 max-w-screen-xl {props.class}">
+<div {...props} class="container {props.class}">
 	{#snippet content()}
 		Container
 	{/snippet}

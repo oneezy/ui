@@ -1,11 +1,11 @@
 <script>
 	// import { Long } from './sample/Long.svelte';
-	let { children = null, typography = true, ...props } = $props();
+	let {children = null, typography = true, ...props} = $props();
 </script>
 
 <article
 	{...props}
-	class="mx-auto {props.class}
+	class="container {props.class}
 
   {/* Prose
 	 *************************/
