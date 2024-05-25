@@ -13,12 +13,12 @@
 	} = $props();
 </script>
 
-<nav {...props} class="navigation flex gap-4 {props.class}">
+<nav {...props} class="navigation flex gap-4 items-start {props.class}">
 	{#each links as link}
 		<Link
 			href={link.href}
 			label={link.label}
-			class="bg-gray-200 text-black aria-[current=true]:bg-blue-500 aria-[current=true]:text-white capitalize"
+			class="text-black aria-[current=true]:bg-blue-500 aria-[current=true]:text-white capitalize"
 		/>
 	{/each}
 </nav>

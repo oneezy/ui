@@ -1,13 +1,18 @@
 <script>
-	import { Section, Container, Content, Title, Divider } from '$lib';
+	import {Section, Container, Content, Title, Divider} from '$lib';
 
-	let { data, page } = $props();
+	let {data, page} = $props();
+
+	let shape = 'waves';
+	let height = '120px';
+	let width = '150%';
 </script>
 
-<Section id={data.page.slug} class="bg-white" state="normal">
-	<Title class="bg-blue-300" title={data.page.title} tagline={data.page.tagline} />
-	<Divider color="text-white bg-blue-300" position="top" shape="waves" invert={false} />
-	<Container class="p-8">
-		<Content>{@html data.page.content}</Content>
-	</Container>
+<Section id={data.page.slug} class="bg-blue-300">
+	<Title title={data.page.title} tagline={data.page.tagline} />
+	<Divider fill="fill-white" {shape} {height} {width} />
+</Section>
+
+<Section id={data.page.slug}>
+	<Content>{@html data.page.content}</Content>
 </Section>

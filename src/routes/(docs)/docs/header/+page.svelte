@@ -52,9 +52,6 @@
 <Header left center={false} right />
 
 <style>
-	:global(body) {
-		padding: 2vw 10vw;
-	}
 	h3 {
 		font-family: monospace;
 		text-transform: uppercase;

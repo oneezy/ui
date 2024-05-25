@@ -1,6 +1,7 @@
 <script>
-	import {Template, Header, Logo, Nav, Button, Footer, Copyright} from '$lib';
+	import {Template, Header, Logo, Nav, Button, Footer, Copyright, Divider} from '$lib';
 	let {data, pageData, children} = $props();
+	let shape = 'waves';
 </script>
 
 <Template>
@@ -17,6 +18,7 @@
 	{/snippet}
 
 	{#snippet footer()}
+		<Divider fill="fill-blue-300" {shape} />
 		<Footer class="p-4">
 			{#snippet left()}<Logo src="/logo.svg" />{/snippet}
 			{#snippet center()}Social{/snippet}

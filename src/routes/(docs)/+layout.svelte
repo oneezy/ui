@@ -1,20 +1,23 @@
 <script>
-	import { page } from '$app/stores';
-	import { App, Nav, Title } from '$lib';
-	import { getRoutes } from '$lib/utils/getRoutes.js';
-	import { convertPathToTitle } from '$lib/utils/convertPathToTitle.js';
+	import {page} from '$app/stores';
+	import {App, Nav, Title, Button} from '$lib';
+	import {getRoutes} from '$lib/utils/getRoutes.js';
+	import {convertPathToTitle} from '$lib/utils/convertPathToTitle.js';
 
-	let { data, docData, children, ...props } = $props();
+	let {data, docData, children, ...props} = $props();
+	let navClosed = $state(false);
 
 	const links = getRoutes();
 </script>
 
-<App class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
-	<Nav
-		{links}
-		class="flex-col bg-green-200 fixed inset-0 right-auto w-[19rem] p-10 overflow-y-auto"
-	/>
-	<div class="lg:pl-[19.5rem]">
+<App id="docs" class="flex">
+	<div class="bg-gray-200">
+		<Nav {links} class="{navClosed ? 'hidden' : 'flex flex-col'} w-80 p-10 sticky top-0" />
+	</div>
+	<div class="relative {navClosed ? '' : 'container'} min-h-dvh w-full">
+		<Button class="sticky top-4 z-20" onclick={() => (navClosed = !navClosed)}
+			>{navClosed ? 'Open' : 'Close'} Nav</Button
+		>
 		<Title>{convertPathToTitle($page.url.pathname)}</Title>
 		{@render children()}
 	</div>

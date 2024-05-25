@@ -1,6 +1,6 @@
 <script>
-	import { page } from '$app/stores';
-	let { slug, href, label, active, state, children, ...props } = $props();
+	import {page} from '$app/stores';
+	let {slug, href, label, active, state, children, ...props} = $props();
 </script>
 
 <a

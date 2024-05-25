@@ -3,6 +3,10 @@
 	import IconAirplane from '~icons/bi/airplane';
 
 	let {data, pageData} = $props();
+	let color = 'text-black';
+	let shape = 'waves';
+	let height = '120';
+	let width = '200vw';
 
 	function scrollToTop() {
 		window.scrollTo({top: 0, behavior: 'smooth'});
@@ -10,17 +14,13 @@
 </script>
 
 {#each data.pageData as { slug, title, tagline, content }}
-	<Section id={slug} class="" state="normal">
-		<Divider position="top" shape="arrow" invert={true} />
+	<Section id={slug}>
+		<Divider {color} {shape} {height} top />
 
-		<Container>
-			<IconAirplane />
-			<Title {title} {tagline} />
+		<Title {title} {tagline} />
+		<Content>{@html content}</Content>
 
-			<Content>{@html content}</Content>
-		</Container>
-
-		<Divider position="bottom" shape="arrow" invert={false} />
+		<Divider {color} {shape} {height} bottom flip />
 	</Section>
 {/each}
 

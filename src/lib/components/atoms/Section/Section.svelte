@@ -1,11 +1,11 @@
 <script>
 	/* Props
 	 *************************/
-	let { children = null, id = null, state = null, ...props } = $props();
+	let {children = null, id = null, state = null, ...props} = $props();
 
 	/* Private Variables
 	 *************************/
-	let _default = `relative w-full min-h-[50vh]`;
+	let _default = `relative w-full`;
 
 	// State
 	let _normal = `text-black dark:text-white`;

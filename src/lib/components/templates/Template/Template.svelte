@@ -45,14 +45,10 @@
 
 <style>
 	.grid-container {
-		grid-template-rows:
-			var(--header, auto) var(--leftside, auto) var(--main, 1fr) var(--rightside, auto)
-			var(--footer, auto);
+		grid-template-rows: var(--header, auto) var(--main, 1fr) var(--footer, auto);
 		grid-template-areas:
 			'header'
-			/* 'leftside' */
 			'main'
-			/* 'rightside' */
 			'footer';
 	}
 

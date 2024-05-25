@@ -8,6 +8,10 @@
 		"sourceMap": true,
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-		"types": ["unplugin-icons/types/svelte"]
+		"types": ["unplugin-icons/types/svelte"],
+    // "baseUrl": ".",
+    // "paths": {
+    //   "$lib": ["src/lib"],
+    // }
 	}
 }
