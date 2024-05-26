@@ -21,6 +21,7 @@ export {default as Title} from './components/atoms/Title/Title.svelte';
 export {default as Logo} from './components/atoms/Logo/Logo.svelte';
 
 /* {molecules} */
+export { default as Darkmode } from './components/molecules/Darkmode/Darkmode.svelte'
 export {default as Accordion} from './components/molecules/Accordion/Accordion.svelte';
 export {default as AccordionItem} from './components/molecules/Accordion/AccordionItem.svelte';
 // export { default as AppBar } from './components/molecules/AppBar/AppBar.svelte'
