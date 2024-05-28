@@ -66,12 +66,9 @@
     "vite": "^5.2.12"
   },
   "peerDependencies": {
-    "@tailwindcss/container-queries": "^0.1.1",
-    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
-    "postcss": "^8.4.38",
     "svelte": "^5.0.0-next.128",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "4.0.0-alpha.15"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",

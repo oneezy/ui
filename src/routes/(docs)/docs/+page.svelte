@@ -1,4 +1,4 @@
-<div id="top" class="prose dark:pro" role="document">
+<div id="top" class="prose" role="document">
 	<header>
 		<div class="open-props">
 			<h1>Open Props</h1>

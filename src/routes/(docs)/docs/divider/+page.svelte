@@ -1,5 +1,5 @@
 <script>
-	import {Section, Container, Divider, Content, Grid} from '$lib';
+	import { Section, Container, Divider, Content } from '$lib';
 
 	let bg = 'bg-sky-500';
 	let fill = 'fill-sky-500';

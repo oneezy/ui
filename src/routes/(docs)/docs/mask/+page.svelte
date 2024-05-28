@@ -1,6 +1,5 @@
 <script>
-	import {Mask, Divider} from '$lib';
-	import arrow from '$lib/components/atoms/Divider/shapes/arrow.svg';
+	import { Mask, Divider } from '$lib';
 </script>
 
 <!-- Default -->
