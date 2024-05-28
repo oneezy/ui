@@ -3,7 +3,6 @@
 /* {atoms} */
 export { default as Mask } from './components/atoms/Mask/Mask.svelte';
 export { default as Text } from './components/atoms/Text/Text.svelte';
-export { default as Grid } from './components/atoms/Grid/Grid.svelte';
 export { default as App } from './components/atoms/App/App.svelte';
 export { default as Block } from './components/atoms/Block/Block.svelte';
 export { default as Button } from './components/atoms/Button/Button.svelte';
@@ -17,7 +16,7 @@ export { default as Section } from './components/atoms/Section/Section.svelte';
 // export { default as TextAnimate } from './components/atoms/TextAnimate/TextAnimate.svelte'
 export { default as Title } from './components/atoms/Title/Title.svelte';
 // export { default as Scrollbar } from './components/atoms/Scrollbar/Scrollbar.svelte'
-export { default as Image } from './components/atoms/Img/Img.svelte';
+export { default as Image } from './components/atoms/Image/Image.svelte';
 export { default as Logo } from './components/atoms/Logo/Logo.svelte';
 
 /* {molecules} */
