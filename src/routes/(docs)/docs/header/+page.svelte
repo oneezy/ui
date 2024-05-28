@@ -7,7 +7,7 @@
 	🟦 children
 	===============*/
 
-	import {Header} from '$lib';
+	import { Header } from '$lib';
 </script>
 
 <!-- default 

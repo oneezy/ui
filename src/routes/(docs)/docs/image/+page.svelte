@@ -3,24 +3,26 @@
 	======================================================
 	⬜ default    ⬛ prop    🟪 snippet    🟦 children
 	====================================================== */
-
-	import {Darkmode} from '$lib';
+	
+  import { Image } from '$lib';
 </script>
 
 <!-- default 
 :::::::::::::::::::::::::::::::: -->
-<Darkmode />
+<Image />
 
 <!-- prop 
 :::::::::::::::::::::::::::::::: -->
-<Darkmode darkmode="⬛ prop darkmode" />
+<Image image="⬛ prop image" />
 
 <!-- snippets
 :::::::::::::::::::::::::::::::: -->
-<Darkmode>
-	{#snippet darkmode()}🟪 snippet darkmode{/snippet}
-</Darkmode>
+<Image>
+	{#snippet image()}🟪 snippet image{/snippet}
+</Image>
 
 <!-- children
 :::::::::::::::::::::::::::::::: -->
-<Darkmode darkmode="i wont show up">🟦 children darkmode</Darkmode>
+<Image image="i wont show up">
+	🟦 children image
+</Image>

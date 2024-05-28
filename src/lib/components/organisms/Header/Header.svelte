@@ -8,12 +8,12 @@
 	} = $props();
 </script>
 
-<div {...props} class="header bg-blue-300 {props.class}">
+<div {...props} class="header bg-primary {props.class}">
 	<div
 		class="container
 		{children
 			? ''
-			: 'grid grid-cols-[auto,1fr,auto] md:grid-cols-[200px,1fr,200px] justify-center gap-4'}"
+			: 'grid grid-cols-[auto_1fr_auto] justify-center gap-4 md:grid-cols-[200px_1fr_200px]'}"
 	>
 		{#if children}
 			{@render children()}
@@ -21,7 +21,7 @@
 			<section class="self-center justify-self-start">
 				{#if typeof left === 'function'}{@render left()}{:else}{left}{/if}
 			</section>
-			<section class="hidden md:flex items-center justify-center h-full">
+			<section class="hidden h-full items-center justify-center md:flex">
 				{#if typeof center === 'function'}{@render center()}{:else}{center}{/if}
 			</section>
 			<section class="self-center justify-self-end">

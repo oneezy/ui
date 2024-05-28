@@ -13,7 +13,7 @@
 		class="container
 		{children
 			? ''
-			: 'grid grid-cols-[auto,1fr,auto] md:grid-cols-[200px,1fr,200px] justify-center gap-4'}"
+			: 'grid grid-cols-[auto_1fr_auto] md:grid-cols-[200px_1fr_200px] justify-center gap-4'}"
 	>
 		{#if children}
 			{@render children()}

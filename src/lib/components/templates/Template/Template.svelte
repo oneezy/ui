@@ -17,15 +17,15 @@
 
 <div
 	{...props}
-	class="grid-container grid min-h-[100dvh] transition-all duration-500 relative {props.class}"
+	class="grid-container relative grid min-h-[100dvh] transition-all duration-500 {props.class}"
 >
 	{#if children}
 		{@render children()}
 	{:else}
-		<header class="header [grid-area:header] sticky top-0 z-20">
+		<header class="header sticky top-0 z-20 [grid-area:header]">
 			{#if typeof header === 'function'}{@render header()}{:else}{header}{/if}
 		</header>
-		<main class="main [grid-area:main] relative z-10">
+		<main class="main relative z-10 [grid-area:main]">
 			{#if typeof main === 'function'}{@render main()}{:else}{main}{/if}
 		</main>
 
@@ -51,14 +51,14 @@
 			'main'
 			'footer';
 	}
-
+	/* 
 	.grid-container > * {
-		/* @apply bg-white p-4; */
+		@apply bg-white p-4;
 	}
 
 	.grid-container > * > * {
 		@apply transition-all duration-500;
-	}
+	} */
 
 	/* Desktop */
 	@media (min-width: 1024px) {
@@ -71,17 +71,17 @@
 				'main main main'
 				'footer footer footer';
 		}
-
+		/* 
 		.grid-container:hover {
-			/* --leftside: 0dvw; */
-			/* --rightside: 0dvw; */
-			/* --grid-gap: 1rem 0; */
-			/* --grid-gap-x: 1rem 0; */
-			/* --grid-gap-y: 1rem 0; */
+			--leftside: 0dvw;
+			--rightside: 0dvw;
+			--grid-gap: 1rem 0;
+			--grid-gap-x: 1rem 0;
+			--grid-gap-y: 1rem 0;
 		}
 
 		.grid-container:hover .leftside > * {
 			transform: translateX(-300px);
-		}
+		} */
 	}
 </style>

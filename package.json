@@ -25,10 +25,6 @@
     "./vite.config.d.ts": "./dist/config/vite.config.d.ts",
     "./svelte.config.js": "./dist/config/svelte.config.js",
     "./svelte.config.d.ts": "./dist/config/svelte.config.d.ts",
-    "./tailwind.config.js": "./dist/config/tailwind.config.js",
-    "./tailwind.config.d.ts": "./dist/config/tailwind.config.d.ts",
-    "./postcss.config.js": "./dist/config/postcss.config.js",
-    "./postcss.config.d.ts": "./dist/config/postcss.config.d.ts",
     "./ui.css": "./dist/ui.css"
   },
   "files": [
@@ -37,33 +33,37 @@
     "!dist/**/*.spec.*"
   ],
   "dependencies": {
-    "@tailwindcss/container-queries": "^0.1.1",
-    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
+    "mode-watcher": "^0.3.0",
     "unplugin-icons": "^0.19.0"
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.1.23",
+    "@iconify-json/solar": "^1.1.9",
     "@sveltejs/adapter-auto": "^3.2.1",
     "@sveltejs/kit": "^2.5.10",
     "@sveltejs/package": "^2.3.1",
     "@sveltejs/vite-plugin-svelte": "next",
+    "@sveltejs/vite-plugin-svelte-inspector": "^2.1.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/postcss": "4.0.0-alpha.15",
     "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/vite": "4.0.0-alpha.15",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.2.5",
     "prettier-plugin-svelte": "^3.2.3",
+    "prettier-plugin-tailwindcss": "^0.5.14",
     "publint": "^0.1.16",
     "svelte": "next",
     "svelte-check": "^3.7.1",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "4.0.0-alpha.15",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "unplugin-icons": "^0.19.0",
-    "vite": "^5.2.11"
+    "vite": "^5.2.12"
   },
   "peerDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
