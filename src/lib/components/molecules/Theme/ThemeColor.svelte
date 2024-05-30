@@ -3,13 +3,13 @@
 
 	$effect(() => {
 		const savedTheme = $state(localStorage.getItem('theme'));
-		document.body.setAttribute('data-theme', savedTheme);
+		document.documentElement.setAttribute('data-theme', savedTheme);
 		theme = savedTheme;
 	});
 
 	function handleChange(event) {
 		theme = event.target.id;
-		document.body.setAttribute('data-theme', theme);
+		document.documentElement.setAttribute('data-theme', theme);
 		localStorage.setItem('theme', theme);
 	}
 </script>
@@ -18,7 +18,7 @@
 	{#if theme}
 		<script>
 			const theme = localStorage.getItem('theme');
-			document.body.setAttribute('data-theme', theme);
+			document.documentElement.setAttribute('data-theme', theme);
 		</script>
 	{/if}
 </svelte:head>

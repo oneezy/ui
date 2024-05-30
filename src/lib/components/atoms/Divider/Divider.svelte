@@ -1,7 +1,7 @@
 <script>
 	let {
 		bg = 'bg-black dark:bg-white',
-		fill = 'fill-black dark:fill-white',
+		fill = 'fill-primary dark:fill-primary',
 		color = 'text-white dark:text-black',
 		height = '120px',
 		width = '100%',
@@ -22,7 +22,7 @@
 		${bottom ? 'position: absolute; top: calc(100% - 1px); left: 0; right: 0;' : ''}
 	`;
 
-	let svgClass = $state('fill-[var(--bg,fill-red-500)]');
+	let svgClass = $state('');
 	svgClass += fill ? ` ${fill}` : '';
 </script>
 
@@ -52,7 +52,7 @@
 {/snippet}
 
 <!-- SVG Logic -->
-{#snippet path({shape})}
+{#snippet path({ shape })}
 	{#if shape == 'curve'}
 		{@render curve()}
 	{:else if shape == 'tilt'}
@@ -67,7 +67,7 @@
 {/snippet}
 
 <!-- SVG -->
-{#snippet svg({shape, height, width, flip, invert, reverse})}
+{#snippet svg({ shape, height, width, flip, invert, reverse })}
 	<div {...props} class={containerClass} style={containerStyle}>
 		<svg
 			class="{svgClass} {flip ? 'rotate-180' : ''} {invert ? 'scale-y-[-1]' : ''} {reverse
@@ -78,7 +78,7 @@
 			xmlns="http://www.w3.org/2000/svg"
 			style="height: {height}; width: {width};"
 		>
-			{@render path({shape})}
+			{@render path({ shape })}
 		</svg>
 	</div>
 {/snippet}
@@ -87,15 +87,15 @@
 {#if children}
 	<section {...props}>
 		<!-- SVG Divider (top) -->
-		{@render svg({shape, height, width, flip: false, invert, reverse})}
+		{@render svg({ shape, height, width, flip: false, invert, reverse })}
 		<!-- Children -->
 		<div class="{bg} {color}">
 			{@render children()}
 		</div>
 		<!-- SVG Divider (bottom) -->
-		{@render svg({shape, height, width, flip: true, invert, reverse})}
+		{@render svg({ shape, height, width, flip: true, invert, reverse })}
 	</section>
 {:else}
 	<!-- SVG Divider -->
-	{@render svg({shape, height, width, flip: false, invert, reverse})}
+	{@render svg({ shape, height, width, flip: false, invert, reverse })}
 {/if}

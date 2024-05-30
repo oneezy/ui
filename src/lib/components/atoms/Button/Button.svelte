@@ -16,9 +16,9 @@
 	let buttonClass = $state('px-4 py-2 font-bold rounded');
 	let iconClass = $state('p-4 block text-white aspect-square rounded-full');
 
-	let primaryClass = ` bg-blue-500 hover:bg-blue-700`;
-	let secondaryClass = ` bg-gray-500 hover:bg-gray-700`;
-	let disabledClass = ` opacity-50 cursor-not-allowed`;
+	let primaryClass = ` preset-filled-primary hover:bg-primary-600-400`;
+	let secondaryClass = ` bg-secondary-400-600 hover:bg-secondary-600-400`;
+	let disabledClass = ` opacity-50 cursor-not-allowed pointer-events-none`;
 
 	if (primary) {
 		defaultClass += `${primaryClass}`;

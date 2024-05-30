@@ -1,0 +1,58 @@
+@layer theme {
+	@theme {
+		/* Theme Colors
+		************************************************************************
+		- base
+		- primary
+		- secondary
+		- tertiary (todo)
+		- success (todo)
+		- warning (todo)
+		- error (todo)
+		- surface (todo)
+		*/
+
+		--color-base: var(--theme-color-base, var(--theme-color, var(--color-gray-500)));
+		--color-primary: var(--theme-color-primary, var(--theme-color, var(--color-blue-500)));
+		--color-secondary: var(--theme-color-secondary, var(--theme-color, var(--color-rose-500)));
+
+		/* base */
+		--color-base-50: color-mix(in srgb, var(--color-base) 5%, white);
+		--color-base-100: color-mix(in srgb, var(--color-base) 10%, white);
+		--color-base-200: color-mix(in srgb, var(--color-base) 30%, white);
+		--color-base-300: color-mix(in srgb, var(--color-base) 50%, white);
+		--color-base-400: color-mix(in srgb, var(--color-base) 70%, white);
+		--color-base-500: color-mix(in srgb, var(--color-base) 100%, white);
+		--color-base-600: color-mix(in srgb, var(--color-base) 70%, black);
+		--color-base-700: color-mix(in srgb, var(--color-base) 40%, black);
+		--color-base-800: color-mix(in srgb, var(--color-base) 20%, black);
+		--color-base-900: color-mix(in srgb, var(--color-base) 10%, black);
+		--color-base-950: color-mix(in srgb, var(--color-base) 5%, black);
+
+		/* primary */
+		--color-primary-50: color-mix(in srgb, var(--color-primary) 5%, white);
+		--color-primary-100: color-mix(in srgb, var(--color-primary) 10%, white);
+		--color-primary-200: color-mix(in srgb, var(--color-primary) 30%, white);
+		--color-primary-300: color-mix(in srgb, var(--color-primary) 50%, white);
+		--color-primary-400: color-mix(in srgb, var(--color-primary) 70%, white);
+		--color-primary-500: color-mix(in srgb, var(--color-primary) 100%, white);
+		--color-primary-600: color-mix(in srgb, var(--color-primary) 70%, black);
+		--color-primary-700: color-mix(in srgb, var(--color-primary) 40%, black);
+		--color-primary-800: color-mix(in srgb, var(--color-primary) 20%, black);
+		--color-primary-900: color-mix(in srgb, var(--color-primary) 10%, black);
+		--color-primary-950: color-mix(in srgb, var(--color-primary) 5%, black);
+
+		/* secondary */
+		--color-secondary-50: color-mix(in srgb, var(--color-secondary) 5%, white);
+		--color-secondary-100: color-mix(in srgb, var(--color-secondary) 10%, white);
+		--color-secondary-200: color-mix(in srgb, var(--color-secondary) 30%, white);
+		--color-secondary-300: color-mix(in srgb, var(--color-secondary) 50%, white);
+		--color-secondary-400: color-mix(in srgb, var(--color-secondary) 70%, white);
+		--color-secondary-500: color-mix(in srgb, var(--color-secondary) 100%, white);
+		--color-secondary-600: color-mix(in srgb, var(--color-secondary) 70%, black);
+		--color-secondary-700: color-mix(in srgb, var(--color-secondary) 40%, black);
+		--color-secondary-800: color-mix(in srgb, var(--color-secondary) 20%, black);
+		--color-secondary-900: color-mix(in srgb, var(--color-secondary) 10%, black);
+		--color-secondary-950: color-mix(in srgb, var(--color-secondary) 5%, black);
+	}
+}

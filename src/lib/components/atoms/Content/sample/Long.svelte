@@ -14,7 +14,7 @@
 		What do you mean I lose all the other base styles too?
 	</p>
 </blockquote>
-<div className="not-prose">
+<div class="not-prose">
 	<h2>Shouldn&#39;t be colored</h2>
 </div>
 
