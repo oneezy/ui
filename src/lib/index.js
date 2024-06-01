@@ -1,7 +1,7 @@
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
-export { default as Effect } from './components/atoms/Effect/Effect.svelte'
+export { default as Effect } from './components/atoms/Effect/Effect.svelte';
 export { default as Mask } from './components/atoms/Mask/Mask.svelte';
 export { default as Text } from './components/atoms/Text/Text.svelte';
 export { default as App } from './components/atoms/App/App.svelte';
