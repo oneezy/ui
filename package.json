@@ -40,7 +40,6 @@
       "svelte": "./dist/index.js",
       "style": "./dist/ui.css"
     },
-    "./package.json": "./package.json",
     "./vite.config.js": "./dist/config/vite.config.js",
     "./vite.config.d.ts": "./dist/config/vite.config.d.ts",
     "./svelte.config.js": "./dist/config/svelte.config.js",
