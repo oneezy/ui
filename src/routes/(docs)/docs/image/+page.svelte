@@ -3,26 +3,24 @@
 	======================================================
 	⬜ default    ⬛ prop    🟪 snippet    🟦 children
 	====================================================== */
-	
-  import { Image } from '$lib';
+
+	import { Image, Container } from '$lib';
 </script>
 
-<!-- default 
-:::::::::::::::::::::::::::::::: -->
-<Image />
+<Container>
+	<!-- default 
+	:::::::::::::::::::::::::::::::: -->
+	<Image src="https://picsum.photos/id/111/2560/1440"  />
 
-<!-- prop 
-:::::::::::::::::::::::::::::::: -->
-<Image image="⬛ prop image" />
+	<!-- default 
+	:::::::::::::::::::::::::::::::: -->
+	<Image src="https://picsum.photos/id/111/2560/1440" ratio="20/4" fill />
 
-<!-- snippets
-:::::::::::::::::::::::::::::::: -->
-<Image>
-	{#snippet image()}🟪 snippet image{/snippet}
-</Image>
+	<!-- default 
+	:::::::::::::::::::::::::::::::: -->
+	<Image src="https://picsum.photos/id/111/2560/1440" ratio="20/4" contain />
 
-<!-- children
-:::::::::::::::::::::::::::::::: -->
-<Image image="i wont show up">
-	🟦 children image
-</Image>
+	<!-- default 
+	:::::::::::::::::::::::::::::::: -->
+	<Image src="https://picsum.photos/id/111/2560/1440" ratio="20/4" fill />
+</Container>

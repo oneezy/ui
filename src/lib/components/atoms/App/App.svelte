@@ -15,3 +15,5 @@
 		{@render textContent('hello, Component!')}
 	{/if}
 </div>
+
+<div class="w-"></div>

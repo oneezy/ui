@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* Add any custom CSS here */
-@layer base {
+@layer app {
 	:root {
 		/* fonts */
 		--font-sans: '';

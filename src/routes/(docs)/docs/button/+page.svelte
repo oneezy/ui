@@ -1,4 +1,7 @@
 <script>
+	import { Button } from '$lib';
+	import IconAirplane from '~icons/bi/airplane';
+
 	const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
 	let name = $state('primary');
 
@@ -20,17 +23,50 @@
 		{/each}
 	{/each}
 {/snippet}
+<Button>text</Button>
+
+<Button>
+	<IconAirplane />
+</Button>
+
+<Button>
+	<IconAirplane />
+	text
+</Button>
+
+<Button>
+	text
+	<IconAirplane />
+</Button>
+
+<Button>
+	text
+	<IconAirplane />
+	text
+</Button>
+
+<Button>
+	<IconAirplane />
+	text
+	<IconAirplane />
+</Button>
+
+<br />
 
 <div>
-	<button class="preset-filled-primary">base</button>
-	<button class="btn">base</button>
-	<button class="btn btn-primary">primary</button>
-	<button class="btn btn-outline">outline</button>
-	<button class="btn btn-secondary">secondary</button>
-	<button class="btn btn-tonal">tonal</button>
+	<Button>preset-filled</Button>
+	<Button primary>preset-filled-primary</Button>
+	<Button secondary>preset-filled-secondary</Button>
+	<Button tonal>preset-tonal</Button>
+	<Button primary tonal>preset-tonal-primary</Button>
+	<Button secondary tonal>preset-tonal-secondary</Button>
+	<Button outline>preset-outline</Button>
+	<Button outline primary>preset-outline-primary</Button>
+	<Button outline secondary>preset-outline-secondary</Button>
+	<Button href="https://example.com">Link Button</Button>
 </div>
 
-<div class="card bg-base-50-950 grid grid-cols-11 gap-4">
+<div class="card bg-themeee-50-950 grid grid-cols-11 gap-4">
 	<!-- 	
 	{@render createButtons('base')}
 	{@render createButtons('primary')}
@@ -72,127 +108,127 @@
 		<button class="btn preset-tonal-surface">Button</button>
 		<button class="btn preset-outlined-surface-500">Button</button>
 	</div> -->
-	<button class="btn bg-base-50-50 text-base-950-950">bg-base-50-50</button><button
-		class="btn bg-base-50-100 text-base-950-950">bg-base-50-100</button
-	><button class="btn bg-base-50-200 text-base-950-950">bg-base-50-200</button><button
-		class="btn bg-base-50-300 text-base-950-950">bg-base-50-300</button
-	><button class="btn bg-base-50-400 text-base-950-950">bg-base-50-400</button><button
-		class="btn bg-base-50-500 text-base-950-950">bg-base-50-500</button
-	><button class="btn bg-base-50-600 text-base-950-50">bg-base-50-600</button><button
-		class="btn bg-base-50-700 text-base-950-50">bg-base-50-700</button
-	><button class="btn bg-base-50-800 text-base-950-50">bg-base-50-800</button><button
-		class="btn bg-base-50-900 text-base-950-50">bg-base-50-900</button
-	><button class="btn bg-base-50-950 text-base-950-50">bg-base-50-950</button><button
-		class="btn bg-base-100-50 text-base-950-950">bg-base-100-50</button
-	><button class="btn bg-base-100-100 text-base-950-950">bg-base-100-100</button><button
-		class="btn bg-base-100-200 text-base-950-950">bg-base-100-200</button
-	><button class="btn bg-base-100-300 text-base-950-950">bg-base-100-300</button><button
-		class="btn bg-base-100-400 text-base-950-950">bg-base-100-400</button
-	><button class="btn bg-base-100-500 text-base-950-950">bg-base-100-500</button><button
-		class="btn bg-base-100-600 text-base-950-50">bg-base-100-600</button
-	><button class="btn bg-base-100-700 text-base-950-50">bg-base-100-700</button><button
-		class="btn bg-base-100-800 text-base-950-50">bg-base-100-800</button
-	><button class="btn bg-base-100-900 text-base-950-50">bg-base-100-900</button><button
-		class="btn bg-base-100-950 text-base-950-50">bg-base-100-950</button
-	><button class="btn bg-base-200-50 text-base-950-950">bg-base-200-50</button><button
-		class="btn bg-base-200-100 text-base-950-950">bg-base-200-100</button
-	><button class="btn bg-base-200-200 text-base-950-950">bg-base-200-200</button><button
-		class="btn bg-base-200-300 text-base-950-950">bg-base-200-300</button
-	><button class="btn bg-base-200-400 text-base-950-950">bg-base-200-400</button><button
-		class="btn bg-base-200-500 text-base-950-950">bg-base-200-500</button
-	><button class="btn bg-base-200-600 text-base-950-50">bg-base-200-600</button><button
-		class="btn bg-base-200-700 text-base-950-50">bg-base-200-700</button
-	><button class="btn bg-base-200-800 text-base-950-50">bg-base-200-800</button><button
-		class="btn bg-base-200-900 text-base-950-50">bg-base-200-900</button
-	><button class="btn bg-base-200-950 text-base-950-50">bg-base-200-950</button><button
-		class="btn bg-base-300-50 text-base-950-950">bg-base-300-50</button
-	><button class="btn bg-base-300-100 text-base-950-950">bg-base-300-100</button><button
-		class="btn bg-base-300-200 text-base-950-950">bg-base-300-200</button
-	><button class="btn bg-base-300-300 text-base-950-950">bg-base-300-300</button><button
-		class="btn bg-base-300-400 text-base-950-950">bg-base-300-400</button
-	><button class="btn bg-base-300-500 text-base-950-950">bg-base-300-500</button><button
-		class="btn bg-base-300-600 text-base-950-50">bg-base-300-600</button
-	><button class="btn bg-base-300-700 text-base-950-50">bg-base-300-700</button><button
-		class="btn bg-base-300-800 text-base-950-50">bg-base-300-800</button
-	><button class="btn bg-base-300-900 text-base-950-50">bg-base-300-900</button><button
-		class="btn bg-base-300-950 text-base-950-50">bg-base-300-950</button
-	><button class="btn bg-base-400-50 text-base-950-950">bg-base-400-50</button><button
-		class="btn bg-base-400-100 text-base-950-950">bg-base-400-100</button
-	><button class="btn bg-base-400-200 text-base-950-950">bg-base-400-200</button><button
-		class="btn bg-base-400-300 text-base-950-950">bg-base-400-300</button
-	><button class="btn bg-base-400-400 text-base-950-950">bg-base-400-400</button><button
-		class="btn bg-base-400-500 text-base-950-950">bg-base-400-500</button
-	><button class="btn bg-base-400-600 text-base-950-50">bg-base-400-600</button><button
-		class="btn bg-base-400-700 text-base-950-50">bg-base-400-700</button
-	><button class="btn bg-base-400-800 text-base-950-50">bg-base-400-800</button><button
-		class="btn bg-base-400-900 text-base-950-50">bg-base-400-900</button
-	><button class="btn bg-base-400-950 text-base-950-50">bg-base-400-950</button><button
-		class="btn bg-base-500-50 text-base-950-950">bg-base-500-50</button
-	><button class="btn bg-base-500-100 text-base-950-950">bg-base-500-100</button><button
-		class="btn bg-base-500-200 text-base-950-950">bg-base-500-200</button
-	><button class="btn bg-base-500-300 text-base-950-950">bg-base-500-300</button><button
-		class="btn bg-base-500-400 text-base-950-950">bg-base-500-400</button
-	><button class="btn bg-base-500-500 text-base-950-950">bg-base-500-500</button><button
-		class="btn bg-base-500-600 text-base-950-50">bg-base-500-600</button
-	><button class="btn bg-base-500-700 text-base-950-50">bg-base-500-700</button><button
-		class="btn bg-base-500-800 text-base-950-50">bg-base-500-800</button
-	><button class="btn bg-base-500-900 text-base-950-50">bg-base-500-900</button><button
-		class="btn bg-base-500-950 text-base-950-50">bg-base-500-950</button
-	><button class="btn bg-base-600-50 text-base-50-950">bg-base-600-50</button><button
-		class="btn bg-base-600-100 text-base-50-950">bg-base-600-100</button
-	><button class="btn bg-base-600-200 text-base-50-950">bg-base-600-200</button><button
-		class="btn bg-base-600-300 text-base-50-950">bg-base-600-300</button
-	><button class="btn bg-base-600-400 text-base-50-950">bg-base-600-400</button><button
-		class="btn bg-base-600-500 text-base-50-950">bg-base-600-500</button
-	><button class="btn bg-base-600-600 text-base-50-50">bg-base-600-600</button><button
-		class="btn bg-base-600-700 text-base-50-50">bg-base-600-700</button
-	><button class="btn bg-base-600-800 text-base-50-50">bg-base-600-800</button><button
-		class="btn bg-base-600-900 text-base-50-50">bg-base-600-900</button
-	><button class="btn bg-base-600-950 text-base-50-50">bg-base-600-950</button><button
-		class="btn bg-base-700-50 text-base-50-950">bg-base-700-50</button
-	><button class="btn bg-base-700-100 text-base-50-950">bg-base-700-100</button><button
-		class="btn bg-base-700-200 text-base-50-950">bg-base-700-200</button
-	><button class="btn bg-base-700-300 text-base-50-950">bg-base-700-300</button><button
-		class="btn bg-base-700-400 text-base-50-950">bg-base-700-400</button
-	><button class="btn bg-base-700-500 text-base-50-950">bg-base-700-500</button><button
-		class="btn bg-base-700-600 text-base-50-50">bg-base-700-600</button
-	><button class="btn bg-base-700-700 text-base-50-50">bg-base-700-700</button><button
-		class="btn bg-base-700-800 text-base-50-50">bg-base-700-800</button
-	><button class="btn bg-base-700-900 text-base-50-50">bg-base-700-900</button><button
-		class="btn bg-base-700-950 text-base-50-50">bg-base-700-950</button
-	><button class="btn bg-base-800-50 text-base-50-950">bg-base-800-50</button><button
-		class="btn bg-base-800-100 text-base-50-950">bg-base-800-100</button
-	><button class="btn bg-base-800-200 text-base-50-950">bg-base-800-200</button><button
-		class="btn bg-base-800-300 text-base-50-950">bg-base-800-300</button
-	><button class="btn bg-base-800-400 text-base-50-950">bg-base-800-400</button><button
-		class="btn bg-base-800-500 text-base-50-950">bg-base-800-500</button
-	><button class="btn bg-base-800-600 text-base-50-50">bg-base-800-600</button><button
-		class="btn bg-base-800-700 text-base-50-50">bg-base-800-700</button
-	><button class="btn bg-base-800-800 text-base-50-50">bg-base-800-800</button><button
-		class="btn bg-base-800-900 text-base-50-50">bg-base-800-900</button
-	><button class="btn bg-base-800-950 text-base-50-50">bg-base-800-950</button><button
-		class="btn bg-base-900-50 text-base-50-950">bg-base-900-50</button
-	><button class="btn bg-base-900-100 text-base-50-950">bg-base-900-100</button><button
-		class="btn bg-base-900-200 text-base-50-950">bg-base-900-200</button
-	><button class="btn bg-base-900-300 text-base-50-950">bg-base-900-300</button><button
-		class="btn bg-base-900-400 text-base-50-950">bg-base-900-400</button
-	><button class="btn bg-base-900-500 text-base-50-950">bg-base-900-500</button><button
-		class="btn bg-base-900-600 text-base-50-50">bg-base-900-600</button
-	><button class="btn bg-base-900-700 text-base-50-50">bg-base-900-700</button><button
-		class="btn bg-base-900-800 text-base-50-50">bg-base-900-800</button
-	><button class="btn bg-base-900-900 text-base-50-50">bg-base-900-900</button><button
-		class="btn bg-base-900-950 text-base-50-50">bg-base-900-950</button
-	><button class="btn bg-base-950-50 text-base-50-950">bg-base-950-50</button><button
-		class="btn bg-base-950-100 text-base-50-950">bg-base-950-100</button
-	><button class="btn bg-base-950-200 text-base-50-950">bg-base-950-200</button><button
-		class="btn bg-base-950-300 text-base-50-950">bg-base-950-300</button
-	><button class="btn bg-base-950-400 text-base-50-950">bg-base-950-400</button><button
-		class="btn bg-base-950-500 text-base-50-950">bg-base-950-500</button
-	><button class="btn bg-base-950-600 text-base-50-50">bg-base-950-600</button><button
-		class="btn bg-base-950-700 text-base-50-50">bg-base-950-700</button
-	><button class="btn bg-base-950-800 text-base-50-50">bg-base-950-800</button><button
-		class="btn bg-base-950-900 text-base-50-50">bg-base-950-900</button
-	><button class="btn bg-base-950-950 text-base-50-50">bg-base-950-950</button><!---->
+	<button class="btn bg-themeee-50-50 text-themeee-950-950">bg-themeee-50-50</button><button
+		class="btn bg-themeee-50-100 text-themeee-950-950">bg-themeee-50-100</button
+	><button class="btn bg-themeee-50-200 text-themeee-950-950">bg-themeee-50-200</button><button
+		class="btn bg-themeee-50-300 text-themeee-950-950">bg-themeee-50-300</button
+	><button class="btn bg-themeee-50-400 text-themeee-950-950">bg-themeee-50-400</button><button
+		class="btn bg-themeee-50-500 text-themeee-950-950">bg-themeee-50-500</button
+	><button class="btn bg-themeee-50-600 text-themeee-950-50">bg-themeee-50-600</button><button
+		class="btn bg-themeee-50-700 text-themeee-950-50">bg-themeee-50-700</button
+	><button class="btn bg-themeee-50-800 text-themeee-950-50">bg-themeee-50-800</button><button
+		class="btn bg-themeee-50-900 text-themeee-950-50">bg-themeee-50-900</button
+	><button class="btn bg-themeee-50-950 text-themeee-950-50">bg-themeee-50-950</button><button
+		class="btn bg-themeee-100-50 text-themeee-950-950">bg-themeee-100-50</button
+	><button class="btn bg-themeee-100-100 text-themeee-950-950">bg-themeee-100-100</button><button
+		class="btn bg-themeee-100-200 text-themeee-950-950">bg-themeee-100-200</button
+	><button class="btn bg-themeee-100-300 text-themeee-950-950">bg-themeee-100-300</button><button
+		class="btn bg-themeee-100-400 text-themeee-950-950">bg-themeee-100-400</button
+	><button class="btn bg-themeee-100-500 text-themeee-950-950">bg-themeee-100-500</button><button
+		class="btn bg-themeee-100-600 text-themeee-950-50">bg-themeee-100-600</button
+	><button class="btn bg-themeee-100-700 text-themeee-950-50">bg-themeee-100-700</button><button
+		class="btn bg-themeee-100-800 text-themeee-950-50">bg-themeee-100-800</button
+	><button class="btn bg-themeee-100-900 text-themeee-950-50">bg-themeee-100-900</button><button
+		class="btn bg-themeee-100-950 text-themeee-950-50">bg-themeee-100-950</button
+	><button class="btn bg-themeee-200-50 text-themeee-950-950">bg-themeee-200-50</button><button
+		class="btn bg-themeee-200-100 text-themeee-950-950">bg-themeee-200-100</button
+	><button class="btn bg-themeee-200-200 text-themeee-950-950">bg-themeee-200-200</button><button
+		class="btn bg-themeee-200-300 text-themeee-950-950">bg-themeee-200-300</button
+	><button class="btn bg-themeee-200-400 text-themeee-950-950">bg-themeee-200-400</button><button
+		class="btn bg-themeee-200-500 text-themeee-950-950">bg-themeee-200-500</button
+	><button class="btn bg-themeee-200-600 text-themeee-950-50">bg-themeee-200-600</button><button
+		class="btn bg-themeee-200-700 text-themeee-950-50">bg-themeee-200-700</button
+	><button class="btn bg-themeee-200-800 text-themeee-950-50">bg-themeee-200-800</button><button
+		class="btn bg-themeee-200-900 text-themeee-950-50">bg-themeee-200-900</button
+	><button class="btn bg-themeee-200-950 text-themeee-950-50">bg-themeee-200-950</button><button
+		class="btn bg-themeee-300-50 text-themeee-950-950">bg-themeee-300-50</button
+	><button class="btn bg-themeee-300-100 text-themeee-950-950">bg-themeee-300-100</button><button
+		class="btn bg-themeee-300-200 text-themeee-950-950">bg-themeee-300-200</button
+	><button class="btn bg-themeee-300-300 text-themeee-950-950">bg-themeee-300-300</button><button
+		class="btn bg-themeee-300-400 text-themeee-950-950">bg-themeee-300-400</button
+	><button class="btn bg-themeee-300-500 text-themeee-950-950">bg-themeee-300-500</button><button
+		class="btn bg-themeee-300-600 text-themeee-950-50">bg-themeee-300-600</button
+	><button class="btn bg-themeee-300-700 text-themeee-950-50">bg-themeee-300-700</button><button
+		class="btn bg-themeee-300-800 text-themeee-950-50">bg-themeee-300-800</button
+	><button class="btn bg-themeee-300-900 text-themeee-950-50">bg-themeee-300-900</button><button
+		class="btn bg-themeee-300-950 text-themeee-950-50">bg-themeee-300-950</button
+	><button class="btn bg-themeee-400-50 text-themeee-950-950">bg-themeee-400-50</button><button
+		class="btn bg-themeee-400-100 text-themeee-950-950">bg-themeee-400-100</button
+	><button class="btn bg-themeee-400-200 text-themeee-950-950">bg-themeee-400-200</button><button
+		class="btn bg-themeee-400-300 text-themeee-950-950">bg-themeee-400-300</button
+	><button class="btn bg-themeee-400-400 text-themeee-950-950">bg-themeee-400-400</button><button
+		class="btn bg-themeee-400-500 text-themeee-950-950">bg-themeee-400-500</button
+	><button class="btn bg-themeee-400-600 text-themeee-950-50">bg-themeee-400-600</button><button
+		class="btn bg-themeee-400-700 text-themeee-950-50">bg-themeee-400-700</button
+	><button class="btn bg-themeee-400-800 text-themeee-950-50">bg-themeee-400-800</button><button
+		class="btn bg-themeee-400-900 text-themeee-950-50">bg-themeee-400-900</button
+	><button class="btn bg-themeee-400-950 text-themeee-950-50">bg-themeee-400-950</button><button
+		class="btn bg-themeee-500-50 text-themeee-950-950">bg-themeee-500-50</button
+	><button class="btn bg-themeee-500-100 text-themeee-950-950">bg-themeee-500-100</button><button
+		class="btn bg-themeee-500-200 text-themeee-950-950">bg-themeee-500-200</button
+	><button class="btn bg-themeee-500-300 text-themeee-950-950">bg-themeee-500-300</button><button
+		class="btn bg-themeee-500-400 text-themeee-950-950">bg-themeee-500-400</button
+	><button class="btn bg-themeee-500-500 text-themeee-950-950">bg-themeee-500-500</button><button
+		class="btn bg-themeee-500-600 text-themeee-950-50">bg-themeee-500-600</button
+	><button class="btn bg-themeee-500-700 text-themeee-950-50">bg-themeee-500-700</button><button
+		class="btn bg-themeee-500-800 text-themeee-950-50">bg-themeee-500-800</button
+	><button class="btn bg-themeee-500-900 text-themeee-950-50">bg-themeee-500-900</button><button
+		class="btn bg-themeee-500-950 text-themeee-950-50">bg-themeee-500-950</button
+	><button class="btn bg-themeee-600-50 text-themeee-50-950">bg-themeee-600-50</button><button
+		class="btn bg-themeee-600-100 text-themeee-50-950">bg-themeee-600-100</button
+	><button class="btn bg-themeee-600-200 text-themeee-50-950">bg-themeee-600-200</button><button
+		class="btn bg-themeee-600-300 text-themeee-50-950">bg-themeee-600-300</button
+	><button class="btn bg-themeee-600-400 text-themeee-50-950">bg-themeee-600-400</button><button
+		class="btn bg-themeee-600-500 text-themeee-50-950">bg-themeee-600-500</button
+	><button class="btn bg-themeee-600-600 text-themeee-50-50">bg-themeee-600-600</button><button
+		class="btn bg-themeee-600-700 text-themeee-50-50">bg-themeee-600-700</button
+	><button class="btn bg-themeee-600-800 text-themeee-50-50">bg-themeee-600-800</button><button
+		class="btn bg-themeee-600-900 text-themeee-50-50">bg-themeee-600-900</button
+	><button class="btn bg-themeee-600-950 text-themeee-50-50">bg-themeee-600-950</button><button
+		class="btn bg-themeee-700-50 text-themeee-50-950">bg-themeee-700-50</button
+	><button class="btn bg-themeee-700-100 text-themeee-50-950">bg-themeee-700-100</button><button
+		class="btn bg-themeee-700-200 text-themeee-50-950">bg-themeee-700-200</button
+	><button class="btn bg-themeee-700-300 text-themeee-50-950">bg-themeee-700-300</button><button
+		class="btn bg-themeee-700-400 text-themeee-50-950">bg-themeee-700-400</button
+	><button class="btn bg-themeee-700-500 text-themeee-50-950">bg-themeee-700-500</button><button
+		class="btn bg-themeee-700-600 text-themeee-50-50">bg-themeee-700-600</button
+	><button class="btn bg-themeee-700-700 text-themeee-50-50">bg-themeee-700-700</button><button
+		class="btn bg-themeee-700-800 text-themeee-50-50">bg-themeee-700-800</button
+	><button class="btn bg-themeee-700-900 text-themeee-50-50">bg-themeee-700-900</button><button
+		class="btn bg-themeee-700-950 text-themeee-50-50">bg-themeee-700-950</button
+	><button class="btn bg-themeee-800-50 text-themeee-50-950">bg-themeee-800-50</button><button
+		class="btn bg-themeee-800-100 text-themeee-50-950">bg-themeee-800-100</button
+	><button class="btn bg-themeee-800-200 text-themeee-50-950">bg-themeee-800-200</button><button
+		class="btn bg-themeee-800-300 text-themeee-50-950">bg-themeee-800-300</button
+	><button class="btn bg-themeee-800-400 text-themeee-50-950">bg-themeee-800-400</button><button
+		class="btn bg-themeee-800-500 text-themeee-50-950">bg-themeee-800-500</button
+	><button class="btn bg-themeee-800-600 text-themeee-50-50">bg-themeee-800-600</button><button
+		class="btn bg-themeee-800-700 text-themeee-50-50">bg-themeee-800-700</button
+	><button class="btn bg-themeee-800-800 text-themeee-50-50">bg-themeee-800-800</button><button
+		class="btn bg-themeee-800-900 text-themeee-50-50">bg-themeee-800-900</button
+	><button class="btn bg-themeee-800-950 text-themeee-50-50">bg-themeee-800-950</button><button
+		class="btn bg-themeee-900-50 text-themeee-50-950">bg-themeee-900-50</button
+	><button class="btn bg-themeee-900-100 text-themeee-50-950">bg-themeee-900-100</button><button
+		class="btn bg-themeee-900-200 text-themeee-50-950">bg-themeee-900-200</button
+	><button class="btn bg-themeee-900-300 text-themeee-50-950">bg-themeee-900-300</button><button
+		class="btn bg-themeee-900-400 text-themeee-50-950">bg-themeee-900-400</button
+	><button class="btn bg-themeee-900-500 text-themeee-50-950">bg-themeee-900-500</button><button
+		class="btn bg-themeee-900-600 text-themeee-50-50">bg-themeee-900-600</button
+	><button class="btn bg-themeee-900-700 text-themeee-50-50">bg-themeee-900-700</button><button
+		class="btn bg-themeee-900-800 text-themeee-50-50">bg-themeee-900-800</button
+	><button class="btn bg-themeee-900-900 text-themeee-50-50">bg-themeee-900-900</button><button
+		class="btn bg-themeee-900-950 text-themeee-50-50">bg-themeee-900-950</button
+	><button class="btn bg-themeee-950-50 text-themeee-50-950">bg-themeee-950-50</button><button
+		class="btn bg-themeee-950-100 text-themeee-50-950">bg-themeee-950-100</button
+	><button class="btn bg-themeee-950-200 text-themeee-50-950">bg-themeee-950-200</button><button
+		class="btn bg-themeee-950-300 text-themeee-50-950">bg-themeee-950-300</button
+	><button class="btn bg-themeee-950-400 text-themeee-50-950">bg-themeee-950-400</button><button
+		class="btn bg-themeee-950-500 text-themeee-50-950">bg-themeee-950-500</button
+	><button class="btn bg-themeee-950-600 text-themeee-50-50">bg-themeee-950-600</button><button
+		class="btn bg-themeee-950-700 text-themeee-50-50">bg-themeee-950-700</button
+	><button class="btn bg-themeee-950-800 text-themeee-50-50">bg-themeee-950-800</button><button
+		class="btn bg-themeee-950-900 text-themeee-50-50">bg-themeee-950-900</button
+	><button class="btn bg-themeee-950-950 text-themeee-50-50">bg-themeee-950-950</button><!---->
 	<button class="btn bg-primary-50-50 text-primary-950-950">bg-primary-50-50</button><button
 		class="btn bg-primary-50-100 text-primary-950-950">bg-primary-50-100</button
 	><button class="btn bg-primary-50-200 text-primary-950-950">bg-primary-50-200</button><button
@@ -435,127 +471,128 @@
 	><button class="btn bg-secondary-950-800 text-secondary-50-50">bg-secondary-950-800</button
 	><button class="btn bg-secondary-950-900 text-secondary-50-50">bg-secondary-950-900</button
 	><button class="btn bg-secondary-950-950 text-secondary-50-50">bg-secondary-950-950</button
-	><!----> <button class="btn bg-base-50-50 text-primary-950-950">bg-base-50-50</button><button
-		class="btn bg-base-50-100 text-primary-950-950">bg-base-50-100</button
-	><button class="btn bg-base-50-200 text-primary-950-950">bg-base-50-200</button><button
-		class="btn bg-base-50-300 text-primary-950-950">bg-base-50-300</button
-	><button class="btn bg-base-50-400 text-primary-950-950">bg-base-50-400</button><button
-		class="btn bg-base-50-500 text-primary-950-950">bg-base-50-500</button
-	><button class="btn bg-base-50-600 text-primary-950-50">bg-base-50-600</button><button
-		class="btn bg-base-50-700 text-primary-950-50">bg-base-50-700</button
-	><button class="btn bg-base-50-800 text-primary-950-50">bg-base-50-800</button><button
-		class="btn bg-base-50-900 text-primary-950-50">bg-base-50-900</button
-	><button class="btn bg-base-50-950 text-primary-950-50">bg-base-50-950</button><button
-		class="btn bg-base-100-50 text-primary-950-950">bg-base-100-50</button
-	><button class="btn bg-base-100-100 text-primary-950-950">bg-base-100-100</button><button
-		class="btn bg-base-100-200 text-primary-950-950">bg-base-100-200</button
-	><button class="btn bg-base-100-300 text-primary-950-950">bg-base-100-300</button><button
-		class="btn bg-base-100-400 text-primary-950-950">bg-base-100-400</button
-	><button class="btn bg-base-100-500 text-primary-950-950">bg-base-100-500</button><button
-		class="btn bg-base-100-600 text-primary-950-50">bg-base-100-600</button
-	><button class="btn bg-base-100-700 text-primary-950-50">bg-base-100-700</button><button
-		class="btn bg-base-100-800 text-primary-950-50">bg-base-100-800</button
-	><button class="btn bg-base-100-900 text-primary-950-50">bg-base-100-900</button><button
-		class="btn bg-base-100-950 text-primary-950-50">bg-base-100-950</button
-	><button class="btn bg-base-200-50 text-primary-950-950">bg-base-200-50</button><button
-		class="btn bg-base-200-100 text-primary-950-950">bg-base-200-100</button
-	><button class="btn bg-base-200-200 text-primary-950-950">bg-base-200-200</button><button
-		class="btn bg-base-200-300 text-primary-950-950">bg-base-200-300</button
-	><button class="btn bg-base-200-400 text-primary-950-950">bg-base-200-400</button><button
-		class="btn bg-base-200-500 text-primary-950-950">bg-base-200-500</button
-	><button class="btn bg-base-200-600 text-primary-950-50">bg-base-200-600</button><button
-		class="btn bg-base-200-700 text-primary-950-50">bg-base-200-700</button
-	><button class="btn bg-base-200-800 text-primary-950-50">bg-base-200-800</button><button
-		class="btn bg-base-200-900 text-primary-950-50">bg-base-200-900</button
-	><button class="btn bg-base-200-950 text-primary-950-50">bg-base-200-950</button><button
-		class="btn bg-base-300-50 text-primary-950-950">bg-base-300-50</button
-	><button class="btn bg-base-300-100 text-primary-950-950">bg-base-300-100</button><button
-		class="btn bg-base-300-200 text-primary-950-950">bg-base-300-200</button
-	><button class="btn bg-base-300-300 text-primary-950-950">bg-base-300-300</button><button
-		class="btn bg-base-300-400 text-primary-950-950">bg-base-300-400</button
-	><button class="btn bg-base-300-500 text-primary-950-950">bg-base-300-500</button><button
-		class="btn bg-base-300-600 text-primary-950-50">bg-base-300-600</button
-	><button class="btn bg-base-300-700 text-primary-950-50">bg-base-300-700</button><button
-		class="btn bg-base-300-800 text-primary-950-50">bg-base-300-800</button
-	><button class="btn bg-base-300-900 text-primary-950-50">bg-base-300-900</button><button
-		class="btn bg-base-300-950 text-primary-950-50">bg-base-300-950</button
-	><button class="btn bg-base-400-50 text-primary-950-950">bg-base-400-50</button><button
-		class="btn bg-base-400-100 text-primary-950-950">bg-base-400-100</button
-	><button class="btn bg-base-400-200 text-primary-950-950">bg-base-400-200</button><button
-		class="btn bg-base-400-300 text-primary-950-950">bg-base-400-300</button
-	><button class="btn bg-base-400-400 text-primary-950-950">bg-base-400-400</button><button
-		class="btn bg-base-400-500 text-primary-950-950">bg-base-400-500</button
-	><button class="btn bg-base-400-600 text-primary-950-50">bg-base-400-600</button><button
-		class="btn bg-base-400-700 text-primary-950-50">bg-base-400-700</button
-	><button class="btn bg-base-400-800 text-primary-950-50">bg-base-400-800</button><button
-		class="btn bg-base-400-900 text-primary-950-50">bg-base-400-900</button
-	><button class="btn bg-base-400-950 text-primary-950-50">bg-base-400-950</button><button
-		class="btn bg-base-500-50 text-primary-950-950">bg-base-500-50</button
-	><button class="btn bg-base-500-100 text-primary-950-950">bg-base-500-100</button><button
-		class="btn bg-base-500-200 text-primary-950-950">bg-base-500-200</button
-	><button class="btn bg-base-500-300 text-primary-950-950">bg-base-500-300</button><button
-		class="btn bg-base-500-400 text-primary-950-950">bg-base-500-400</button
-	><button class="btn bg-base-500-500 text-primary-950-950">bg-base-500-500</button><button
-		class="btn bg-base-500-600 text-primary-950-50">bg-base-500-600</button
-	><button class="btn bg-base-500-700 text-primary-950-50">bg-base-500-700</button><button
-		class="btn bg-base-500-800 text-primary-950-50">bg-base-500-800</button
-	><button class="btn bg-base-500-900 text-primary-950-50">bg-base-500-900</button><button
-		class="btn bg-base-500-950 text-primary-950-50">bg-base-500-950</button
-	><button class="btn bg-base-600-50 text-primary-50-950">bg-base-600-50</button><button
-		class="btn bg-base-600-100 text-primary-50-950">bg-base-600-100</button
-	><button class="btn bg-base-600-200 text-primary-50-950">bg-base-600-200</button><button
-		class="btn bg-base-600-300 text-primary-50-950">bg-base-600-300</button
-	><button class="btn bg-base-600-400 text-primary-50-950">bg-base-600-400</button><button
-		class="btn bg-base-600-500 text-primary-50-950">bg-base-600-500</button
-	><button class="btn bg-base-600-600 text-primary-50-50">bg-base-600-600</button><button
-		class="btn bg-base-600-700 text-primary-50-50">bg-base-600-700</button
-	><button class="btn bg-base-600-800 text-primary-50-50">bg-base-600-800</button><button
-		class="btn bg-base-600-900 text-primary-50-50">bg-base-600-900</button
-	><button class="btn bg-base-600-950 text-primary-50-50">bg-base-600-950</button><button
-		class="btn bg-base-700-50 text-primary-50-950">bg-base-700-50</button
-	><button class="btn bg-base-700-100 text-primary-50-950">bg-base-700-100</button><button
-		class="btn bg-base-700-200 text-primary-50-950">bg-base-700-200</button
-	><button class="btn bg-base-700-300 text-primary-50-950">bg-base-700-300</button><button
-		class="btn bg-base-700-400 text-primary-50-950">bg-base-700-400</button
-	><button class="btn bg-base-700-500 text-primary-50-950">bg-base-700-500</button><button
-		class="btn bg-base-700-600 text-primary-50-50">bg-base-700-600</button
-	><button class="btn bg-base-700-700 text-primary-50-50">bg-base-700-700</button><button
-		class="btn bg-base-700-800 text-primary-50-50">bg-base-700-800</button
-	><button class="btn bg-base-700-900 text-primary-50-50">bg-base-700-900</button><button
-		class="btn bg-base-700-950 text-primary-50-50">bg-base-700-950</button
-	><button class="btn bg-base-800-50 text-primary-50-950">bg-base-800-50</button><button
-		class="btn bg-base-800-100 text-primary-50-950">bg-base-800-100</button
-	><button class="btn bg-base-800-200 text-primary-50-950">bg-base-800-200</button><button
-		class="btn bg-base-800-300 text-primary-50-950">bg-base-800-300</button
-	><button class="btn bg-base-800-400 text-primary-50-950">bg-base-800-400</button><button
-		class="btn bg-base-800-500 text-primary-50-950">bg-base-800-500</button
-	><button class="btn bg-base-800-600 text-primary-50-50">bg-base-800-600</button><button
-		class="btn bg-base-800-700 text-primary-50-50">bg-base-800-700</button
-	><button class="btn bg-base-800-800 text-primary-50-50">bg-base-800-800</button><button
-		class="btn bg-base-800-900 text-primary-50-50">bg-base-800-900</button
-	><button class="btn bg-base-800-950 text-primary-50-50">bg-base-800-950</button><button
-		class="btn bg-base-900-50 text-primary-50-950">bg-base-900-50</button
-	><button class="btn bg-base-900-100 text-primary-50-950">bg-base-900-100</button><button
-		class="btn bg-base-900-200 text-primary-50-950">bg-base-900-200</button
-	><button class="btn bg-base-900-300 text-primary-50-950">bg-base-900-300</button><button
-		class="btn bg-base-900-400 text-primary-50-950">bg-base-900-400</button
-	><button class="btn bg-base-900-500 text-primary-50-950">bg-base-900-500</button><button
-		class="btn bg-base-900-600 text-primary-50-50">bg-base-900-600</button
-	><button class="btn bg-base-900-700 text-primary-50-50">bg-base-900-700</button><button
-		class="btn bg-base-900-800 text-primary-50-50">bg-base-900-800</button
-	><button class="btn bg-base-900-900 text-primary-50-50">bg-base-900-900</button><button
-		class="btn bg-base-900-950 text-primary-50-50">bg-base-900-950</button
-	><button class="btn bg-base-950-50 text-primary-50-950">bg-base-950-50</button><button
-		class="btn bg-base-950-100 text-primary-50-950">bg-base-950-100</button
-	><button class="btn bg-base-950-200 text-primary-50-950">bg-base-950-200</button><button
-		class="btn bg-base-950-300 text-primary-50-950">bg-base-950-300</button
-	><button class="btn bg-base-950-400 text-primary-50-950">bg-base-950-400</button><button
-		class="btn bg-base-950-500 text-primary-50-950">bg-base-950-500</button
-	><button class="btn bg-base-950-600 text-primary-50-50">bg-base-950-600</button><button
-		class="btn bg-base-950-700 text-primary-50-50">bg-base-950-700</button
-	><button class="btn bg-base-950-800 text-primary-50-50">bg-base-950-800</button><button
-		class="btn bg-base-950-900 text-primary-50-50">bg-base-950-900</button
-	><button class="btn bg-base-950-950 text-primary-50-50">bg-base-950-950</button>
+	><!---->
+	<button class="btn bg-themeee-50-50 text-primary-950-950">bg-themeee-50-50</button><button
+		class="btn bg-themeee-50-100 text-primary-950-950">bg-themeee-50-100</button
+	><button class="btn bg-themeee-50-200 text-primary-950-950">bg-themeee-50-200</button><button
+		class="btn bg-themeee-50-300 text-primary-950-950">bg-themeee-50-300</button
+	><button class="btn bg-themeee-50-400 text-primary-950-950">bg-themeee-50-400</button><button
+		class="btn bg-themeee-50-500 text-primary-950-950">bg-themeee-50-500</button
+	><button class="btn bg-themeee-50-600 text-primary-950-50">bg-themeee-50-600</button><button
+		class="btn bg-themeee-50-700 text-primary-950-50">bg-themeee-50-700</button
+	><button class="btn bg-themeee-50-800 text-primary-950-50">bg-themeee-50-800</button><button
+		class="btn bg-themeee-50-900 text-primary-950-50">bg-themeee-50-900</button
+	><button class="btn bg-themeee-50-950 text-primary-950-50">bg-themeee-50-950</button><button
+		class="btn bg-themeee-100-50 text-primary-950-950">bg-themeee-100-50</button
+	><button class="btn bg-themeee-100-100 text-primary-950-950">bg-themeee-100-100</button><button
+		class="btn bg-themeee-100-200 text-primary-950-950">bg-themeee-100-200</button
+	><button class="btn bg-themeee-100-300 text-primary-950-950">bg-themeee-100-300</button><button
+		class="btn bg-themeee-100-400 text-primary-950-950">bg-themeee-100-400</button
+	><button class="btn bg-themeee-100-500 text-primary-950-950">bg-themeee-100-500</button><button
+		class="btn bg-themeee-100-600 text-primary-950-50">bg-themeee-100-600</button
+	><button class="btn bg-themeee-100-700 text-primary-950-50">bg-themeee-100-700</button><button
+		class="btn bg-themeee-100-800 text-primary-950-50">bg-themeee-100-800</button
+	><button class="btn bg-themeee-100-900 text-primary-950-50">bg-themeee-100-900</button><button
+		class="btn bg-themeee-100-950 text-primary-950-50">bg-themeee-100-950</button
+	><button class="btn bg-themeee-200-50 text-primary-950-950">bg-themeee-200-50</button><button
+		class="btn bg-themeee-200-100 text-primary-950-950">bg-themeee-200-100</button
+	><button class="btn bg-themeee-200-200 text-primary-950-950">bg-themeee-200-200</button><button
+		class="btn bg-themeee-200-300 text-primary-950-950">bg-themeee-200-300</button
+	><button class="btn bg-themeee-200-400 text-primary-950-950">bg-themeee-200-400</button><button
+		class="btn bg-themeee-200-500 text-primary-950-950">bg-themeee-200-500</button
+	><button class="btn bg-themeee-200-600 text-primary-950-50">bg-themeee-200-600</button><button
+		class="btn bg-themeee-200-700 text-primary-950-50">bg-themeee-200-700</button
+	><button class="btn bg-themeee-200-800 text-primary-950-50">bg-themeee-200-800</button><button
+		class="btn bg-themeee-200-900 text-primary-950-50">bg-themeee-200-900</button
+	><button class="btn bg-themeee-200-950 text-primary-950-50">bg-themeee-200-950</button><button
+		class="btn bg-themeee-300-50 text-primary-950-950">bg-themeee-300-50</button
+	><button class="btn bg-themeee-300-100 text-primary-950-950">bg-themeee-300-100</button><button
+		class="btn bg-themeee-300-200 text-primary-950-950">bg-themeee-300-200</button
+	><button class="btn bg-themeee-300-300 text-primary-950-950">bg-themeee-300-300</button><button
+		class="btn bg-themeee-300-400 text-primary-950-950">bg-themeee-300-400</button
+	><button class="btn bg-themeee-300-500 text-primary-950-950">bg-themeee-300-500</button><button
+		class="btn bg-themeee-300-600 text-primary-950-50">bg-themeee-300-600</button
+	><button class="btn bg-themeee-300-700 text-primary-950-50">bg-themeee-300-700</button><button
+		class="btn bg-themeee-300-800 text-primary-950-50">bg-themeee-300-800</button
+	><button class="btn bg-themeee-300-900 text-primary-950-50">bg-themeee-300-900</button><button
+		class="btn bg-themeee-300-950 text-primary-950-50">bg-themeee-300-950</button
+	><button class="btn bg-themeee-400-50 text-primary-950-950">bg-themeee-400-50</button><button
+		class="btn bg-themeee-400-100 text-primary-950-950">bg-themeee-400-100</button
+	><button class="btn bg-themeee-400-200 text-primary-950-950">bg-themeee-400-200</button><button
+		class="btn bg-themeee-400-300 text-primary-950-950">bg-themeee-400-300</button
+	><button class="btn bg-themeee-400-400 text-primary-950-950">bg-themeee-400-400</button><button
+		class="btn bg-themeee-400-500 text-primary-950-950">bg-themeee-400-500</button
+	><button class="btn bg-themeee-400-600 text-primary-950-50">bg-themeee-400-600</button><button
+		class="btn bg-themeee-400-700 text-primary-950-50">bg-themeee-400-700</button
+	><button class="btn bg-themeee-400-800 text-primary-950-50">bg-themeee-400-800</button><button
+		class="btn bg-themeee-400-900 text-primary-950-50">bg-themeee-400-900</button
+	><button class="btn bg-themeee-400-950 text-primary-950-50">bg-themeee-400-950</button><button
+		class="btn bg-themeee-500-50 text-primary-950-950">bg-themeee-500-50</button
+	><button class="btn bg-themeee-500-100 text-primary-950-950">bg-themeee-500-100</button><button
+		class="btn bg-themeee-500-200 text-primary-950-950">bg-themeee-500-200</button
+	><button class="btn bg-themeee-500-300 text-primary-950-950">bg-themeee-500-300</button><button
+		class="btn bg-themeee-500-400 text-primary-950-950">bg-themeee-500-400</button
+	><button class="btn bg-themeee-500-500 text-primary-950-950">bg-themeee-500-500</button><button
+		class="btn bg-themeee-500-600 text-primary-950-50">bg-themeee-500-600</button
+	><button class="btn bg-themeee-500-700 text-primary-950-50">bg-themeee-500-700</button><button
+		class="btn bg-themeee-500-800 text-primary-950-50">bg-themeee-500-800</button
+	><button class="btn bg-themeee-500-900 text-primary-950-50">bg-themeee-500-900</button><button
+		class="btn bg-themeee-500-950 text-primary-950-50">bg-themeee-500-950</button
+	><button class="btn bg-themeee-600-50 text-primary-50-950">bg-themeee-600-50</button><button
+		class="btn bg-themeee-600-100 text-primary-50-950">bg-themeee-600-100</button
+	><button class="btn bg-themeee-600-200 text-primary-50-950">bg-themeee-600-200</button><button
+		class="btn bg-themeee-600-300 text-primary-50-950">bg-themeee-600-300</button
+	><button class="btn bg-themeee-600-400 text-primary-50-950">bg-themeee-600-400</button><button
+		class="btn bg-themeee-600-500 text-primary-50-950">bg-themeee-600-500</button
+	><button class="btn bg-themeee-600-600 text-primary-50-50">bg-themeee-600-600</button><button
+		class="btn bg-themeee-600-700 text-primary-50-50">bg-themeee-600-700</button
+	><button class="btn bg-themeee-600-800 text-primary-50-50">bg-themeee-600-800</button><button
+		class="btn bg-themeee-600-900 text-primary-50-50">bg-themeee-600-900</button
+	><button class="btn bg-themeee-600-950 text-primary-50-50">bg-themeee-600-950</button><button
+		class="btn bg-themeee-700-50 text-primary-50-950">bg-themeee-700-50</button
+	><button class="btn bg-themeee-700-100 text-primary-50-950">bg-themeee-700-100</button><button
+		class="btn bg-themeee-700-200 text-primary-50-950">bg-themeee-700-200</button
+	><button class="btn bg-themeee-700-300 text-primary-50-950">bg-themeee-700-300</button><button
+		class="btn bg-themeee-700-400 text-primary-50-950">bg-themeee-700-400</button
+	><button class="btn bg-themeee-700-500 text-primary-50-950">bg-themeee-700-500</button><button
+		class="btn bg-themeee-700-600 text-primary-50-50">bg-themeee-700-600</button
+	><button class="btn bg-themeee-700-700 text-primary-50-50">bg-themeee-700-700</button><button
+		class="btn bg-themeee-700-800 text-primary-50-50">bg-themeee-700-800</button
+	><button class="btn bg-themeee-700-900 text-primary-50-50">bg-themeee-700-900</button><button
+		class="btn bg-themeee-700-950 text-primary-50-50">bg-themeee-700-950</button
+	><button class="btn bg-themeee-800-50 text-primary-50-950">bg-themeee-800-50</button><button
+		class="btn bg-themeee-800-100 text-primary-50-950">bg-themeee-800-100</button
+	><button class="btn bg-themeee-800-200 text-primary-50-950">bg-themeee-800-200</button><button
+		class="btn bg-themeee-800-300 text-primary-50-950">bg-themeee-800-300</button
+	><button class="btn bg-themeee-800-400 text-primary-50-950">bg-themeee-800-400</button><button
+		class="btn bg-themeee-800-500 text-primary-50-950">bg-themeee-800-500</button
+	><button class="btn bg-themeee-800-600 text-primary-50-50">bg-themeee-800-600</button><button
+		class="btn bg-themeee-800-700 text-primary-50-50">bg-themeee-800-700</button
+	><button class="btn bg-themeee-800-800 text-primary-50-50">bg-themeee-800-800</button><button
+		class="btn bg-themeee-800-900 text-primary-50-50">bg-themeee-800-900</button
+	><button class="btn bg-themeee-800-950 text-primary-50-50">bg-themeee-800-950</button><button
+		class="btn bg-themeee-900-50 text-primary-50-950">bg-themeee-900-50</button
+	><button class="btn bg-themeee-900-100 text-primary-50-950">bg-themeee-900-100</button><button
+		class="btn bg-themeee-900-200 text-primary-50-950">bg-themeee-900-200</button
+	><button class="btn bg-themeee-900-300 text-primary-50-950">bg-themeee-900-300</button><button
+		class="btn bg-themeee-900-400 text-primary-50-950">bg-themeee-900-400</button
+	><button class="btn bg-themeee-900-500 text-primary-50-950">bg-themeee-900-500</button><button
+		class="btn bg-themeee-900-600 text-primary-50-50">bg-themeee-900-600</button
+	><button class="btn bg-themeee-900-700 text-primary-50-50">bg-themeee-900-700</button><button
+		class="btn bg-themeee-900-800 text-primary-50-50">bg-themeee-900-800</button
+	><button class="btn bg-themeee-900-900 text-primary-50-50">bg-themeee-900-900</button><button
+		class="btn bg-themeee-900-950 text-primary-50-50">bg-themeee-900-950</button
+	><button class="btn bg-themeee-950-50 text-primary-50-950">bg-themeee-950-50</button><button
+		class="btn bg-themeee-950-100 text-primary-50-950">bg-themeee-950-100</button
+	><button class="btn bg-themeee-950-200 text-primary-50-950">bg-themeee-950-200</button><button
+		class="btn bg-themeee-950-300 text-primary-50-950">bg-themeee-950-300</button
+	><button class="btn bg-themeee-950-400 text-primary-50-950">bg-themeee-950-400</button><button
+		class="btn bg-themeee-950-500 text-primary-50-950">bg-themeee-950-500</button
+	><button class="btn bg-themeee-950-600 text-primary-50-50">bg-themeee-950-600</button><button
+		class="btn bg-themeee-950-700 text-primary-50-50">bg-themeee-950-700</button
+	><button class="btn bg-themeee-950-800 text-primary-50-50">bg-themeee-950-800</button><button
+		class="btn bg-themeee-950-900 text-primary-50-50">bg-themeee-950-900</button
+	><button class="btn bg-themeee-950-950 text-primary-50-50">bg-themeee-950-950</button>
 	<button class="btn bg-primary-50-50 text-primary-950-950">bg-primary-50-50</button><button
 		class="btn bg-primary-50-100 text-primary-950-950">bg-primary-50-100</button
 	><button class="btn bg-primary-50-200 text-primary-950-950">bg-primary-50-200</button><button

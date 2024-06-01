@@ -1,0 +1,5 @@
+@theme {
+	/* fonts */
+	--font-family-base: var(--theme-font-base, var(--theme-font, var(--font-sans)));
+	--font-family-headings: var(--theme-font-headings, var(--theme-font, var(--font-sans)));
+}

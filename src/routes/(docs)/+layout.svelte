@@ -17,7 +17,7 @@
 	<div class="relative {navClosed ? '' : 'container'} min-h-dvh w-full">
 		<Header class="sticky top-4 z-20 rounded-xl">
 			{#snippet left()}
-				<Button onclick={() => (navClosed = !navClosed)}>{navClosed ? 'Open' : 'Close'} Nav</Button>
+				<Button outline primary onclick={() => (navClosed = !navClosed)}>{navClosed ? 'Open' : 'Close'} Nav</Button>
 			{/snippet}
 			{#snippet center()}
 				<ThemeColor />

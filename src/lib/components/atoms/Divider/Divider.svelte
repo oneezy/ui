@@ -8,6 +8,7 @@
 		shape = 'waves',
 		top = false,
 		bottom = false,
+		outside = false,
 		flip = false,
 		invert = false,
 		reverse = false,
@@ -18,12 +19,14 @@
 	let containerClass = $state('w-full pointer-events-none overflow-hidden z-10');
 
 	let containerStyle = `
-		${top ? 'position: absolute; bottom: calc(100% - 1px); left: 0; right: 0;' : ''}
-		${bottom ? 'position: absolute; top: calc(100% - 1px); left: 0; right: 0;' : ''}
+		${top ? 'position: absolute; top: -1px; left: 0; right: 0;' : ''}
+		${top && outside ? 'position: absolute; bottom: calc(100% - 1px); left: 0; right: 0;' : ''}
+		${bottom ? 'position: absolute; bottom: -1px; left: 0; right: 0;' : ''}
+		${bottom && outside ? 'position: absolute; top: calc(100% - 1px); left: 0; right: 0;' : ''}
 	`;
 
 	let svgClass = $state('');
-	svgClass += fill ? ` ${fill}` : '';
+	svgClass += fill ? ` ${fill}` : 'fill-';
 </script>
 
 <!-- SVG Shapes -->
@@ -67,12 +70,12 @@
 {/snippet}
 
 <!-- SVG -->
-{#snippet svg({ shape, height, width, flip, invert, reverse })}
-	<div {...props} class={containerClass} style={containerStyle}>
+{#snippet divider({ shape, height, width, flip, invert, reverse })}
+	<div {...props} class="{containerClass} {props.class}" style={containerStyle}>
 		<svg
 			class="{svgClass} {flip ? 'rotate-180' : ''} {invert ? 'scale-y-[-1]' : ''} {reverse
 				? 'scale-x-[-1]'
-				: ''} {props.class}"
+				: ''}"
 			viewBox="0 0 1200 120"
 			preserveAspectRatio="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -87,15 +90,15 @@
 {#if children}
 	<section {...props}>
 		<!-- SVG Divider (top) -->
-		{@render svg({ shape, height, width, flip: false, invert, reverse })}
+		{@render divider({ shape, height, width, flip: false, invert, reverse })}
 		<!-- Children -->
 		<div class="{bg} {color}">
 			{@render children()}
 		</div>
 		<!-- SVG Divider (bottom) -->
-		{@render svg({ shape, height, width, flip: true, invert, reverse })}
+		{@render divider({ shape, height, width, flip: true, invert, reverse })}
 	</section>
 {:else}
 	<!-- SVG Divider -->
-	{@render svg({ shape, height, width, flip: false, invert, reverse })}
+	{@render divider({ shape, height, width, flip: false, invert, reverse })}
 {/if}

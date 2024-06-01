@@ -1,9 +1,9 @@
 <script>
 	import { Section, Container, Divider, Content } from '$lib';
 
-	let bg = 'bg-primary-100';
-	let fill = 'fill-primary-100';
-	let color = 'text-base';
+	let bg = 'bg-primary-200-700';
+	let fill = 'fill-primary-200-700';
+	let color = 'text-theme-950-50';
 	let height = '320px';
 	let width = '150%';
 	let shape = 'tilt';

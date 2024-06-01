@@ -14,10 +14,7 @@
 </script>
 
 <ModeWatcher />
-<Button
-	onclick={handleModeChange}
-	class="place-items-center rounded-full bg-transparent py-4 text-2xl text-blue-500 hover:bg-transparent"
->
+<Button ghost onclick={handleModeChange}>
 	{#if $mode === 'light'}
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 			><path

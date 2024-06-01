@@ -1,57 +1,90 @@
 <script>
-	// Define the props for the button component
 	let {
 		icon = null,
 		type = 'button',
 		href = null,
 		disabled = false,
-		primary,
-		secondary,
+		primary = false,
+		secondary = false,
+		tonal = false,
+		outline = false,
+		ghost = false,
+		left = false,
+		right = false,
 		children,
 		...props
 	} = $props();
 
-	// Determine the Tailwind classes based on the variant
-	let defaultClass = $state('text-white focus:outline-none');
-	let buttonClass = $state('px-4 py-2 font-bold rounded');
-	let iconClass = $state('p-4 block text-white aspect-square rounded-full');
+	let baseClass = 'btn';
+	let classNames = [baseClass];
 
-	let primaryClass = ` preset-filled-primary hover:bg-primary-600-400`;
-	let secondaryClass = ` bg-secondary-400-600 hover:bg-secondary-600-400`;
-	let disabledClass = ` opacity-50 cursor-not-allowed pointer-events-none`;
-
-	if (primary) {
-		defaultClass += `${primaryClass}`;
+	if (primary && outline) {
+		classNames.push('preset-outline-primary');
+	} else if (secondary && outline) {
+		classNames.push('preset-outline-secondary');
+	} else if (outline) {
+		classNames.push('preset-outline');
+	} else if (primary && tonal) {
+		classNames.push('preset-tonal-primary');
+	} else if (secondary && tonal) {
+		classNames.push('preset-tonal-secondary');
+	} else if (tonal) {
+		classNames.push('preset-tonal');
+	} else if (primary && ghost) {
+		classNames.push('preset-ghost-primary');
+	} else if (secondary && ghost) {
+		classNames.push('preset-ghost-secondary');
+	} else if (ghost) {
+		classNames.push('preset-ghost');
+	} else if (primary) {
+		classNames.push('preset-filled-primary');
 	} else if (secondary) {
-		defaultClass += `${secondaryClass}`;
+		classNames.push('preset-filled-secondary');
 	} else {
-		defaultClass += `${primaryClass}`;
+		classNames.push('preset-filled');
 	}
 
 	if (disabled) {
-		defaultClass += ' opacity-50 cursor-not-allowed';
+		classNames.push('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
 	}
+
+	let iconPositionClass = '';
+
+	if (icon) {
+		iconPositionClass = left ? 'flex-row-reverse' : 'flex-row';
+	}
+
+	const finalClass = `${classNames.join(' ')} ${iconPositionClass}`;
 </script>
 
-<!-- The button element with dynamic classes and props -->
 {#if href}
-	<a
-		{...props}
-		{href}
-		{icon}
-		class="{icon ? iconClass : buttonClass} {defaultClass} {props.class}"
-		{disabled}
-	>
+	<a {...props} {href} class="@container {finalClass} {props.class}" aria-disabled={disabled}>
 		{@render children()}
 	</a>
 {:else}
-	<button
-		{...props}
-		{type}
-		{icon}
-		class="{icon ? iconClass : buttonClass} {defaultClass} {props.class}"
-		{disabled}
-	>
+	<button {...props} {type} class="@container {finalClass} {props.class}" {disabled}>
 		{@render children()}
 	</button>
 {/if}
+
+<style>
+	/* 	
+	:global(.btn:has(svg)) {
+		background: lime;
+	}
+	:global(.btn:has(*)) {
+		background: lightblue;
+	}
+	:global(.btn:has(svg + *)) {
+		background: red;
+	}
+	:global(.btn:has(* + svg)) {
+		background: yellow;
+	}
+	:global(.btn:has(svg + * + svg)) {
+		background: blue;
+	}
+	:global(.btn:has(* + svg + *)) {
+		background: hotpink;
+	} */
+</style>

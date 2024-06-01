@@ -1,40 +1,10 @@
 <script>
 	/* Props
 	 *************************/
-	let {children = null, id = null, state = null, ...props} = $props();
-
-	/* Private Variables
-	 *************************/
-	let _default = `relative w-full`;
-
-	// State
-	let _normal = `text-black dark:text-white`;
-	let _active = `active section--active`;
-	let _disabled = `opacity-50 cursor-not-allowed`;
-	let _loading = ``;
+	let { children = null, id = null, ...props } = $props();
 </script>
 
-<section
-	{id}
-	{...props}
-	class="{_default}
-
-  {/* State
-	 *************************/
-	state == 'active'
-		? _active
-		: state == 'disabled'
-			? _disabled
-			: state == 'loading'
-				? _loading
-				: state == 'normal'
-					? _normal
-					: _normal} 
-  
-  {/* Classes
-	 *************************/
-	props.class}"
->
+<section {...props} {id} class={props.class}>
 	{#snippet content()}
 		Section
 	{/snippet}
