@@ -15,7 +15,7 @@
 		...props
 	} = $props();
 
-	let baseClass = 'btn';
+	let baseClass = 'rounded-base flex items-center justify-between border-2 font-medium;';
 	let classNames = [baseClass];
 
 	if (primary && outline) {
@@ -54,16 +54,30 @@
 		iconPositionClass = left ? 'flex-row-reverse' : 'flex-row';
 	}
 
+	// const finalClass = `${classNames.join(' ')} ${iconPositionClass} ${icon ? 'p-3' : 'px-6 py-3'}`;
 	const finalClass = `${classNames.join(' ')} ${iconPositionClass}`;
 </script>
 
 {#if href}
-	<a {...props} {href} class="@container {finalClass} {props.class}" aria-disabled={disabled}>
+	<a {...props} {href} class="{finalClass} {props.class}" aria-disabled={disabled}>
 		{@render children()}
 	</a>
 {:else}
-	<button {...props} {type} class="@container {finalClass} {props.class}" {disabled}>
-		{@render children()}
+	<button
+		{...props}
+		{type}
+		class="{finalClass} has-[*:not(span)>svg:only-child]:p-3 {props.class}"
+		{disabled}
+	>
+		{#if icon}
+			{@render children()}
+		{:else}
+			<span
+				class="flex w-full items-center gap-2 py-2 px-5 has-[svg+svg]:justify-start has-[svg+svg:last-child]:[&>*:last-child]:ml-auto"
+			>
+				{@render children()}
+			</span>
+		{/if}
 	</button>
 {/if}
 

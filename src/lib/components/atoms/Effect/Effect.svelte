@@ -1,5 +1,6 @@
 <script>
 	let {
+		glass,
 		gradient,
 		linear = '135deg',
 		radial = false,

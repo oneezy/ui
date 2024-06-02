@@ -1,7 +1,8 @@
-@layer theme, base, presets, components, utilities;
+@layer theme, base, daisy, presets, components, utilities;
 
 @import 'tailwindcss';
 
+/* @import './css/test/full.css' layer(daisy); */
 @import './css/colors/colors.css' layer(base);
 @import './css/colors/pairings.css' layer(base);
 @import './css/typography/fonts.css' layer(base);
@@ -123,6 +124,11 @@
 	.preset-ghost-secondary {
 		@apply text-secondary-500;
 	}
+
+	/* glass */
+	.preset-ghost {
+		@apply text-themeee-950-50;
+	}
 }
 
 /* 3. Components
@@ -134,9 +140,9 @@
 	}
 
 	/* buttons */
-	.btn {
+	/* .btn {
 		@apply rounded-base flex items-center justify-between border-2 font-medium;
-	}
+	} */
 	/* 
 	.btn:has(svg:last-child) {
 		@apply w-auto p-2;
@@ -147,10 +153,10 @@
 	} */
 
 	/* cards */
-	.card {
+	/* .card {
 		@apply rounded-2xl p-4;
 	}
 	.card-primary {
 		@apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100;
-	}
+	} */
 }

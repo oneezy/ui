@@ -25,7 +25,7 @@
 {/snippet}
 <Button>text</Button>
 
-<Button>
+<Button secondary icon>
 	<IconAirplane />
 </Button>
 
@@ -45,7 +45,7 @@
 	text
 </Button>
 
-<Button>
+<Button class="w-full">
 	<IconAirplane />
 	text
 	<IconAirplane />
