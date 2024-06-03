@@ -6,6 +6,9 @@
 		radial = false,
 		repeating = false,
 		conic = false,
+		back = false,
+		front = false,
+		animate = false,
 		...props
 	} = $props();
 
@@ -25,7 +28,7 @@
 </script>
 
 <div
-	class="effect absolute inset-0 z-10 {props.class}"
+	class="effect absolute inset-0 pointer-events-none {animate ? 'animate' : ' '} {back ? '-z-10' : front}  {props.class}"
 	style="background-image: {gradientStyle};"
 ></div>
 
@@ -34,5 +37,15 @@
 		--to: var(--color-theme-primary, rgba(255, 0, 0, 0.5));
 		--via: trnsparent;
 		--from: var(--color-theme-secondary, rgba(0, 0, 255, 0.5));
+	}
+
+	.animate {
+		animation: gradientAnimation 5s linear infinite;
+		background-size: 200% 100%;
+	}
+
+	@keyframes gradientAnimation {
+		0% { background-position: 100% 0; }
+		100% { background-position: -100% 0; }
 	}
 </style>

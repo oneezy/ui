@@ -23,6 +23,13 @@
 	:root {
 		color-scheme: light dark;
 
+		/* colors */
+		--theme-color: var(--color-gray-500);
+		--theme-color-neutral: var(--color-gray-500);
+		--theme-color-primary: var(--color-blue-500);
+		--theme-color-secondary: var(--color-rose-500);
+		--theme-color-accent: var(--color-green-500);
+
 		/* fonts */
 		--theme-font: 'Comic Sans MS';
 		--theme-font-base: var(--font-family-sans);
@@ -31,25 +38,25 @@
 		/* font size */
 		--theme-scale: 1;
 
-		/* colors */
-		--theme-color: var(--color-gray-500);
-		--theme-color-theme: var(--color-gray-500);
-		--theme-color-primary: var(--color-blue-500);
-		--theme-color-secondary: var(--color-rose-500);
-
 		/* radius */
 		--theme-corners: 9999px;
 	}
 
 	[data-theme='blue'] {
-		--theme-color-theme: var(--color-slate-500); /* slate */
+		/* colors */
+		--theme-color: var(--color-slate-500);
+		--theme-color-neutral: var(--color-slate-500); /* slate */
 		--theme-color-primary: var(--color-sky-500);
 		--theme-color-secondary: var(--color-yellow-500);
+		--theme-color-accent: var(--color-lime-500);
 	}
 	[data-theme='red'] {
-		--theme-color-theme: var(--color-slate-500); /* stone */
+		/* colors */
+		--theme-color: var(--color-stone-500); /* stone */
+		--theme-color-neutral: var(--color-stone-500); /* stone */
 		--theme-color-primary: var(--color-pink-600);
 		--theme-color-secondary: var(--color-purple-700);
+		--theme-color-accent: var(--color-indigo-500);
 	}
 
 	html {
@@ -65,7 +72,7 @@
 	}
 
 	body {
-		@apply bg-themeee-50-950 text-themeee-950-50 font-base overflow-x-hidden text-base;
+		@apply bg-neutral-50-950 text-neutral-950-50 font-base overflow-x-hidden text-base;
 	}
 
 	h1,
@@ -83,40 +90,67 @@
 @layer presets {
 	/* filled */
 	.preset-filled {
-		@apply bg-themeee-500-500 text-themeee-50-50 border-themeee-500-500;
+		@apply bg-neutral-200-800 text-neutral-950-50;
+	}
+	.preset-filled-neutral {
+		@apply bg-neutral-900-100 text-neutral-50-950;
 	}
 	.preset-filled-primary {
-		@apply bg-primary-500-500 text-primary-50-50 border-primary-500-500;
+		@apply bg-primary-500-500 text-primary-50-50;
 	}
 	.preset-filled-secondary {
-		@apply bg-secondary-500-500 text-secondary-50-50 border-secondary-500-500;
+		@apply bg-secondary-500-500 text-secondary-50-50;
+	}
+	.preset-filled-accent {
+		@apply bg-accent-500-500 text-accent-50-50;
 	}
 
 	/* tonal */
 	.preset-tonal {
-		@apply bg-themeee-200-800 text-themeee-800-200 border-themeee-200-800;
+		@apply bg-neutral-200-800 text-neutral-800-200;
 	}
 	.preset-tonal-primary {
-		@apply bg-primary-200-800 text-primary-800-200 border-primary-200-800;
+		@apply bg-primary-200-800 text-primary-800-200;
 	}
 	.preset-tonal-secondary {
-		@apply bg-secondary-200-800 text-secondary-800-200 border-secondary-200-800;
+		@apply bg-secondary-200-800 text-secondary-800-200;
 	}
 
 	/* outline */
 	.preset-outline {
-		@apply bg-themeee-50-950 text-themeee-950-50 border-themeee-950-50;
+		@apply text-neutral-950-50 border-neutral-900-100 border-2;
+		&:is(.btn:hover, .btn:active) {
+			@apply bg-neutral-900-100 text-neutral-50-950;
+		}
+	}
+	.preset-outline-neutral {
+		@apply text-neutral-950-50 border-neutral-950-50 border-2;
+		&:is(.btn:hover, .btn:active) {
+			@apply bg-neutral-900-100 text-neutral-50-950;
+		}
 	}
 	.preset-outline-primary {
-		@apply bg-primary-50-950 text-primary-950-50 border-primary-500-500;
+		@apply text-primary border-primary border-2;
+		&:is(.btn:hover, .btn:active) {
+			@apply bg-primary text-primary-50-50;
+		}
 	}
 	.preset-outline-secondary {
-		@apply bg-secondary-50-950 text-secondary-950-50 border-secondary-500-500;
+		@apply text-secondary border-secondary border-2;
+		&:is(.btn:hover, .btn:active) {
+			@apply bg-secondary text-secondary-50-50;
+		}
+	}
+	.preset-outline-accent {
+		@apply text-accent border-accent border-2;
+		&:is(.btn:hover, .btn:active) {
+			@apply bg-accent text-accent-50-50;
+		}
 	}
 
 	/* ghost */
 	.preset-ghost {
-		@apply text-themeee-950-50;
+		@apply text-neutral-950-50;
 	}
 	.preset-ghost-primary {
 		@apply text-primary-500;
@@ -126,8 +160,17 @@
 	}
 
 	/* glass */
-	.preset-ghost {
-		@apply text-themeee-950-50;
+	.preset-glass {
+		@apply rounded-base text-neutral-950-950/90 isolate border-2 border-white/25 bg-white/50 ring-1 shadow-lg ring-black/5 backdrop-blur-2xl;
+		&:is(.btn:hover, .btn:active) {
+			@apply text-neutral-950-950/100 border-white/50 bg-white/50;
+		}
+	}
+	.preset-glass-invert {
+		@apply text-neutral-50-50/90 isolate border-2 border-black/25 bg-black/70 ring-1 shadow-lg ring-white/5 backdrop-blur-2xl;
+		&:is(.btn:hover, .btn:active) {
+			@apply text-neutral-50-50/100 border-black/80 bg-black/50;
+		}
 	}
 }
 
@@ -140,22 +183,67 @@
 	}
 
 	/* buttons */
-	/* .btn {
-		@apply rounded-base flex items-center justify-between border-2 font-medium;
-	} */
-	/* 
-	.btn:has(svg:last-child) {
-		@apply w-auto p-2;
-	}
+	.btn {
+		@apply rounded-base inline-flex cursor-pointer items-center justify-center font-medium;
 
-	.btn:has(*) {
-		@apply w-56;
-	} */
+		&:not(.btn-icon) {
+			@apply py-3 px-5 text-base;
+
+			&:is(.btn-xs) {
+				@apply py-1.5 px-2.5 text-xs;
+			}
+			&:is(.btn-sm) {
+				@apply py-2 px-4 text-sm;
+			}
+			&:is(.btn-md) {
+				@apply py-3 px-5 text-base;
+			}
+			&:is(.btn-lg) {
+				@apply py-4 px-8 text-xl;
+			}
+			&:is(.btn-xl) {
+				@apply py-5 px-10 text-2xl;
+			}
+		}
+		&:is(.btn-icon) {
+			@apply size-10 text-base;
+
+			&:is(.btn-xs) {
+				@apply size-6 text-xs;
+			}
+			&:is(.btn-sm) {
+				@apply size-8 text-sm;
+			}
+			&:is(.btn-md) {
+				@apply size-10 text-base;
+			}
+			&:is(.btn-lg) {
+				@apply size-12 text-lg;
+			}
+			&:is(.btn-xl) {
+				@apply size-14 text-xl;
+			}
+		}
+	}
+	.btn-container {
+		@apply flex w-full items-center gap-2;
+
+		&:has(svg + svg) {
+			@apply justify-start;
+		}
+		&:has(svg + svg:last-child) {
+			@apply justify-start;
+			& > *:last-child {
+				@apply ml-auto;
+			}
+		}
+	}
 
 	/* cards */
-	/* .card {
-		@apply rounded-2xl p-4;
+	.card {
+		@apply rounded-lg p-1;
 	}
+	/* 
 	.card-primary {
 		@apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100;
 	} */

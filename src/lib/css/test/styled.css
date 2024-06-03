@@ -1579,6 +1579,7 @@ input.tab:checked + .tab-content,
     animation: button-pop 0s ease-out;
     transform: scale(var(--btn-focus-scale, 0.97));
   }
+
   /* default btn */
   .btn {
   --tw-text-opacity: 1;
@@ -1642,10 +1643,10 @@ input.tab:checked + .tab-content,
     }
       }
   .btn:focus-visible {
-  outline-style: solid;
-  outline-width: 2px;
-  outline-offset: 2px
-}
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 2px
+  }
   /* brand colors */
   .btn-primary {
   --tw-text-opacity: 1;

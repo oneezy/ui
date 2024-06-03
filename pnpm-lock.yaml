@@ -21,6 +21,12 @@ importers:
       '@iconify-json/bi':
         specifier: ^1.1.23
         version: 1.1.23
+      '@iconify-json/hugeicons':
+        specifier: ^1.1.0
+        version: 1.1.0
+      '@iconify-json/material-symbols':
+        specifier: ^1.1.80
+        version: 1.1.80
       '@iconify-json/solar':
         specifier: ^1.1.9
         version: 1.1.9
@@ -50,13 +56,13 @@ importers:
         version: 4.0.0-alpha.15(vite@5.2.12(lightningcss@1.25.1))
       prettier:
         specifier: ^3.2.5
-        version: 3.2.5
+        version: 3.3.0
       prettier-plugin-svelte:
         specifier: ^3.2.3
-        version: 3.2.3(prettier@3.2.5)(svelte@5.0.0-next.148)
+        version: 3.2.3(prettier@3.3.0)(svelte@5.0.0-next.148)
       prettier-plugin-tailwindcss:
         specifier: ^0.5.14
-        version: 0.5.14(prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@5.0.0-next.148))(prettier@3.2.5)
+        version: 0.5.14(prettier-plugin-svelte@3.2.3(prettier@3.3.0)(svelte@5.0.0-next.148))(prettier@3.3.0)
       publint:
         specifier: ^0.1.16
         version: 0.1.16
@@ -237,6 +243,12 @@ packages:
 
   '@iconify-json/bi@1.1.23':
     resolution: {integrity: sha512-1te+g9ZzI+PU1Lv6Xerd3XPXf4DE6g3TvDL2buIopTAfrauPHyXCHPFQMrzoQVNrVPCpN3rv3vBtJMPyBwJ9IA==}
+
+  '@iconify-json/hugeicons@1.1.0':
+    resolution: {integrity: sha512-MzzShBJQsOB92kzPMBe2dI35m0BrR7Z7yEQ0Al84ULQ46PRAAu+RBkqmTzqY+T2uBB1PeGe8sPs+8lGRXClGjg==}
+
+  '@iconify-json/material-symbols@1.1.80':
+    resolution: {integrity: sha512-JrDMmWeHxFFMp3BBSsjvDvSiYzJ0qdYmHAQYWY/L5fxVZcIoeoQvtQR0wM1iJN4UDIsnHwbpJQ/sqZ/cvph6sw==}
 
   '@iconify-json/solar@1.1.9':
     resolution: {integrity: sha512-BcWzZqA02BiQduYizqU/J4v4RNs0MkjZUGpMbejpozH8YQSt3+S/LfV6zfVRonx/2DhXTVSqiLa1abDRAZtojQ==}
@@ -552,8 +564,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001625:
-    resolution: {integrity: sha512-4KE9N2gcRH+HQhpeiRZXd+1niLB/XNLAhSy4z7fI8EzcbcPoAqjNInxVHTiTwWfTIV4w096XG8OtCOCQQKPv3w==}
+  caniuse-lite@1.0.30001626:
+    resolution: {integrity: sha512-JRW7kAH8PFJzoPCJhLSHgDgKg5348hsQ68aqb+slnzuB5QFERv846oA/mRChmlLAOdEDeOkRn3ynb1gSFnjt3w==}
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -1044,8 +1056,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  prettier@3.3.0:
+    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1399,6 +1411,14 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/hugeicons@1.1.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols@1.1.80':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/solar@1.1.9':
     dependencies:
       '@iconify/types': 2.0.0
@@ -1675,7 +1695,7 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001625
+      caniuse-lite: 1.0.30001626
       electron-to-chromium: 1.4.788
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
@@ -1688,7 +1708,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001625: {}
+  caniuse-lite@1.0.30001626: {}
 
   chokidar@3.6.0:
     dependencies:
@@ -2099,18 +2119,18 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@5.0.0-next.148):
+  prettier-plugin-svelte@3.2.3(prettier@3.3.0)(svelte@5.0.0-next.148):
     dependencies:
-      prettier: 3.2.5
+      prettier: 3.3.0
       svelte: 5.0.0-next.148
 
-  prettier-plugin-tailwindcss@0.5.14(prettier-plugin-svelte@3.2.3(prettier@3.2.5)(svelte@5.0.0-next.148))(prettier@3.2.5):
+  prettier-plugin-tailwindcss@0.5.14(prettier-plugin-svelte@3.2.3(prettier@3.3.0)(svelte@5.0.0-next.148))(prettier@3.3.0):
     dependencies:
-      prettier: 3.2.5
+      prettier: 3.3.0
     optionalDependencies:
-      prettier-plugin-svelte: 3.2.3(prettier@3.2.5)(svelte@5.0.0-next.148)
+      prettier-plugin-svelte: 3.2.3(prettier@3.3.0)(svelte@5.0.0-next.148)
 
-  prettier@3.2.5: {}
+  prettier@3.3.0: {}
 
   publint@0.1.16:
     dependencies:

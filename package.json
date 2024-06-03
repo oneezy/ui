@@ -63,6 +63,8 @@
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.1.23",
+    "@iconify-json/hugeicons": "^1.1.0",
+    "@iconify-json/material-symbols": "^1.1.80",
     "@iconify-json/solar": "^1.1.9",
     "@sveltejs/adapter-auto": "^3.2.1",
     "@sveltejs/kit": "^2.5.10",

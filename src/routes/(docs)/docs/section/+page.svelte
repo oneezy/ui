@@ -1,9 +1,4 @@
 <script>
-	/* KEY:
-	======================================================
-	⬜ default    ⬛ prop    🟪 snippet    🟦 children
-	====================================================== */
-
 	import { Section, Image, Effect, Divider, Content, Title, Button } from '$lib';
 </script>
 
@@ -16,7 +11,6 @@
 		<Effect
 			gradient="var(--color-primary), transparent, transparent, var(--color-secondary)"
 			linear="170deg"
-			repeat
 		/>
 	</Image>
 
@@ -28,7 +22,7 @@
 		/>
 
 		<div class="flex gap-4">
-			<Button href="/contact" primary>Schedule Appointment</Button>
+			<Button href="tel:8888888888" primary>Schedule Appointment</Button>
 			<Button href="/contact" outline>Get Directions</Button>
 		</div>
 	</div>

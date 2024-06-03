@@ -1,0 +1,580 @@
+<style>
+	.preview {
+		border: 1px solid var(--color-neutral-200);
+		background-image: repeating-linear-gradient(
+			45deg,
+			var(--color-neutral-100),
+			var(--color-neutral-100) 13px,
+			var(--color-neutral-200) 13px,
+			var(--color-neutral-200) 14px
+		);
+
+		background-size: 40px 40px;
+	}
+</style>
+
+<section class="px-6">
+	<section class="mb-96">
+		<div class="title not-prose w-full py-20">
+			<h2 class="text--primary text-center text-5xl font-extrabold tracking-tight md:text-6xl">neutral</h2>
+		</div>
+		<div
+			class="preview container card flex grid min-h-[6rem] grid-cols-11 flex-wrap items-center justify-center gap-2 gap-4 overflow-x-hidden rounded-lg p-4 text-center font-mono text-sm"
+		>
+	
+			<div class="card bg-neutral-50-50 text-neutral-950-950">neutral 50/50</div>
+			<div class="card bg-neutral-50-100 text-neutral-950-950">neutral 50/100</div>
+			<div class="card bg-neutral-50-200 text-neutral-950-950">neutral 50/200</div>
+			<div class="card bg-neutral-50-300 text-neutral-950-950">neutral 50/300</div>
+			<div class="card bg-neutral-50-400 text-neutral-950-950">neutral 50/400</div>
+			<div class="card bg-neutral-50-500 text-neutral-950-950">neutral 50/500</div>
+			<div class="card bg-neutral-50-600 text-neutral-950-50">neutral 50/600</div>
+			<div class="card bg-neutral-50-700 text-neutral-950-50">neutral 50/700</div>
+			<div class="card bg-neutral-50-800 text-neutral-950-50">neutral 50/800</div>
+			<div class="card bg-neutral-50-900 text-neutral-950-50">neutral 50/900</div>
+			<div class="card bg-neutral-50-950 text-neutral-950-50">neutral 50/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-100-50 text-neutral-950-950">neutral 100/50</div>
+			<div class="card bg-neutral-100-100 text-neutral-950-950">neutral 100/100</div>
+			<div class="card bg-neutral-100-200 text-neutral-950-950">neutral 100/200</div>
+			<div class="card bg-neutral-100-300 text-neutral-950-950">neutral 100/300</div>
+			<div class="card bg-neutral-100-400 text-neutral-950-950">neutral 100/400</div>
+			<div class="card bg-neutral-100-500 text-neutral-950-950">neutral 100/500</div>
+			<div class="card bg-neutral-100-600 text-neutral-950-50">neutral 100/600</div>
+			<div class="card bg-neutral-100-700 text-neutral-950-50">neutral 100/700</div>
+			<div class="card bg-neutral-100-800 text-neutral-950-50">neutral 100/800</div>
+			<div class="card bg-neutral-100-900 text-neutral-950-50">neutral 100/900</div>
+			<div class="card bg-neutral-100-950 text-neutral-950-50">neutral 100/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-200-50 text-neutral-950-950">neutral 200/50</div>
+			<div class="card bg-neutral-200-100 text-neutral-950-950">neutral 200/100</div>
+			<div class="card bg-neutral-200-200 text-neutral-950-950">neutral 200/200</div>
+			<div class="card bg-neutral-200-300 text-neutral-950-950">neutral 200/300</div>
+			<div class="card bg-neutral-200-400 text-neutral-950-950">neutral 200/400</div>
+			<div class="card bg-neutral-200-500 text-neutral-950-950">neutral 200/500</div>
+			<div class="card bg-neutral-200-600 text-neutral-950-50">neutral 200/600</div>
+			<div class="card bg-neutral-200-700 text-neutral-950-50">neutral 200/700</div>
+			<div class="card bg-neutral-200-800 text-neutral-950-50">neutral 200/800</div>
+			<div class="card bg-neutral-200-900 text-neutral-950-50">neutral 200/900</div>
+			<div class="card bg-neutral-200-950 text-neutral-950-50">neutral 200/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-300-50 text-neutral-950-950">neutral 300/50</div>
+			<div class="card bg-neutral-300-100 text-neutral-950-950">neutral 300/100</div>
+			<div class="card bg-neutral-300-200 text-neutral-950-950">neutral 300/200</div>
+			<div class="card bg-neutral-300-300 text-neutral-950-950">neutral 300/300</div>
+			<div class="card bg-neutral-300-400 text-neutral-950-950">neutral 300/400</div>
+			<div class="card bg-neutral-300-500 text-neutral-950-950">neutral 300/500</div>
+			<div class="card bg-neutral-300-600 text-neutral-950-50">neutral 300/600</div>
+			<div class="card bg-neutral-300-700 text-neutral-950-50">neutral 300/700</div>
+			<div class="card bg-neutral-300-800 text-neutral-950-50">neutral 300/800</div>
+			<div class="card bg-neutral-300-900 text-neutral-950-50">neutral 300/900</div>
+			<div class="card bg-neutral-300-950 text-neutral-950-50">neutral 300/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-400-50 text-neutral-950-950">neutral 400/50</div>
+			<div class="card bg-neutral-400-100 text-neutral-950-950">neutral 400/100</div>
+			<div class="card bg-neutral-400-200 text-neutral-950-950">neutral 400/200</div>
+			<div class="card bg-neutral-400-300 text-neutral-950-950">neutral 400/300</div>
+			<div class="card bg-neutral-400-400 text-neutral-950-950">neutral 400/400</div>
+			<div class="card bg-neutral-400-500 text-neutral-950-950">neutral 400/500</div>
+			<div class="card bg-neutral-400-600 text-neutral-950-50">neutral 400/600</div>
+			<div class="card bg-neutral-400-700 text-neutral-950-50">neutral 400/700</div>
+			<div class="card bg-neutral-400-800 text-neutral-950-50">neutral 400/800</div>
+			<div class="card bg-neutral-400-900 text-neutral-950-50">neutral 400/900</div>
+			<div class="card bg-neutral-400-950 text-neutral-950-50">neutral 400/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-500-50 text-neutral-950-950">neutral 500/50</div>
+			<div class="card bg-neutral-500-100 text-neutral-950-950">neutral 500/100</div>
+			<div class="card bg-neutral-500-200 text-neutral-950-950">neutral 500/200</div>
+			<div class="card bg-neutral-500-300 text-neutral-950-950">neutral 500/300</div>
+			<div class="card bg-neutral-500-400 text-neutral-950-950">neutral 500/400</div>
+			<div class="card bg-neutral-500-500 text-neutral-950-950">neutral 500/500</div>
+			<div class="card bg-neutral-500-600 text-neutral-950-50">neutral 500/600</div>
+			<div class="card bg-neutral-500-700 text-neutral-950-50">neutral 500/700</div>
+			<div class="card bg-neutral-500-800 text-neutral-950-50">neutral 500/800</div>
+			<div class="card bg-neutral-500-900 text-neutral-950-50">neutral 500/900</div>
+			<div class="card bg-neutral-500-950 text-neutral-950-50">neutral 500/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-600-50 text-neutral-50-950">neutral 600/50</div>
+			<div class="card bg-neutral-600-100 text-neutral-50-950">neutral 600/100</div>
+			<div class="card bg-neutral-600-200 text-neutral-50-950">neutral 600/200</div>
+			<div class="card bg-neutral-600-300 text-neutral-50-950">neutral 600/300</div>
+			<div class="card bg-neutral-600-400 text-neutral-50-950">neutral 600/400</div>
+			<div class="card bg-neutral-600-500 text-neutral-50-950">neutral 600/500</div>
+			<div class="card bg-neutral-600-600 text-neutral-50-50">neutral 600/600</div>
+			<div class="card bg-neutral-600-700 text-neutral-50-50">neutral 600/700</div>
+			<div class="card bg-neutral-600-800 text-neutral-50-50">neutral 600/800</div>
+			<div class="card bg-neutral-600-900 text-neutral-50-50">neutral 600/900</div>
+			<div class="card bg-neutral-600-950 text-neutral-50-50">neutral 600/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-700-50 text-neutral-50-950">neutral 700/50</div>
+			<div class="card bg-neutral-700-100 text-neutral-50-950">neutral 700/100</div>
+			<div class="card bg-neutral-700-200 text-neutral-50-950">neutral 700/200</div>
+			<div class="card bg-neutral-700-300 text-neutral-50-950">neutral 700/300</div>
+			<div class="card bg-neutral-700-400 text-neutral-50-950">neutral 700/400</div>
+			<div class="card bg-neutral-700-500 text-neutral-50-950">neutral 700/500</div>
+			<div class="card bg-neutral-700-600 text-neutral-50-50">neutral 700/600</div>
+			<div class="card bg-neutral-700-700 text-neutral-50-50">neutral 700/700</div>
+			<div class="card bg-neutral-700-800 text-neutral-50-50">neutral 700/800</div>
+			<div class="card bg-neutral-700-900 text-neutral-50-50">neutral 700/900</div>
+			<div class="card bg-neutral-700-950 text-neutral-50-50">neutral 700/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-800-50 text-neutral-50-950">neutral 800/50</div>
+			<div class="card bg-neutral-800-100 text-neutral-50-950">neutral 800/100</div>
+			<div class="card bg-neutral-800-200 text-neutral-50-950">neutral 800/200</div>
+			<div class="card bg-neutral-800-300 text-neutral-50-950">neutral 800/300</div>
+			<div class="card bg-neutral-800-400 text-neutral-50-950">neutral 800/400</div>
+			<div class="card bg-neutral-800-500 text-neutral-50-950">neutral 800/500</div>
+			<div class="card bg-neutral-800-600 text-neutral-50-50">neutral 800/600</div>
+			<div class="card bg-neutral-800-700 text-neutral-50-50">neutral 800/700</div>
+			<div class="card bg-neutral-800-800 text-neutral-50-50">neutral 800/800</div>
+			<div class="card bg-neutral-800-900 text-neutral-50-50">neutral 800/900</div>
+			<div class="card bg-neutral-800-950 text-neutral-50-50">neutral 800/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-900-50 text-neutral-50-950">neutral 900/50</div>
+			<div class="card bg-neutral-900-100 text-neutral-50-950">neutral 900/100</div>
+			<div class="card bg-neutral-900-200 text-neutral-50-950">neutral 900/200</div>
+			<div class="card bg-neutral-900-300 text-neutral-50-950">neutral 900/300</div>
+			<div class="card bg-neutral-900-400 text-neutral-50-950">neutral 900/400</div>
+			<div class="card bg-neutral-900-500 text-neutral-50-950">neutral 900/500</div>
+			<div class="card bg-neutral-900-600 text-neutral-50-50">neutral 900/600</div>
+			<div class="card bg-neutral-900-700 text-neutral-50-50">neutral 900/700</div>
+			<div class="card bg-neutral-900-800 text-neutral-50-50">neutral 900/800</div>
+			<div class="card bg-neutral-900-900 text-neutral-50-50">neutral 900/900</div>
+			<div class="card bg-neutral-900-950 text-neutral-50-50">neutral 900/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-neutral-950-50 text-neutral-50-950">neutral 950/50</div>
+			<div class="card bg-neutral-950-100 text-neutral-50-950">neutral 950/100</div>
+			<div class="card bg-neutral-950-200 text-neutral-50-950">neutral 950/200</div>
+			<div class="card bg-neutral-950-300 text-neutral-50-950">neutral 950/300</div>
+			<div class="card bg-neutral-950-400 text-neutral-50-950">neutral 950/400</div>
+			<div class="card bg-neutral-950-500 text-neutral-50-950">neutral 950/500</div>
+			<div class="card bg-neutral-950-600 text-neutral-50-50">neutral 950/600</div>
+			<div class="card bg-neutral-950-700 text-neutral-50-50">neutral 950/700</div>
+			<div class="card bg-neutral-950-800 text-neutral-50-50">neutral 950/800</div>
+			<div class="card bg-neutral-950-900 text-neutral-50-50">neutral 950/900</div>
+			<div class="card bg-neutral-950-950 text-neutral-50-50">neutral 950/950</div>
+			<!--]--><!--]--><!--]--><!--]--><!--]--><!--]-->
+		</div>
+		<!--[-->
+		<div class="title not-prose w-full py-20">
+			
+			<!--[-->
+			<h2 class="text--primary text-center text-5xl font-extrabold tracking-tight md:text-6xl">primary</h2>
+		</div>
+		<div
+			class="preview container card flex grid min-h-[6rem] grid-cols-11 flex-wrap items-center justify-center gap-2 gap-4 overflow-x-hidden rounded-lg p-4 text-center font-mono text-sm"
+		>
+	
+			<div class="card bg-primary-50-50 text-primary-950-950">primary 50/50</div>
+			<div class="card bg-primary-50-100 text-primary-950-950">primary 50/100</div>
+			<div class="card bg-primary-50-200 text-primary-950-950">primary 50/200</div>
+			<div class="card bg-primary-50-300 text-primary-950-950">primary 50/300</div>
+			<div class="card bg-primary-50-400 text-primary-950-950">primary 50/400</div>
+			<div class="card bg-primary-50-500 text-primary-950-950">primary 50/500</div>
+			<div class="card bg-primary-50-600 text-primary-950-50">primary 50/600</div>
+			<div class="card bg-primary-50-700 text-primary-950-50">primary 50/700</div>
+			<div class="card bg-primary-50-800 text-primary-950-50">primary 50/800</div>
+			<div class="card bg-primary-50-900 text-primary-950-50">primary 50/900</div>
+			<div class="card bg-primary-50-950 text-primary-950-50">primary 50/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-100-50 text-primary-950-950">primary 100/50</div>
+			<div class="card bg-primary-100-100 text-primary-950-950">primary 100/100</div>
+			<div class="card bg-primary-100-200 text-primary-950-950">primary 100/200</div>
+			<div class="card bg-primary-100-300 text-primary-950-950">primary 100/300</div>
+			<div class="card bg-primary-100-400 text-primary-950-950">primary 100/400</div>
+			<div class="card bg-primary-100-500 text-primary-950-950">primary 100/500</div>
+			<div class="card bg-primary-100-600 text-primary-950-50">primary 100/600</div>
+			<div class="card bg-primary-100-700 text-primary-950-50">primary 100/700</div>
+			<div class="card bg-primary-100-800 text-primary-950-50">primary 100/800</div>
+			<div class="card bg-primary-100-900 text-primary-950-50">primary 100/900</div>
+			<div class="card bg-primary-100-950 text-primary-950-50">primary 100/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-200-50 text-primary-950-950">primary 200/50</div>
+			<div class="card bg-primary-200-100 text-primary-950-950">primary 200/100</div>
+			<div class="card bg-primary-200-200 text-primary-950-950">primary 200/200</div>
+			<div class="card bg-primary-200-300 text-primary-950-950">primary 200/300</div>
+			<div class="card bg-primary-200-400 text-primary-950-950">primary 200/400</div>
+			<div class="card bg-primary-200-500 text-primary-950-950">primary 200/500</div>
+			<div class="card bg-primary-200-600 text-primary-950-50">primary 200/600</div>
+			<div class="card bg-primary-200-700 text-primary-950-50">primary 200/700</div>
+			<div class="card bg-primary-200-800 text-primary-950-50">primary 200/800</div>
+			<div class="card bg-primary-200-900 text-primary-950-50">primary 200/900</div>
+			<div class="card bg-primary-200-950 text-primary-950-50">primary 200/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-300-50 text-primary-950-950">primary 300/50</div>
+			<div class="card bg-primary-300-100 text-primary-950-950">primary 300/100</div>
+			<div class="card bg-primary-300-200 text-primary-950-950">primary 300/200</div>
+			<div class="card bg-primary-300-300 text-primary-950-950">primary 300/300</div>
+			<div class="card bg-primary-300-400 text-primary-950-950">primary 300/400</div>
+			<div class="card bg-primary-300-500 text-primary-950-950">primary 300/500</div>
+			<div class="card bg-primary-300-600 text-primary-950-50">primary 300/600</div>
+			<div class="card bg-primary-300-700 text-primary-950-50">primary 300/700</div>
+			<div class="card bg-primary-300-800 text-primary-950-50">primary 300/800</div>
+			<div class="card bg-primary-300-900 text-primary-950-50">primary 300/900</div>
+			<div class="card bg-primary-300-950 text-primary-950-50">primary 300/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-400-50 text-primary-950-950">primary 400/50</div>
+			<div class="card bg-primary-400-100 text-primary-950-950">primary 400/100</div>
+			<div class="card bg-primary-400-200 text-primary-950-950">primary 400/200</div>
+			<div class="card bg-primary-400-300 text-primary-950-950">primary 400/300</div>
+			<div class="card bg-primary-400-400 text-primary-950-950">primary 400/400</div>
+			<div class="card bg-primary-400-500 text-primary-950-950">primary 400/500</div>
+			<div class="card bg-primary-400-600 text-primary-950-50">primary 400/600</div>
+			<div class="card bg-primary-400-700 text-primary-950-50">primary 400/700</div>
+			<div class="card bg-primary-400-800 text-primary-950-50">primary 400/800</div>
+			<div class="card bg-primary-400-900 text-primary-950-50">primary 400/900</div>
+			<div class="card bg-primary-400-950 text-primary-950-50">primary 400/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-500-50 text-primary-950-950">primary 500/50</div>
+			<div class="card bg-primary-500-100 text-primary-950-950">primary 500/100</div>
+			<div class="card bg-primary-500-200 text-primary-950-950">primary 500/200</div>
+			<div class="card bg-primary-500-300 text-primary-950-950">primary 500/300</div>
+			<div class="card bg-primary-500-400 text-primary-950-950">primary 500/400</div>
+			<div class="card bg-primary-500-500 text-primary-950-950">primary 500/500</div>
+			<div class="card bg-primary-500-600 text-primary-950-50">primary 500/600</div>
+			<div class="card bg-primary-500-700 text-primary-950-50">primary 500/700</div>
+			<div class="card bg-primary-500-800 text-primary-950-50">primary 500/800</div>
+			<div class="card bg-primary-500-900 text-primary-950-50">primary 500/900</div>
+			<div class="card bg-primary-500-950 text-primary-950-50">primary 500/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-600-50 text-primary-50-950">primary 600/50</div>
+			<div class="card bg-primary-600-100 text-primary-50-950">primary 600/100</div>
+			<div class="card bg-primary-600-200 text-primary-50-950">primary 600/200</div>
+			<div class="card bg-primary-600-300 text-primary-50-950">primary 600/300</div>
+			<div class="card bg-primary-600-400 text-primary-50-950">primary 600/400</div>
+			<div class="card bg-primary-600-500 text-primary-50-950">primary 600/500</div>
+			<div class="card bg-primary-600-600 text-primary-50-50">primary 600/600</div>
+			<div class="card bg-primary-600-700 text-primary-50-50">primary 600/700</div>
+			<div class="card bg-primary-600-800 text-primary-50-50">primary 600/800</div>
+			<div class="card bg-primary-600-900 text-primary-50-50">primary 600/900</div>
+			<div class="card bg-primary-600-950 text-primary-50-50">primary 600/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-700-50 text-primary-50-950">primary 700/50</div>
+			<div class="card bg-primary-700-100 text-primary-50-950">primary 700/100</div>
+			<div class="card bg-primary-700-200 text-primary-50-950">primary 700/200</div>
+			<div class="card bg-primary-700-300 text-primary-50-950">primary 700/300</div>
+			<div class="card bg-primary-700-400 text-primary-50-950">primary 700/400</div>
+			<div class="card bg-primary-700-500 text-primary-50-950">primary 700/500</div>
+			<div class="card bg-primary-700-600 text-primary-50-50">primary 700/600</div>
+			<div class="card bg-primary-700-700 text-primary-50-50">primary 700/700</div>
+			<div class="card bg-primary-700-800 text-primary-50-50">primary 700/800</div>
+			<div class="card bg-primary-700-900 text-primary-50-50">primary 700/900</div>
+			<div class="card bg-primary-700-950 text-primary-50-50">primary 700/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-800-50 text-primary-50-950">primary 800/50</div>
+			<div class="card bg-primary-800-100 text-primary-50-950">primary 800/100</div>
+			<div class="card bg-primary-800-200 text-primary-50-950">primary 800/200</div>
+			<div class="card bg-primary-800-300 text-primary-50-950">primary 800/300</div>
+			<div class="card bg-primary-800-400 text-primary-50-950">primary 800/400</div>
+			<div class="card bg-primary-800-500 text-primary-50-950">primary 800/500</div>
+			<div class="card bg-primary-800-600 text-primary-50-50">primary 800/600</div>
+			<div class="card bg-primary-800-700 text-primary-50-50">primary 800/700</div>
+			<div class="card bg-primary-800-800 text-primary-50-50">primary 800/800</div>
+			<div class="card bg-primary-800-900 text-primary-50-50">primary 800/900</div>
+			<div class="card bg-primary-800-950 text-primary-50-50">primary 800/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-900-50 text-primary-50-950">primary 900/50</div>
+			<div class="card bg-primary-900-100 text-primary-50-950">primary 900/100</div>
+			<div class="card bg-primary-900-200 text-primary-50-950">primary 900/200</div>
+			<div class="card bg-primary-900-300 text-primary-50-950">primary 900/300</div>
+			<div class="card bg-primary-900-400 text-primary-50-950">primary 900/400</div>
+			<div class="card bg-primary-900-500 text-primary-50-950">primary 900/500</div>
+			<div class="card bg-primary-900-600 text-primary-50-50">primary 900/600</div>
+			<div class="card bg-primary-900-700 text-primary-50-50">primary 900/700</div>
+			<div class="card bg-primary-900-800 text-primary-50-50">primary 900/800</div>
+			<div class="card bg-primary-900-900 text-primary-50-50">primary 900/900</div>
+			<div class="card bg-primary-900-950 text-primary-50-50">primary 900/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-primary-950-50 text-primary-50-950">primary 950/50</div>
+			<div class="card bg-primary-950-100 text-primary-50-950">primary 950/100</div>
+			<div class="card bg-primary-950-200 text-primary-50-950">primary 950/200</div>
+			<div class="card bg-primary-950-300 text-primary-50-950">primary 950/300</div>
+			<div class="card bg-primary-950-400 text-primary-50-950">primary 950/400</div>
+			<div class="card bg-primary-950-500 text-primary-50-950">primary 950/500</div>
+			<div class="card bg-primary-950-600 text-primary-50-50">primary 950/600</div>
+			<div class="card bg-primary-950-700 text-primary-50-50">primary 950/700</div>
+			<div class="card bg-primary-950-800 text-primary-50-50">primary 950/800</div>
+			<div class="card bg-primary-950-900 text-primary-50-50">primary 950/900</div>
+			<div class="card bg-primary-950-950 text-primary-50-50">primary 950/950</div>
+		</div>
+		<!--[-->
+		<div class="title not-prose w-full py-20">
+			<h2 class="text--primary text-center text-5xl font-extrabold tracking-tight md:text-6xl">secondary</h2>
+		</div>
+		<div
+			class="preview container card flex grid min-h-[6rem] grid-cols-11 flex-wrap items-center justify-center gap-2 gap-4 overflow-x-hidden rounded-lg p-4 text-center font-mono text-sm"
+		>
+	
+			<div class="card bg-secondary-50-50 text-secondary-950-950">secondary 50/50</div>
+			<div class="card bg-secondary-50-100 text-secondary-950-950">secondary 50/100</div>
+			<div class="card bg-secondary-50-200 text-secondary-950-950">secondary 50/200</div>
+			<div class="card bg-secondary-50-300 text-secondary-950-950">secondary 50/300</div>
+			<div class="card bg-secondary-50-400 text-secondary-950-950">secondary 50/400</div>
+			<div class="card bg-secondary-50-500 text-secondary-950-950">secondary 50/500</div>
+			<div class="card bg-secondary-50-600 text-secondary-950-50">secondary 50/600</div>
+			<div class="card bg-secondary-50-700 text-secondary-950-50">secondary 50/700</div>
+			<div class="card bg-secondary-50-800 text-secondary-950-50">secondary 50/800</div>
+			<div class="card bg-secondary-50-900 text-secondary-950-50">secondary 50/900</div>
+			<div class="card bg-secondary-50-950 text-secondary-950-50">secondary 50/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-100-50 text-secondary-950-950">secondary 100/50</div>
+			<div class="card bg-secondary-100-100 text-secondary-950-950">secondary 100/100</div>
+			<div class="card bg-secondary-100-200 text-secondary-950-950">secondary 100/200</div>
+			<div class="card bg-secondary-100-300 text-secondary-950-950">secondary 100/300</div>
+			<div class="card bg-secondary-100-400 text-secondary-950-950">secondary 100/400</div>
+			<div class="card bg-secondary-100-500 text-secondary-950-950">secondary 100/500</div>
+			<div class="card bg-secondary-100-600 text-secondary-950-50">secondary 100/600</div>
+			<div class="card bg-secondary-100-700 text-secondary-950-50">secondary 100/700</div>
+			<div class="card bg-secondary-100-800 text-secondary-950-50">secondary 100/800</div>
+			<div class="card bg-secondary-100-900 text-secondary-950-50">secondary 100/900</div>
+			<div class="card bg-secondary-100-950 text-secondary-950-50">secondary 100/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-200-50 text-secondary-950-950">secondary 200/50</div>
+			<div class="card bg-secondary-200-100 text-secondary-950-950">secondary 200/100</div>
+			<div class="card bg-secondary-200-200 text-secondary-950-950">secondary 200/200</div>
+			<div class="card bg-secondary-200-300 text-secondary-950-950">secondary 200/300</div>
+			<div class="card bg-secondary-200-400 text-secondary-950-950">secondary 200/400</div>
+			<div class="card bg-secondary-200-500 text-secondary-950-950">secondary 200/500</div>
+			<div class="card bg-secondary-200-600 text-secondary-950-50">secondary 200/600</div>
+			<div class="card bg-secondary-200-700 text-secondary-950-50">secondary 200/700</div>
+			<div class="card bg-secondary-200-800 text-secondary-950-50">secondary 200/800</div>
+			<div class="card bg-secondary-200-900 text-secondary-950-50">secondary 200/900</div>
+			<div class="card bg-secondary-200-950 text-secondary-950-50">secondary 200/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-300-50 text-secondary-950-950">secondary 300/50</div>
+			<div class="card bg-secondary-300-100 text-secondary-950-950">secondary 300/100</div>
+			<div class="card bg-secondary-300-200 text-secondary-950-950">secondary 300/200</div>
+			<div class="card bg-secondary-300-300 text-secondary-950-950">secondary 300/300</div>
+			<div class="card bg-secondary-300-400 text-secondary-950-950">secondary 300/400</div>
+			<div class="card bg-secondary-300-500 text-secondary-950-950">secondary 300/500</div>
+			<div class="card bg-secondary-300-600 text-secondary-950-50">secondary 300/600</div>
+			<div class="card bg-secondary-300-700 text-secondary-950-50">secondary 300/700</div>
+			<div class="card bg-secondary-300-800 text-secondary-950-50">secondary 300/800</div>
+			<div class="card bg-secondary-300-900 text-secondary-950-50">secondary 300/900</div>
+			<div class="card bg-secondary-300-950 text-secondary-950-50">secondary 300/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-400-50 text-secondary-950-950">secondary 400/50</div>
+			<div class="card bg-secondary-400-100 text-secondary-950-950">secondary 400/100</div>
+			<div class="card bg-secondary-400-200 text-secondary-950-950">secondary 400/200</div>
+			<div class="card bg-secondary-400-300 text-secondary-950-950">secondary 400/300</div>
+			<div class="card bg-secondary-400-400 text-secondary-950-950">secondary 400/400</div>
+			<div class="card bg-secondary-400-500 text-secondary-950-950">secondary 400/500</div>
+			<div class="card bg-secondary-400-600 text-secondary-950-50">secondary 400/600</div>
+			<div class="card bg-secondary-400-700 text-secondary-950-50">secondary 400/700</div>
+			<div class="card bg-secondary-400-800 text-secondary-950-50">secondary 400/800</div>
+			<div class="card bg-secondary-400-900 text-secondary-950-50">secondary 400/900</div>
+			<div class="card bg-secondary-400-950 text-secondary-950-50">secondary 400/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-500-50 text-secondary-950-950">secondary 500/50</div>
+			<div class="card bg-secondary-500-100 text-secondary-950-950">secondary 500/100</div>
+			<div class="card bg-secondary-500-200 text-secondary-950-950">secondary 500/200</div>
+			<div class="card bg-secondary-500-300 text-secondary-950-950">secondary 500/300</div>
+			<div class="card bg-secondary-500-400 text-secondary-950-950">secondary 500/400</div>
+			<div class="card bg-secondary-500-500 text-secondary-950-950">secondary 500/500</div>
+			<div class="card bg-secondary-500-600 text-secondary-950-50">secondary 500/600</div>
+			<div class="card bg-secondary-500-700 text-secondary-950-50">secondary 500/700</div>
+			<div class="card bg-secondary-500-800 text-secondary-950-50">secondary 500/800</div>
+			<div class="card bg-secondary-500-900 text-secondary-950-50">secondary 500/900</div>
+			<div class="card bg-secondary-500-950 text-secondary-950-50">secondary 500/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-600-50 text-secondary-50-950">secondary 600/50</div>
+			<div class="card bg-secondary-600-100 text-secondary-50-950">secondary 600/100</div>
+			<div class="card bg-secondary-600-200 text-secondary-50-950">secondary 600/200</div>
+			<div class="card bg-secondary-600-300 text-secondary-50-950">secondary 600/300</div>
+			<div class="card bg-secondary-600-400 text-secondary-50-950">secondary 600/400</div>
+			<div class="card bg-secondary-600-500 text-secondary-50-950">secondary 600/500</div>
+			<div class="card bg-secondary-600-600 text-secondary-50-50">secondary 600/600</div>
+			<div class="card bg-secondary-600-700 text-secondary-50-50">secondary 600/700</div>
+			<div class="card bg-secondary-600-800 text-secondary-50-50">secondary 600/800</div>
+			<div class="card bg-secondary-600-900 text-secondary-50-50">secondary 600/900</div>
+			<div class="card bg-secondary-600-950 text-secondary-50-50">secondary 600/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-700-50 text-secondary-50-950">secondary 700/50</div>
+			<div class="card bg-secondary-700-100 text-secondary-50-950">secondary 700/100</div>
+			<div class="card bg-secondary-700-200 text-secondary-50-950">secondary 700/200</div>
+			<div class="card bg-secondary-700-300 text-secondary-50-950">secondary 700/300</div>
+			<div class="card bg-secondary-700-400 text-secondary-50-950">secondary 700/400</div>
+			<div class="card bg-secondary-700-500 text-secondary-50-950">secondary 700/500</div>
+			<div class="card bg-secondary-700-600 text-secondary-50-50">secondary 700/600</div>
+			<div class="card bg-secondary-700-700 text-secondary-50-50">secondary 700/700</div>
+			<div class="card bg-secondary-700-800 text-secondary-50-50">secondary 700/800</div>
+			<div class="card bg-secondary-700-900 text-secondary-50-50">secondary 700/900</div>
+			<div class="card bg-secondary-700-950 text-secondary-50-50">secondary 700/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-800-50 text-secondary-50-950">secondary 800/50</div>
+			<div class="card bg-secondary-800-100 text-secondary-50-950">secondary 800/100</div>
+			<div class="card bg-secondary-800-200 text-secondary-50-950">secondary 800/200</div>
+			<div class="card bg-secondary-800-300 text-secondary-50-950">secondary 800/300</div>
+			<div class="card bg-secondary-800-400 text-secondary-50-950">secondary 800/400</div>
+			<div class="card bg-secondary-800-500 text-secondary-50-950">secondary 800/500</div>
+			<div class="card bg-secondary-800-600 text-secondary-50-50">secondary 800/600</div>
+			<div class="card bg-secondary-800-700 text-secondary-50-50">secondary 800/700</div>
+			<div class="card bg-secondary-800-800 text-secondary-50-50">secondary 800/800</div>
+			<div class="card bg-secondary-800-900 text-secondary-50-50">secondary 800/900</div>
+			<div class="card bg-secondary-800-950 text-secondary-50-50">secondary 800/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-900-50 text-secondary-50-950">secondary 900/50</div>
+			<div class="card bg-secondary-900-100 text-secondary-50-950">secondary 900/100</div>
+			<div class="card bg-secondary-900-200 text-secondary-50-950">secondary 900/200</div>
+			<div class="card bg-secondary-900-300 text-secondary-50-950">secondary 900/300</div>
+			<div class="card bg-secondary-900-400 text-secondary-50-950">secondary 900/400</div>
+			<div class="card bg-secondary-900-500 text-secondary-50-950">secondary 900/500</div>
+			<div class="card bg-secondary-900-600 text-secondary-50-50">secondary 900/600</div>
+			<div class="card bg-secondary-900-700 text-secondary-50-50">secondary 900/700</div>
+			<div class="card bg-secondary-900-800 text-secondary-50-50">secondary 900/800</div>
+			<div class="card bg-secondary-900-900 text-secondary-50-50">secondary 900/900</div>
+			<div class="card bg-secondary-900-950 text-secondary-50-50">secondary 900/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-secondary-950-50 text-secondary-50-950">secondary 950/50</div>
+			<div class="card bg-secondary-950-100 text-secondary-50-950">secondary 950/100</div>
+			<div class="card bg-secondary-950-200 text-secondary-50-950">secondary 950/200</div>
+			<div class="card bg-secondary-950-300 text-secondary-50-950">secondary 950/300</div>
+			<div class="card bg-secondary-950-400 text-secondary-50-950">secondary 950/400</div>
+			<div class="card bg-secondary-950-500 text-secondary-50-950">secondary 950/500</div>
+			<div class="card bg-secondary-950-600 text-secondary-50-50">secondary 950/600</div>
+			<div class="card bg-secondary-950-700 text-secondary-50-50">secondary 950/700</div>
+			<div class="card bg-secondary-950-800 text-secondary-50-50">secondary 950/800</div>
+			<div class="card bg-secondary-950-900 text-secondary-50-50">secondary 950/900</div>
+			<div class="card bg-secondary-950-950 text-secondary-50-50">secondary 950/950</div>
+		</div>
+		<div class="title not-prose w-full py-20">
+			<h2 class="text--primary text-center text-5xl font-extrabold tracking-tight md:text-6xl">accent</h2>
+		</div>
+		<div
+			class="preview container card flex grid min-h-[6rem] grid-cols-11 flex-wrap items-center justify-center gap-2 gap-4 overflow-x-hidden rounded-lg p-4 text-center font-mono text-sm"
+		>
+	
+			<div class="card bg-accent-50-50 text-accent-950-950">accent 50/50</div>
+			<div class="card bg-accent-50-100 text-accent-950-950">accent 50/100</div>
+			<div class="card bg-accent-50-200 text-accent-950-950">accent 50/200</div>
+			<div class="card bg-accent-50-300 text-accent-950-950">accent 50/300</div>
+			<div class="card bg-accent-50-400 text-accent-950-950">accent 50/400</div>
+			<div class="card bg-accent-50-500 text-accent-950-950">accent 50/500</div>
+			<div class="card bg-accent-50-600 text-accent-950-50">accent 50/600</div>
+			<div class="card bg-accent-50-700 text-accent-950-50">accent 50/700</div>
+			<div class="card bg-accent-50-800 text-accent-950-50">accent 50/800</div>
+			<div class="card bg-accent-50-900 text-accent-950-50">accent 50/900</div>
+			<div class="card bg-accent-50-950 text-accent-950-50">accent 50/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-100-50 text-accent-950-950">accent 100/50</div>
+			<div class="card bg-accent-100-100 text-accent-950-950">accent 100/100</div>
+			<div class="card bg-accent-100-200 text-accent-950-950">accent 100/200</div>
+			<div class="card bg-accent-100-300 text-accent-950-950">accent 100/300</div>
+			<div class="card bg-accent-100-400 text-accent-950-950">accent 100/400</div>
+			<div class="card bg-accent-100-500 text-accent-950-950">accent 100/500</div>
+			<div class="card bg-accent-100-600 text-accent-950-50">accent 100/600</div>
+			<div class="card bg-accent-100-700 text-accent-950-50">accent 100/700</div>
+			<div class="card bg-accent-100-800 text-accent-950-50">accent 100/800</div>
+			<div class="card bg-accent-100-900 text-accent-950-50">accent 100/900</div>
+			<div class="card bg-accent-100-950 text-accent-950-50">accent 100/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-200-50 text-accent-950-950">accent 200/50</div>
+			<div class="card bg-accent-200-100 text-accent-950-950">accent 200/100</div>
+			<div class="card bg-accent-200-200 text-accent-950-950">accent 200/200</div>
+			<div class="card bg-accent-200-300 text-accent-950-950">accent 200/300</div>
+			<div class="card bg-accent-200-400 text-accent-950-950">accent 200/400</div>
+			<div class="card bg-accent-200-500 text-accent-950-950">accent 200/500</div>
+			<div class="card bg-accent-200-600 text-accent-950-50">accent 200/600</div>
+			<div class="card bg-accent-200-700 text-accent-950-50">accent 200/700</div>
+			<div class="card bg-accent-200-800 text-accent-950-50">accent 200/800</div>
+			<div class="card bg-accent-200-900 text-accent-950-50">accent 200/900</div>
+			<div class="card bg-accent-200-950 text-accent-950-50">accent 200/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-300-50 text-accent-950-950">accent 300/50</div>
+			<div class="card bg-accent-300-100 text-accent-950-950">accent 300/100</div>
+			<div class="card bg-accent-300-200 text-accent-950-950">accent 300/200</div>
+			<div class="card bg-accent-300-300 text-accent-950-950">accent 300/300</div>
+			<div class="card bg-accent-300-400 text-accent-950-950">accent 300/400</div>
+			<div class="card bg-accent-300-500 text-accent-950-950">accent 300/500</div>
+			<div class="card bg-accent-300-600 text-accent-950-50">accent 300/600</div>
+			<div class="card bg-accent-300-700 text-accent-950-50">accent 300/700</div>
+			<div class="card bg-accent-300-800 text-accent-950-50">accent 300/800</div>
+			<div class="card bg-accent-300-900 text-accent-950-50">accent 300/900</div>
+			<div class="card bg-accent-300-950 text-accent-950-50">accent 300/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-400-50 text-accent-950-950">accent 400/50</div>
+			<div class="card bg-accent-400-100 text-accent-950-950">accent 400/100</div>
+			<div class="card bg-accent-400-200 text-accent-950-950">accent 400/200</div>
+			<div class="card bg-accent-400-300 text-accent-950-950">accent 400/300</div>
+			<div class="card bg-accent-400-400 text-accent-950-950">accent 400/400</div>
+			<div class="card bg-accent-400-500 text-accent-950-950">accent 400/500</div>
+			<div class="card bg-accent-400-600 text-accent-950-50">accent 400/600</div>
+			<div class="card bg-accent-400-700 text-accent-950-50">accent 400/700</div>
+			<div class="card bg-accent-400-800 text-accent-950-50">accent 400/800</div>
+			<div class="card bg-accent-400-900 text-accent-950-50">accent 400/900</div>
+			<div class="card bg-accent-400-950 text-accent-950-50">accent 400/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-500-50 text-accent-950-950">accent 500/50</div>
+			<div class="card bg-accent-500-100 text-accent-950-950">accent 500/100</div>
+			<div class="card bg-accent-500-200 text-accent-950-950">accent 500/200</div>
+			<div class="card bg-accent-500-300 text-accent-950-950">accent 500/300</div>
+			<div class="card bg-accent-500-400 text-accent-950-950">accent 500/400</div>
+			<div class="card bg-accent-500-500 text-accent-950-950">accent 500/500</div>
+			<div class="card bg-accent-500-600 text-accent-950-50">accent 500/600</div>
+			<div class="card bg-accent-500-700 text-accent-950-50">accent 500/700</div>
+			<div class="card bg-accent-500-800 text-accent-950-50">accent 500/800</div>
+			<div class="card bg-accent-500-900 text-accent-950-50">accent 500/900</div>
+			<div class="card bg-accent-500-950 text-accent-950-50">accent 500/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-600-50 text-accent-50-950">accent 600/50</div>
+			<div class="card bg-accent-600-100 text-accent-50-950">accent 600/100</div>
+			<div class="card bg-accent-600-200 text-accent-50-950">accent 600/200</div>
+			<div class="card bg-accent-600-300 text-accent-50-950">accent 600/300</div>
+			<div class="card bg-accent-600-400 text-accent-50-950">accent 600/400</div>
+			<div class="card bg-accent-600-500 text-accent-50-950">accent 600/500</div>
+			<div class="card bg-accent-600-600 text-accent-50-50">accent 600/600</div>
+			<div class="card bg-accent-600-700 text-accent-50-50">accent 600/700</div>
+			<div class="card bg-accent-600-800 text-accent-50-50">accent 600/800</div>
+			<div class="card bg-accent-600-900 text-accent-50-50">accent 600/900</div>
+			<div class="card bg-accent-600-950 text-accent-50-50">accent 600/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-700-50 text-accent-50-950">accent 700/50</div>
+			<div class="card bg-accent-700-100 text-accent-50-950">accent 700/100</div>
+			<div class="card bg-accent-700-200 text-accent-50-950">accent 700/200</div>
+			<div class="card bg-accent-700-300 text-accent-50-950">accent 700/300</div>
+			<div class="card bg-accent-700-400 text-accent-50-950">accent 700/400</div>
+			<div class="card bg-accent-700-500 text-accent-50-950">accent 700/500</div>
+			<div class="card bg-accent-700-600 text-accent-50-50">accent 700/600</div>
+			<div class="card bg-accent-700-700 text-accent-50-50">accent 700/700</div>
+			<div class="card bg-accent-700-800 text-accent-50-50">accent 700/800</div>
+			<div class="card bg-accent-700-900 text-accent-50-50">accent 700/900</div>
+			<div class="card bg-accent-700-950 text-accent-50-50">accent 700/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-800-50 text-accent-50-950">accent 800/50</div>
+			<div class="card bg-accent-800-100 text-accent-50-950">accent 800/100</div>
+			<div class="card bg-accent-800-200 text-accent-50-950">accent 800/200</div>
+			<div class="card bg-accent-800-300 text-accent-50-950">accent 800/300</div>
+			<div class="card bg-accent-800-400 text-accent-50-950">accent 800/400</div>
+			<div class="card bg-accent-800-500 text-accent-50-950">accent 800/500</div>
+			<div class="card bg-accent-800-600 text-accent-50-50">accent 800/600</div>
+			<div class="card bg-accent-800-700 text-accent-50-50">accent 800/700</div>
+			<div class="card bg-accent-800-800 text-accent-50-50">accent 800/800</div>
+			<div class="card bg-accent-800-900 text-accent-50-50">accent 800/900</div>
+			<div class="card bg-accent-800-950 text-accent-50-50">accent 800/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-900-50 text-accent-50-950">accent 900/50</div>
+			<div class="card bg-accent-900-100 text-accent-50-950">accent 900/100</div>
+			<div class="card bg-accent-900-200 text-accent-50-950">accent 900/200</div>
+			<div class="card bg-accent-900-300 text-accent-50-950">accent 900/300</div>
+			<div class="card bg-accent-900-400 text-accent-50-950">accent 900/400</div>
+			<div class="card bg-accent-900-500 text-accent-50-950">accent 900/500</div>
+			<div class="card bg-accent-900-600 text-accent-50-50">accent 900/600</div>
+			<div class="card bg-accent-900-700 text-accent-50-50">accent 900/700</div>
+			<div class="card bg-accent-900-800 text-accent-50-50">accent 900/800</div>
+			<div class="card bg-accent-900-900 text-accent-50-50">accent 900/900</div>
+			<div class="card bg-accent-900-950 text-accent-50-50">accent 900/950</div>
+			<!--]--><!--]--><!--]--><!--]<!--[-->
+			<div class="card bg-accent-950-50 text-accent-50-950">accent 950/50</div>
+			<div class="card bg-accent-950-100 text-accent-50-950">accent 950/100</div>
+			<div class="card bg-accent-950-200 text-accent-50-950">accent 950/200</div>
+			<div class="card bg-accent-950-300 text-accent-50-950">accent 950/300</div>
+			<div class="card bg-accent-950-400 text-accent-50-950">accent 950/400</div>
+			<div class="card bg-accent-950-500 text-accent-50-950">accent 950/500</div>
+			<div class="card bg-accent-950-600 text-accent-50-50">accent 950/600</div>
+			<div class="card bg-accent-950-700 text-accent-50-50">accent 950/700</div>
+			<div class="card bg-accent-950-800 text-accent-50-50">accent 950/800</div>
+			<div class="card bg-accent-950-900 text-accent-50-50">accent 950/900</div>
+			<div class="card bg-accent-950-950 text-accent-50-50">accent 950/950</div>
+		</div>
+	</section>
+</section>
