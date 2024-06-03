@@ -1,5 +1,7 @@
 <script>
 	import { Effect } from '$lib';
+	import { onMount } from 'svelte';
+
 	let {
 		src,
 		placeholder,
@@ -12,10 +14,13 @@
 		gradient = false,
 		bg = false,
 		children = null,
+		slideshow = false,
 		...props
 	} = $props();
 	let loaded = $state(false);
 	let error = $state(false);
+	let currentImageIndex = $state(0);
+	let imageSources = $state([]);
 
 	const loRes = 'https://picsum.photos/id/420/240/360';
 	const hiRes = 'https://picsum.photos/id/420/1920/1080';
@@ -53,6 +58,21 @@
 	let imgClass =
 		'absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ' +
 		getObjectFitClass();
+
+	onMount(() => {
+		if (typeof src === 'string' && slideshow) {
+			imageSources = src.split(',').map(s => s.trim());
+		} else if (Array.isArray(src) && slideshow) {
+			imageSources = src;
+		} else {
+			imageSources = [src];
+		}
+		if (slideshow) {
+			setInterval(() => {
+				currentImageIndex = (currentImageIndex + 1) % imageSources.length;
+			}, 3000); // change image every 3 seconds
+		}
+	});
 </script>
 
 <div
@@ -63,21 +83,28 @@
 	style="aspect-ratio: {ratio}"
 >
 	<img src={getValidSrc(placeholder)} {alt} class="blur-2xl {imgClass}" onerror={onError} />
-	<img
-		src={getValidSrc(src)}
-		{alt}
-		class={loaded && !error ? imgClass + ' opacity-100' : imgClass + ' opacity-0'}
-		onload={onLoad}
-		onerror={onError}
-		style="transition-delay: 1s;"
-	/>
+	{#if !slideshow}
+		<img
+			src={getValidSrc(src)}
+			{alt}
+			class={loaded && !error ? imgClass + ' opacity-100' : imgClass + ' opacity-0'}
+			onload={onLoad}
+			onerror={onError}
+			style="transition-delay: 1s;"
+		/>
+	{:else}
+		{#each imageSources as imgSrc, index}
+			<img
+				src={getValidSrc(imgSrc)}
+				{alt}
+				class={index === currentImageIndex && loaded && !error ? imgClass + ' opacity-100' : imgClass + ' opacity-0'}
+				onload={onLoad}
+				onerror={onError}
+				style="transition-delay: 1s;"
+			/>
+		{/each}
+	{/if}
 	{#if children}
 		{@render children()}
 	{/if}
 </div>
-
-<style>
-	img {
-		border-image: fill 0 linear-gradient(#0003, #000); /* your gradient here */
-	}
-</style>
