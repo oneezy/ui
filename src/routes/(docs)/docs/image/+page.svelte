@@ -1,9 +1,4 @@
 <script>
-	/* KEY:
-	======================================================
-	⬜ default    ⬛ prop    🟪 snippet    🟦 children
-	====================================================== */
-
 	import { Image, Container } from '$lib';
 	
 	let images = [

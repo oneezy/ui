@@ -1,13 +1,40 @@
 @import 'tailwindcss';
+@import './lib/ui.css';
 
 /* Add any custom CSS here */
-@layer app {
-	:root {
-		/* fonts */
-		--font-sans: '';
-		--font-serif: '';
-		--font-mono: '';
-		--font-diplay: '';
-		--font-hand: '';
-	}
+[data-theme] {
+	/* colors */
+	--theme-color: var(--color-slate-500);
+	--theme-color-neutral: var(--color-slate-500);
+	--theme-color-primary: rgb(64, 158, 185);
+	--theme-color-secondary: rgb(0, 98, 128);
+	--theme-color-accent: rgb(0, 255, 200);
+
+	/* fonts */
+	--theme-font: 'Comic Sans MS';
+	--theme-font-base: var(--font-family-sans);
+	--theme-font-headings: var(--font-family-sans);
+
+	/* font size */
+	--theme-scale: 1;
+
+	/* radius */
+	--theme-corners: 9999px;
+}
+
+[data-theme='blue'] {
+	/* colors */
+	--theme-color: var(--color-slate-500);
+	--theme-color-neutral: var(--color-slate-500); /* slate */
+	--theme-color-primary: var(--color-sky-500);
+	--theme-color-secondary: var(--color-yellow-500);
+	--theme-color-accent: var(--color-lime-500);
+}
+[data-theme='red'] {
+	/* colors */
+	--theme-color: var(--color-stone-500); /* stone */
+	--theme-color-neutral: var(--color-stone-500); /* stone */
+	--theme-color-primary: var(--color-pink-600);
+	--theme-color-secondary: var(--color-purple-700);
+	--theme-color-accent: var(--color-indigo-500);
 }

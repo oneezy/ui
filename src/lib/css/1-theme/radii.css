@@ -1,0 +1,4 @@
+@theme {
+	/* radius */
+	--radius-base: var(--theme-corners-base, var(--theme-corners, 0));
+}

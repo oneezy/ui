@@ -1,8 +1,7 @@
 <script>
 	let {
-		bg = 'bg-black dark:bg-white',
-		fill = 'fill-primary dark:fill-primary',
-		color = 'text-white dark:text-black',
+		bg = 'bg-neutral-200-700',
+		fill = 'fill-neutral-200-700',
 		height = '120px',
 		width = '100%',
 		shape = 'waves',
@@ -92,7 +91,7 @@
 		<!-- SVG Divider (top) -->
 		{@render divider({ shape, height, width, flip: false, invert, reverse })}
 		<!-- Children -->
-		<div class="{bg} {color}">
+		<div class="{bg}">
 			{@render children()}
 		</div>
 		<!-- SVG Divider (bottom) -->

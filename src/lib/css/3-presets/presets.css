@@ -1,0 +1,87 @@
+/* 2. Presets
+*************************************************************************/
+
+/* filled */
+.preset-filled {
+	@apply bg-neutral-200-800 text-neutral-950-50;
+}
+.preset-filled-neutral {
+	@apply bg-neutral-900-100 text-neutral-50-950;
+}
+.preset-filled-primary {
+	@apply bg-primary-500-500 text-primary-50-50;
+}
+.preset-filled-secondary {
+	@apply bg-secondary-500-500 text-secondary-50-50;
+}
+.preset-filled-accent {
+	@apply bg-accent-500-500 text-accent-50-50;
+}
+
+/* tonal */
+.preset-tonal {
+	@apply bg-neutral-200-800 text-neutral-800-200;
+}
+.preset-tonal-primary {
+	@apply bg-primary-200-800 text-primary-800-200;
+}
+.preset-tonal-secondary {
+	@apply bg-secondary-200-800 text-secondary-800-200;
+}
+
+/* outline */
+.preset-outline {
+	@apply text-neutral-950-50 border-neutral-900-100 border-2;
+	&:is(.btn:hover, .btn:active) {
+		@apply bg-neutral-900-100 text-neutral-50-950;
+	}
+}
+.preset-outline-neutral {
+	@apply text-neutral-950-50 border-neutral-950-50 border-2;
+	&:is(.btn:hover, .btn:active) {
+		@apply bg-neutral-900-100 text-neutral-50-950;
+	}
+}
+.preset-outline-primary {
+	@apply text-primary border-primary border-2;
+	&:is(.btn:hover, .btn:active) {
+		@apply bg-primary text-primary-50-50;
+	}
+}
+.preset-outline-secondary {
+	@apply text-secondary border-secondary border-2;
+	&:is(.btn:hover, .btn:active) {
+		@apply bg-secondary text-secondary-50-50;
+	}
+}
+.preset-outline-accent {
+	@apply text-accent border-accent border-2;
+	&:is(.btn:hover, .btn:active) {
+		@apply bg-accent text-accent-50-50;
+	}
+}
+
+/* ghost */
+.preset-ghost {
+	@apply text-neutral-950-50;
+}
+.preset-ghost-primary {
+	@apply text-primary-500;
+}
+.preset-ghost-secondary {
+	@apply text-secondary-500;
+}
+
+/* glass */
+.preset-glass {
+	@apply rounded-base text-neutral-950-950/90 isolate border-2 border-white/25 bg-white/50 ring-1 shadow-lg ring-black/5 backdrop-blur-2xl;
+	&:is(.btn:hover, .btn:active) {
+		@apply text-neutral-950-950/100 border-white/50 bg-white/50;
+	}
+}
+.preset-glass-invert {
+	@apply text-neutral-50-50/90 isolate border-2 border-black/25 bg-black/70 ring-1 shadow-lg ring-white/5 backdrop-blur-2xl;
+	&:is(.btn:hover, .btn:active) {
+		@apply text-neutral-50-50/100 border-black/80 bg-black/50;
+	}
+}

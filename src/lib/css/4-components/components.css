@@ -1,0 +1,72 @@
+/* 3. Components
+*************************************************************************/
+/* container */
+.container {
+	@apply mx-auto max-w-6xl px-4 md:px-5 lg:px-8;
+}
+
+/* buttons */
+.btn {
+	@apply rounded-base inline-flex cursor-pointer items-center justify-center font-medium;
+
+	&:not(.btn-icon) {
+		@apply py-3 px-5 text-base;
+
+		&:is(.btn-xs) {
+			@apply py-1.5 px-2.5 text-xs;
+		}
+		&:is(.btn-sm) {
+			@apply py-2 px-4 text-sm;
+		}
+		&:is(.btn-md) {
+			@apply py-3 px-5 text-base;
+		}
+		&:is(.btn-lg) {
+			@apply py-4 px-8 text-xl;
+		}
+		&:is(.btn-xl) {
+			@apply py-5 px-10 text-2xl;
+		}
+	}
+	&:is(.btn-icon) {
+		@apply size-10 text-base;
+
+		&:is(.btn-xs) {
+			@apply size-6 text-xs;
+		}
+		&:is(.btn-sm) {
+			@apply size-8 text-sm;
+		}
+		&:is(.btn-md) {
+			@apply size-10 text-base;
+		}
+		&:is(.btn-lg) {
+			@apply size-12 text-lg;
+		}
+		&:is(.btn-xl) {
+			@apply size-14 text-xl;
+		}
+	}
+}
+.btn-container {
+	@apply flex w-full items-center gap-2;
+
+	&:has(svg + svg) {
+		@apply justify-start;
+	}
+	&:has(svg + svg:last-child) {
+		@apply justify-start;
+		& > *:last-child {
+			@apply ml-auto;
+		}
+	}
+}
+
+/* cards */
+.card {
+	@apply rounded-lg p-1;
+}
+/* 
+	.card-primary {
+		@apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100;
+	} */

@@ -1,20 +1,23 @@
-@layer theme, base, daisy, presets, components, utilities;
+@layer theme, base, presets, components, utilities;
 
 @import 'tailwindcss';
 
-/* @import './css/test/full.css' layer(daisy); */
-@import './css/colors/colors.css' layer(base);
-@import './css/colors/pairings.css' layer(base);
-@import './css/typography/fonts.css' layer(base);
-@import './css/typography/size.css' layer(base);
-@import './css/typography/prose.css' layer(presets);
+/* 1. Theme */
+@import './css/1-theme/colors.css' layer(theme);
+@import './css/1-theme/pairings.css' layer(theme);
+@import './css/1-theme/fonts.css' layer(theme);
+@import './css/1-theme/size.css' layer(theme);
+@import './css/1-theme/radii.css' layer(theme);
 
-@layer theme {
-	@theme {
-		/* radius */
-		--radius-base: var(--theme-corners-base, var(--theme-corners, 0));
-	}
-}
+/* 2. Base */
+@import './css/2-base/base.css' layer(base);
+
+/* 3. Presets */
+@import './css/3-presets/prose.css' layer(presets);
+@import './css/3-presets/presets.css' layer(presets);
+
+/* 4. Components */
+@import './css/4-components/components.css' layer(components);
 
 /* 1. Base
 *************************************************/
@@ -41,210 +44,4 @@
 		/* radius */
 		--theme-corners: 9999px;
 	}
-
-	[data-theme='blue'] {
-		/* colors */
-		--theme-color: var(--color-slate-500);
-		--theme-color-neutral: var(--color-slate-500); /* slate */
-		--theme-color-primary: var(--color-sky-500);
-		--theme-color-secondary: var(--color-yellow-500);
-		--theme-color-accent: var(--color-lime-500);
-	}
-	[data-theme='red'] {
-		/* colors */
-		--theme-color: var(--color-stone-500); /* stone */
-		--theme-color-neutral: var(--color-stone-500); /* stone */
-		--theme-color-primary: var(--color-pink-600);
-		--theme-color-secondary: var(--color-purple-700);
-		--theme-color-accent: var(--color-indigo-500);
-	}
-
-	html {
-		color-scheme: light dark;
-	}
-
-	html[style='color-scheme: light;'] {
-		color-scheme: light;
-	}
-
-	html[style='color-scheme: dark;'] {
-		color-scheme: dark;
-	}
-
-	body {
-		@apply bg-neutral-50-950 text-neutral-950-50 font-base overflow-x-hidden text-base;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font-headings;
-	}
-}
-
-/* 2. Presets
-*************************************************************************/
-@layer presets {
-	/* filled */
-	.preset-filled {
-		@apply bg-neutral-200-800 text-neutral-950-50;
-	}
-	.preset-filled-neutral {
-		@apply bg-neutral-900-100 text-neutral-50-950;
-	}
-	.preset-filled-primary {
-		@apply bg-primary-500-500 text-primary-50-50;
-	}
-	.preset-filled-secondary {
-		@apply bg-secondary-500-500 text-secondary-50-50;
-	}
-	.preset-filled-accent {
-		@apply bg-accent-500-500 text-accent-50-50;
-	}
-
-	/* tonal */
-	.preset-tonal {
-		@apply bg-neutral-200-800 text-neutral-800-200;
-	}
-	.preset-tonal-primary {
-		@apply bg-primary-200-800 text-primary-800-200;
-	}
-	.preset-tonal-secondary {
-		@apply bg-secondary-200-800 text-secondary-800-200;
-	}
-
-	/* outline */
-	.preset-outline {
-		@apply text-neutral-950-50 border-neutral-900-100 border-2;
-		&:is(.btn:hover, .btn:active) {
-			@apply bg-neutral-900-100 text-neutral-50-950;
-		}
-	}
-	.preset-outline-neutral {
-		@apply text-neutral-950-50 border-neutral-950-50 border-2;
-		&:is(.btn:hover, .btn:active) {
-			@apply bg-neutral-900-100 text-neutral-50-950;
-		}
-	}
-	.preset-outline-primary {
-		@apply text-primary border-primary border-2;
-		&:is(.btn:hover, .btn:active) {
-			@apply bg-primary text-primary-50-50;
-		}
-	}
-	.preset-outline-secondary {
-		@apply text-secondary border-secondary border-2;
-		&:is(.btn:hover, .btn:active) {
-			@apply bg-secondary text-secondary-50-50;
-		}
-	}
-	.preset-outline-accent {
-		@apply text-accent border-accent border-2;
-		&:is(.btn:hover, .btn:active) {
-			@apply bg-accent text-accent-50-50;
-		}
-	}
-
-	/* ghost */
-	.preset-ghost {
-		@apply text-neutral-950-50;
-	}
-	.preset-ghost-primary {
-		@apply text-primary-500;
-	}
-	.preset-ghost-secondary {
-		@apply text-secondary-500;
-	}
-
-	/* glass */
-	.preset-glass {
-		@apply rounded-base text-neutral-950-950/90 isolate border-2 border-white/25 bg-white/50 ring-1 shadow-lg ring-black/5 backdrop-blur-2xl;
-		&:is(.btn:hover, .btn:active) {
-			@apply text-neutral-950-950/100 border-white/50 bg-white/50;
-		}
-	}
-	.preset-glass-invert {
-		@apply text-neutral-50-50/90 isolate border-2 border-black/25 bg-black/70 ring-1 shadow-lg ring-white/5 backdrop-blur-2xl;
-		&:is(.btn:hover, .btn:active) {
-			@apply text-neutral-50-50/100 border-black/80 bg-black/50;
-		}
-	}
-}
-
-/* 3. Components
-*************************************************************************/
-@layer components {
-	/* container */
-	.container {
-		@apply mx-auto max-w-6xl px-4 md:px-5 lg:px-8;
-	}
-
-	/* buttons */
-	.btn {
-		@apply rounded-base inline-flex cursor-pointer items-center justify-center font-medium;
-
-		&:not(.btn-icon) {
-			@apply py-3 px-5 text-base;
-
-			&:is(.btn-xs) {
-				@apply py-1.5 px-2.5 text-xs;
-			}
-			&:is(.btn-sm) {
-				@apply py-2 px-4 text-sm;
-			}
-			&:is(.btn-md) {
-				@apply py-3 px-5 text-base;
-			}
-			&:is(.btn-lg) {
-				@apply py-4 px-8 text-xl;
-			}
-			&:is(.btn-xl) {
-				@apply py-5 px-10 text-2xl;
-			}
-		}
-		&:is(.btn-icon) {
-			@apply size-10 text-base;
-
-			&:is(.btn-xs) {
-				@apply size-6 text-xs;
-			}
-			&:is(.btn-sm) {
-				@apply size-8 text-sm;
-			}
-			&:is(.btn-md) {
-				@apply size-10 text-base;
-			}
-			&:is(.btn-lg) {
-				@apply size-12 text-lg;
-			}
-			&:is(.btn-xl) {
-				@apply size-14 text-xl;
-			}
-		}
-	}
-	.btn-container {
-		@apply flex w-full items-center gap-2;
-
-		&:has(svg + svg) {
-			@apply justify-start;
-		}
-		&:has(svg + svg:last-child) {
-			@apply justify-start;
-			& > *:last-child {
-				@apply ml-auto;
-			}
-		}
-	}
-
-	/* cards */
-	.card {
-		@apply rounded-lg p-1;
-	}
-	/* 
-	.card-primary {
-		@apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100;
-	} */
 }

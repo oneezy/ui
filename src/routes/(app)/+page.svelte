@@ -3,8 +3,8 @@
 	import IconAirplane from '~icons/bi/airplane';
 
 	let { data, pageData } = $props();
-	let fill = 'fill-green-200';
-	let bg = 'bg-green-200';
+	// let fill = 'fill-green-200';
+	// let bg = 'bg-green-200';
 	let shape = 'waves';
 	let height = '120';
 	let width = '150%';
@@ -16,8 +16,8 @@
 
 {#each data.pageData as { slug, title, tagline, content }}
 	<Section id={slug}>
-		<Divider {bg} {fill} {shape} {height} {width}>
-			<Title class="text-primary" {title} {tagline} />
+		<Divider>
+			<Title {title} {tagline} />
 			<Content>{@html content}</Content>
 		</Divider>
 	</Section>

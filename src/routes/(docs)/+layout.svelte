@@ -7,16 +7,17 @@
 	import IconClose from '~icons/material-symbols/close-rounded'
 
 	let { data, docData, children, ...props } = $props();
-	let navClosed = $state(true);
+	let navClosed = $state(false);
 
 	const links = getRoutes();
+
 </script>
 
 {#snippet menu()}<IconMenu />{/snippet}
 {#snippet close()}<IconClose />{/snippet}
 
 <App id="docs" class="flex">
-	<div class="bg-gray-200">
+	<div class="bg-neutral-100-800">
 		<Nav {links} class="{navClosed ? 'hidden' : 'flex flex-col'} sticky top-0 w-80 p-10" />
 	</div>
 	<div class="relative {navClosed ? '' : 'container'} min-h-dvh w-full">
@@ -28,7 +29,7 @@
 			rightClass=""
 		>
 			{#snippet left()}
-				<Button class="text-white text-2xl" ghost icon onclick={() => (navClosed = !navClosed)}>
+				<Button class="text-2xl" ghost icon onclick={() => (navClosed = !navClosed)}>
 					{#if navClosed}
 						{@render menu()}
 					{:else}
@@ -39,7 +40,7 @@
 			{#snippet center()}
 				<ThemeColor />
 			{/snippet}
-			{#snippet right()}<ThemeDark class="text-white" />{/snippet}
+			{#snippet right()}<ThemeDark />{/snippet}
 		</Header>
 		<Title>{convertPathToTitle($page.url.pathname)}</Title>
 
