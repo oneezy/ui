@@ -10,19 +10,37 @@
 		invert = false,
 		children = null,
 		unstyled = false,
+		bg,
+		img,
 		...props
 	} = $props();
 </script>
 
-<img
-	{...props}
-	{src}
-	{alt}
-	style="
-	width: {full ? '100%' : ''};
-	max-width: 100%;
-	mask-image: url({mask});
-	mask-position: {position};
-	mask-repeat: {repeat ? 'repat' : 'no-repeat'};
-	mask-size: {size};"
-/>
+{#if bg}
+	<div
+		{...props}
+		class="{bg} {props.class}"
+		style="
+			width: {full ? '100%' : ''};
+			max-width: 100%;
+			mask-image: url({mask});
+			mask-position: {position};
+			mask-repeat: {repeat ? 'repat' : 'no-repeat'};"
+	>
+		{@render children()	}
+	</div>
+{:else}
+	<img
+		{...props}
+		{src}
+		{alt}
+		class="{props.class}"
+		style="
+			width: {full ? '100%' : ''};
+			max-width: 100%;
+			mask-image: url({mask});
+			mask-position: {position};
+			mask-repeat: {repeat ? 'repat' : 'no-repeat'};
+			mask-size: {size};"
+		/>
+{/if}

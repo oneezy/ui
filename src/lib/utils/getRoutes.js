@@ -1,7 +1,7 @@
 export function getRoutes() {
 	const routeFiles = import.meta.glob('/src/routes/**/+page.svelte');
 	const routes = Object.keys(routeFiles)
-		.filter((file) => !file.includes('/(app)/')) // Exclude routes containing /(app)/
+		.filter((file) => !file.includes('/(app)/', '/(template)/')) // Exclude routes containing /(app)/
 		.map((file) => {
 			const path = file
 				.replace('/src/routes', '') // Remove /src/routes from path

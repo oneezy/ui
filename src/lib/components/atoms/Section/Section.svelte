@@ -1,17 +1,22 @@
 <script>
-	/* Props
-	 *************************/
-	let { children = null, id = null, ...props } = $props();
+	import { Title } from '$lib';
+
+	let {
+		title,
+		tagline,
+		children = null,
+		id = null,
+		...props
+	} = $props();
 </script>
 
+{#snippet titleText(name)}
+	<Title />
+{/snippet}
 <section {...props} {id} class={props.class}>
-	{#snippet content()}
-		Section
-	{/snippet}
-
 	{#if children}
 		{@render children()}
 	{:else}
-		{@render content()}
+		{@render titleText()}
 	{/if}
 </section>
