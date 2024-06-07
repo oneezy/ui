@@ -59,7 +59,8 @@
   "dependencies": {
     "daisyui": "^4.12.2",
     "mode-watcher": "^0.3.0",
-    "unplugin-icons": "^0.19.0"
+    "unplugin-icons": "^0.19.0",
+    "runed": "^0.10.0"
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.1.23",
@@ -79,7 +80,6 @@
     "prettier-plugin-svelte": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "publint": "^0.1.16",
-    "runed": "^0.10.0",
     "svelte": "next",
     "svelte-check": "^3.8.0",
     "tailwindcss": "next",
@@ -91,6 +91,6 @@
   },
   "peerDependencies": {
     "svelte": "^5.0.0-next.136",
-    "tailwindcss": "4.0.0-alpha.15"
+    "tailwindcss": "^4.0.0-alpha.15"
   }
 }
