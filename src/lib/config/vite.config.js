@@ -22,7 +22,7 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			'~icons': path.resolve(__dirname, 'node_modules/@iconify-json')
+			// '~icons': path.resolve(__dirname, 'node_modules/@iconify-json')
 		}
 	},
 	optimizeDeps: {
