@@ -75,11 +75,15 @@
 
 <!-- SVG -->
 {#snippet divider({ shape, height, width, flip, invert, reverse })}
-	<div {...props} class="{containerClass} {props.class}" style={containerStyle}>
+	<div
+		{...props}
+		class="{containerClass} {reverse ? 'scale-x-[-1]' : ''} {props.class}"
+		style={containerStyle}
+	>
 		<svg
 			class="{svgClass} {flip ? 'rotate-180' : ''} {invert
 				? 'scale-y-[-1]'
-				: ''} {reverse ? 'scale-x-[-1]' : ''}"
+				: ''}"
 			viewBox="0 0 1200 120"
 			preserveAspectRatio="none"
 			xmlns="http://www.w3.org/2000/svg"

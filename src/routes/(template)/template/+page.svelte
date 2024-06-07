@@ -6,7 +6,10 @@
 		Content,
 		Divider,
 		Card,
-		Title
+		Map,
+		Title,
+		Accordion,
+		AccordionItem
 	} from '$lib';
 	let { children, ...props } = $props();
 
@@ -57,9 +60,67 @@
 </Divider>
 
 <Section>
+	<Title>Testimonials</Title>
+	<div
+		class="my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10"
+	>
+		<Card total="3" />
+	</div>
+</Section>
+
+<Section
+	class="relative min-h-[80vh]"
+	fill="fill-neutral-50-800 bg-neutral-50-800"
+>
+	<Divider
+		fill="fill-neutral-50-800"
+		flip
+		invert
+		reverse
+		height="240px"
+		width="150%"
+		top
+	/>
 	<Title>Contact Us</Title>
-	<Container class="card grid grid-cols-2 gap-10 p-4">
-		<Content text class={classes} />
-		<Content img class={classes} />
+	<Map
+		address="5385 Laurel, Beaumont, TX, 77707"
+		zoom={12}
+		class="absolute inset-0 -z-10"
+	/>
+	<Divider
+		class="z-20"
+		flip
+		fill="fill-neutral-50-800"
+		height="240px"
+		width="150%"
+		bottom
+	/>
+</Section>
+
+<Section>
+	<Title>FAQ</Title>
+
+	<Container>
+		<Accordion>
+			<AccordionItem id="1">
+				{#snippet control()}Question{/snippet}
+				{#snippet panel()}{lorem}{/snippet}
+			</AccordionItem>
+			<hr class="hr" />
+			<AccordionItem id="2">
+				{#snippet control()}Accordion 2{/snippet}
+				{#snippet panel()}{lorem}{/snippet}
+			</AccordionItem>
+			<hr class="hr" />
+			<AccordionItem id="3">
+				{#snippet control()}Accordion 3 (disabled){/snippet}
+				{#snippet panel()}{lorem}{/snippet}
+			</AccordionItem>
+			<hr class="hr" />
+			<AccordionItem id="4">
+				{#snippet control()}Accordion 4{/snippet}
+				{#snippet panel()}{lorem}{/snippet}
+			</AccordionItem>
+		</Accordion>
 	</Container>
 </Section>
