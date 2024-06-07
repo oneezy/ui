@@ -4,6 +4,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { svelteInspector } from '@sveltejs/vite-plugin-svelte-inspector';
 import { defineConfig } from 'vite';
 import Icons from 'unplugin-icons/vite';
+import path from 'path';
 
 export default defineConfig({
 	plugins: [
@@ -21,7 +22,7 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			'~icons': require('path').resolve(__dirname, 'node_modules/@iconify-json')
+			'~icons': path.resolve(__dirname, 'node_modules/@iconify-json')
 		}
 	},
 	optimizeDeps: {
