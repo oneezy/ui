@@ -8,7 +8,7 @@
 {#snippet content()}
 	<Link
 		href="#"
-		class="rounded-box border-neutral-200-800 bg-neutral-50-950 grid align-center place-items-center items-center justify-center text-center max-w-xs border p-6 shadow"
+		class="rounded-box border-neutral-200-800 bg-neutral-50-950 align-center grid max-w-xs place-items-center items-center justify-center border p-6 text-center shadow"
 	>
 		<IconDentistFilled class="text-primary-400-500 size-14" />
 		<h3 class="mb-3 text-2xl font-medium">Meet Our Doctor</h3>
@@ -18,7 +18,7 @@
 		</p>
 	</Link>
 {/snippet}
-<Base {...props} class="{props.class}">
+<Base {...props} class={props.class}>
 	{#if children}
 		{@render children()}
 	{:else}

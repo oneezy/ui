@@ -60,14 +60,14 @@
     "daisyui": "^4.12.2",
     "mode-watcher": "^0.3.0",
     "unplugin-icons": "^0.19.0",
-    "runed": "^0.10.0"
-  },
-  "devDependencies": {
+    "runed": "^0.10.0",
     "@iconify-json/bi": "^1.1.23",
     "@iconify-json/fluent": "^1.1.56",
     "@iconify-json/hugeicons": "^1.1.0",
     "@iconify-json/material-symbols": "^1.1.82",
-    "@iconify-json/solar": "^1.1.9",
+    "@iconify-json/solar": "^1.1.9"
+  },
+  "devDependencies": {
     "@sveltejs/adapter-auto": "^3.2.1",
     "@sveltejs/kit": "^2.5.10",
     "@sveltejs/package": "^2.3.1",

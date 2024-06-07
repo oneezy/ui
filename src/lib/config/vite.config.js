@@ -16,8 +16,22 @@ export default defineConfig({
 			autoInstall: true
 		})
 	],
-
 	server: {
 		open: '/'
+	},
+	resolve: {
+		alias: {
+			'~icons': require('path').resolve(__dirname, 'node_modules/@iconify-json')
+		}
+	},
+	optimizeDeps: {
+		include: [
+			'unplugin-icons',
+			'@iconify-json/fluent',
+			'@iconify-json/bi',
+			'@iconify-json/hugeicons',
+			'@iconify-json/material-symbols',
+			'@iconify-json/solar'
+		]
 	}
 });
