@@ -1,6 +1,7 @@
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
+export { default as Box } from './components/atoms/Box/Box.svelte'
 export { default as Preview } from './components/atoms/Preview/Preview.svelte'
 export { default as Effect } from './components/atoms/Effect/Effect.svelte';
 export { default as Mask } from './components/atoms/Mask/Mask.svelte';
@@ -47,6 +48,7 @@ export { default as Footer } from './components/organisms/Footer/Footer.svelte';
 // export { default as Page } from './components/pages/Page/Page.svelte'
 
 /* {particles} */
+export { default as Base } from './components/particles/Base/Base.svelte'
 // export { default as Device } from './components/particles/Device/Device.svelte'
 
 /* {templates} */

@@ -1,4 +1,15 @@
 @theme {
 	/* radius */
-	--radius-base: var(--theme-corners-base, var(--theme-corners, 0));
+	--radius-base: var(
+		--theme-corners-base,
+		var(--theme-corners, var(--radius-xl, 0))
+	);
+	--radius-box: var(
+		--theme-corners-box,
+		var(--theme-corners, var(--radius-xl, 0))
+	);
+	--radius-button: var(
+		--theme-corners-button,
+		var(--theme-corners, var(--radius-md, 0))
+	);
 }

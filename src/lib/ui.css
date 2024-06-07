@@ -43,5 +43,7 @@
 
 		/* radius */
 		--theme-corners: 9999px;
+		--theme-corners-box: 1.5rem;
+		--theme-corners-button: 9999px;
 	}
 }

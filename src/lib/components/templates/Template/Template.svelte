@@ -22,7 +22,7 @@
 	{#if children}
 		{@render children()}
 	{:else}
-		<header class="header sticky top-0 z-20 [grid-area:header]">
+		<header class="header z-20 [grid-area:header]">
 			{#if typeof header === 'function'}{@render header()}{:else}{header}{/if}
 		</header>
 		<main class="main relative z-10 [grid-area:main]">
@@ -45,7 +45,7 @@
 
 <style>
 	.grid-container {
-		grid-template-rows: var(--header, auto) var(--main, 1fr) var(--footer, auto);
+		grid-template-rows: var(--header, 0) var(--main, 1fr) var(--footer, auto);
 		grid-template-areas:
 			'header'
 			'main'
@@ -64,7 +64,7 @@
 	@media (min-width: 1024px) {
 		.grid-container {
 			/* grid-template-columns: var(--leftside, 300px) var(--main, 1fr) var(--rightside, 300px); */
-			grid-template-rows: var(--header, auto) var(--main, 1fr) var(--footer, auto);
+			grid-template-rows: var(--header, 0) var(--main, 1fr) var(--footer, auto);
 			grid-template-areas:
 				'header header header'
 				/* 'leftside main rightside' */

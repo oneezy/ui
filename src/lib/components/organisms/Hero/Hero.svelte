@@ -1,5 +1,13 @@
 <script>
-	import { Section, Container, Image, Effect, Title, Button, Divider } from '$lib';
+	import {
+		Section,
+		Container,
+		Image,
+		Effect,
+		Title,
+		Button,
+		Divider
+	} from '$lib';
 	let {
 		title = 'Title',
 		tagline = 'Your awesome tagline goes here',
@@ -14,25 +22,25 @@
 	} = $props();
 </script>
 
-
 <!-- children
 :::::::::::::::::::::::::::::::: -->
 <Section
+	{...props}
 	class="relative grid grid-rows-[1fr_auto] items-end overflow-hidden"
 >
-	<Image bg cover src="https://www.ronaldcitranodds.com/custom/images/banner-1.jpg">
+	<Image
+		bg
+		cover
+		src="https://www.ronaldcitranodds.com/custom/images/banner-1.jpg"
+	>
 		<Effect
-			gradient="var(--color-primary), transparent, transparent, var(--color-secondary)"
-			linear="170deg"
+			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
+			linear="180deg"
 		/>
 	</Image>
 
 	<Container class="flex flex-col items-center justify-center">
-		<Title
-			{title}
-			{tagline}
-			class="text-center"
-		/>
+		<Title {title} {tagline} class="text-center" />
 
 		<div class="flex gap-4">
 			<Button href={button1Link} primary>{button1}</Button>
@@ -40,7 +48,12 @@
 		</div>
 	</Container>
 
-	{#if divider }
-		<Divider height="240px" fill="fill-neutral-50-950" width="150%" flip={true} />
+	{#if divider}
+		<Divider
+			height="240px"
+			fill="fill-neutral-50-800"
+			width="150%"
+			flip={true}
+		/>
 	{/if}
 </Section>

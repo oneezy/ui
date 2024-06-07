@@ -1,4 +1,5 @@
 <script>
+	import { Section } from '$lib';
 	let {
 		bg = 'bg-neutral-200-700',
 		fill = 'fill-neutral-200-700',
@@ -15,7 +16,9 @@
 		...props
 	} = $props();
 
-	let containerClass = $state('w-full pointer-events-none overflow-hidden z-10');
+	let containerClass = $state(
+		'w-full pointer-events-none overflow-hidden z-10'
+	);
 
 	let containerStyle = `
 		${top ? 'position: absolute; top: -1px; left: 0; right: 0;' : ''}
@@ -36,7 +39,9 @@
 {/snippet}
 
 {#snippet curve()}
-	<path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" />
+	<path
+		d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z"
+	/>
 {/snippet}
 
 {#snippet tilt()}
@@ -72,9 +77,9 @@
 {#snippet divider({ shape, height, width, flip, invert, reverse })}
 	<div {...props} class="{containerClass} {props.class}" style={containerStyle}>
 		<svg
-			class="{svgClass} {flip ? 'rotate-180' : ''} {invert ? 'scale-y-[-1]' : ''} {reverse
-				? 'scale-x-[-1]'
-				: ''}"
+			class="{svgClass} {flip ? 'rotate-180' : ''} {invert
+				? 'scale-y-[-1]'
+				: ''} {reverse ? 'scale-x-[-1]' : ''}"
 			viewBox="0 0 1200 120"
 			preserveAspectRatio="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -87,16 +92,16 @@
 
 <!-- Component -->
 {#if children}
-	<section {...props}>
+	<Section {...props}>
 		<!-- SVG Divider (top) -->
 		{@render divider({ shape, height, width, flip: false, invert, reverse })}
 		<!-- Children -->
-		<div class="{bg}">
+		<div class={bg}>
 			{@render children()}
 		</div>
 		<!-- SVG Divider (bottom) -->
 		{@render divider({ shape, height, width, flip: true, invert, reverse })}
-	</section>
+	</Section>
 {:else}
 	<!-- SVG Divider -->
 	{@render divider({ shape, height, width, flip: false, invert, reverse })}

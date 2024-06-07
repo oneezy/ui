@@ -4,23 +4,31 @@
 	⬜ default    ⬛ prop    🟪 snippet    🟦 children
 	====================================================== */
 
-	import { Preview, Card } from '$lib';
+	import { Preview, Block } from '$lib';
 </script>
 
 <!-- default 
 :::::::::::::::::::::::::::::::: -->
 <Preview name="default">
-	<Card total="3" />
+	<Block primary total="3" />
 </Preview>
 
 <!-- prop 
 :::::::::::::::::::::::::::::::: -->
-<Preview name="secondary">
-	<Card card="⬛ prop card" neutral />
+<Preview name="prop ">
+	<Block block="⬛ prop block" />
+</Preview>
+
+<!-- snippets
+:::::::::::::::::::::::::::::::: -->
+<Preview name="snippets">
+	<Block>
+		{#snippet block()}🟪 snippet block{/snippet}
+	</Block>
 </Preview>
 
 <!-- children
 :::::::::::::::::::::::::::::::: -->
-<Preview name="default">
-	<Card card="i wont show up">test</Card>
+<Preview name="children">
+	<Block block="i wont show up">🟦 children block</Block>
 </Preview>

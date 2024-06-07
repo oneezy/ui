@@ -1,4 +1,24 @@
 <script>
+	import { useIntersectionObserver } from 'runed';
+	import { Container } from '$lib';
+
+	let target = $state(null);
+	let root = $state(null);
+	let isIntersecting = $state(false);
+
+	useIntersectionObserver(
+		// () => document.querySelector('#hero'),
+		() => target,
+		(entries) => {
+			const entry = entries[0];
+			if (!entry) return;
+			isIntersecting = entry.isIntersecting;
+		},
+		{ root: () => root }
+	);
+
+	// $inspect(isIntersecting);
+
 	let {
 		left = '⬜ header left',
 		center = '⬜ header center',
@@ -9,36 +29,47 @@
 		leftClass,
 		centerClass,
 		rightClass,
-		secondary = false,
-		neutral = false,
-		glass = true,
 		children = null,
 		...props
 	} = $props();
 
-	// Define default class variables
-	let defaultHeaderClass = $state('header');
-	let defaultContainerClass = $state('container grid grid-cols-[auto_1fr_auto] justify-center gap-4 md:grid-cols-[200px_1fr_200px]');
-	let defaultLeftClass = $state('self-center justify-self-start');
-	let defaultCenterClass = $state('hidden h-full items-center justify-center md:flex');
-	let defaultRightClass = $state('self-center justify-self-end');
-	
+	let classHeader =
+		'header w-full transition-all duration-500 z-20 translate-y-0 fixed top-0';
+	let classContainer =
+		'grid grid-cols-[auto_1fr_auto] justify-center gap-4 md:grid-cols-[200px_1fr_200px] py-3 transition-opacity duration-500';
+	let classLeft = 'self-center justify-self-start';
+	let classCenter = 'hidden h-full items-center justify-center md:flex';
+	let classRight = 'self-center justify-self-end';
+
+	// active
+	let classInactive = '';
+	let classActive = 'translate-y-5';
 </script>
 
-<div {...props} class="{defaultHeaderClass} {props.class}">
-	<div class="{children ? '' : defaultContainerClass + ' ' + containerClass}">
+<div
+	{...props}
+	class="{classHeader} 
+	{isIntersecting ? classInactive : classActive} {props.class}"
+>
+	<Container
+		class="{children ? '' : classContainer} {isIntersecting
+			? ''
+			: 'preset-glass'}"
+	>
 		{#if children}
 			{@render children()}
 		{:else}
-			<section class="{defaultLeftClass} {leftClass}">
+			<section class="{classLeft} {leftClass}">
 				{#if typeof left === 'function'}{@render left()}{:else}{left}{/if}
 			</section>
-			<section class="{defaultCenterClass} {centerClass}">
+			<section class="{classCenter} {centerClass}">
 				{#if typeof center === 'function'}{@render center()}{:else}{center}{/if}
 			</section>
-			<section class="{defaultRightClass} {rightClass}">
+			<section class="{classRight} {rightClass}">
 				{#if typeof right === 'function'}{@render right()}{:else}{right}{/if}
 			</section>
 		{/if}
-	</div>
+	</Container>
 </div>
+
+<hr class="border-0 pb-20" bind:this={target} />

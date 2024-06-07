@@ -1,13 +1,7 @@
 <script>
 	import { Title } from '$lib';
 
-	let {
-		title,
-		tagline,
-		children = null,
-		id = null,
-		...props
-	} = $props();
+	let { title, tagline, children = null, id = null, ...props } = $props();
 </script>
 
 {#snippet titleText(name)}

@@ -4,25 +4,33 @@
 	⬜ default    ⬛ prop    🟪 snippet    🟦 children
 	====================================================== */
 	
-  import { {{name}} } from '$lib';
+  import { Preview, {{name}} } from '$lib';
 </script>
 
 <!-- default 
 :::::::::::::::::::::::::::::::: -->
-<{{name}} />
+<Preview name="default">
+	<{{name}} />
+</Preview>
 
 <!-- prop 
 :::::::::::::::::::::::::::::::: -->
-<{{name}} {{lowerCaseNoSpace name}}="⬛ prop {{lowerCaseNoSpace name}}" />
+<Preview name="prop ">
+	<{{name}} {{lowerCaseNoSpace name}}="⬛ prop {{lowerCaseNoSpace name}}" />
+</Preview>
 
 <!-- snippets
 :::::::::::::::::::::::::::::::: -->
-<{{name}}>
-	{#snippet {{lowerCaseNoSpace name}}()}🟪 snippet {{lowerCaseNoSpace name}}{/snippet}
-</{{name}}>
+<Preview name="snippets">
+	<{{name}}>
+		{#snippet {{lowerCaseNoSpace name}}()}🟪 snippet {{lowerCaseNoSpace name}}{/snippet}
+	</{{name}}>
+</Preview>
 
 <!-- children
 :::::::::::::::::::::::::::::::: -->
-<{{name}} {{lowerCaseNoSpace name}}="i wont show up">
-	🟦 children {{lowerCaseNoSpace name}}
-</{{name}}>
+<Preview name="children">
+	<{{name}} {{lowerCaseNoSpace name}}="i wont show up">
+		🟦 children {{lowerCaseNoSpace name}}
+	</{{name}}>
+</Preview>

@@ -15,7 +15,7 @@
 
 <Template>
 	{#snippet header()}
-		<Header class="p-4">
+		<Header>
 			{#snippet left()}<Logo />{/snippet}
 			{#snippet center()}<Nav />{/snippet}
 			{#snippet right()}<ThemeDark />{/snippet}
