@@ -1,8 +1,8 @@
 /* COMPONENTS
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ */
 /* {atoms} */
-export { default as Box } from './components/atoms/Box/Box.svelte'
-export { default as Preview } from './components/atoms/Preview/Preview.svelte'
+export { default as Box } from './components/atoms/Box/Box.svelte';
+export { default as Preview } from './components/atoms/Preview/Preview.svelte';
 export { default as Effect } from './components/atoms/Effect/Effect.svelte';
 export { default as Mask } from './components/atoms/Mask/Mask.svelte';
 export { default as Text } from './components/atoms/Text/Text.svelte';
@@ -37,8 +37,8 @@ export { default as ThemeDark } from './components/molecules/Theme/ThemeDark.sve
 export { default as ThemeColor } from './components/molecules/Theme/ThemeColor.svelte';
 
 /* {organisms} */
-export { default as Map } from './components/organisms/Map/Map.svelte'
-export { default as Hero } from './components/organisms/Hero/Hero.svelte'
+export { default as Map } from './components/organisms/Map/Map.svelte';
+export { default as Hero } from './components/organisms/Hero/Hero.svelte';
 // export { default as Stats } from './components/organisms/Stats/Stats.svelte'
 // export { default as Hero } from './components/organisms/Hero/Hero.svelte'
 export { default as Header } from './components/organisms/Header/Header.svelte';
@@ -49,7 +49,8 @@ export { default as Footer } from './components/organisms/Footer/Footer.svelte';
 // export { default as Page } from './components/pages/Page/Page.svelte'
 
 /* {particles} */
-export { default as Base } from './components/particles/Base/Base.svelte'
+export { default as Base } from './components/particles/Base/Base.svelte';
+export { observer, isObserving } from './utils/observer.svelte.js';
 // export { default as Device } from './components/particles/Device/Device.svelte'
 
 /* {templates} */

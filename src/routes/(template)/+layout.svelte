@@ -11,13 +11,21 @@
 	} from '$lib';
 
 	let { children, ...props } = $props();
+
+	let links = [
+		{ label: 'home', href: '#home' },
+		{ label: 'about', href: '#about' },
+		{ label: 'services', href: '#services' },
+		{ label: 'contact', href: '#contact' },
+		{ label: 'FAQ', href: '#faq' }
+	];
 </script>
 
 <Template>
 	{#snippet header()}
 		<Header>
 			{#snippet left()}<Logo />{/snippet}
-			{#snippet center()}<Nav />{/snippet}
+			{#snippet center()}<Nav {links} />{/snippet}
 			{#snippet right()}<ThemeDark />{/snippet}
 		</Header>
 	{/snippet}

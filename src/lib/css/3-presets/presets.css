@@ -1,5 +1,15 @@
 /* 2. Presets
 *************************************************************************/
+/* active */
+.active {
+	&:is(a) {
+		@apply bg-primary text-neutral-50-50;
+	}
+	/* 	
+	&:is(section) {
+		@apply ring-primary-500-500 bg-primary fill-primary ring-2;
+	} */
+}
 
 /* filled */
 .preset-filled {

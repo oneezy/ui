@@ -1,5 +1,6 @@
 html {
 	color-scheme: light dark;
+	scroll-behavior: smooth;
 }
 
 html[style='color-scheme: light;'] {
@@ -11,6 +12,7 @@ html[style='color-scheme: dark;'] {
 }
 
 body {
+	scroll-behavior: smooth;
 	@apply bg-neutral-50-800 text-neutral-950-50 font-base overflow-x-hidden text-base;
 }
 

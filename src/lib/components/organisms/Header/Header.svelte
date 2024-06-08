@@ -1,23 +1,16 @@
 <script>
-	import { useIntersectionObserver } from 'runed';
+	import { observer, isObserving } from '$lib';
 	import { Container } from '$lib';
 
 	let target = $state(null);
 	let root = $state(null);
 	let isIntersecting = $state(false);
 
-	useIntersectionObserver(
-		// () => document.querySelector('#hero'),
+	isObserving(
 		() => target,
-		(entries) => {
-			const entry = entries[0];
-			if (!entry) return;
-			isIntersecting = entry.isIntersecting;
-		},
-		{ root: () => root }
+		() => root,
+		(value) => (isIntersecting = value)
 	);
-
-	// $inspect(isIntersecting);
 
 	let {
 		left = '⬜ header left',

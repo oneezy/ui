@@ -18,35 +18,38 @@
 	let height = '240px';
 </script>
 
-<Hero id="hero" />
+<Hero id="home" />
 
 <Section
+	id="about"
 	class="my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 "
 >
 	<Card total="4" />
 </Section>
 
-<Container id="team" class="grid items-center justify-center gap-20">
+<Section id="about">
 	<Title>Our Team</Title>
-	<div
-		class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
-	>
-		<Content text class={classes} />
-		<Content img class={classes} />
-	</div>
-	<div
-		class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
-	>
-		<Content text class={classes} />
-		<Content img class={classes} />
-	</div>
-	<div
-		class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
-	>
-		<Content text class={classes} />
-		<Content img class={classes} />
-	</div>
-</Container>
+	<Container class="grid items-center justify-center gap-20">
+		<div
+			class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
+		>
+			<Content text class={classes} />
+			<Content img class={classes} />
+		</div>
+		<div
+			class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
+		>
+			<Content text class={classes} />
+			<Content img class={classes} />
+		</div>
+		<div
+			class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
+		>
+			<Content text class={classes} />
+			<Content img class={classes} />
+		</div>
+	</Container>
+</Section>
 
 <Divider id="services" {width} {height}>
 	<Title>Our Services</Title>
@@ -59,7 +62,7 @@
 	</Container>
 </Divider>
 
-<Section>
+<Section id="testimonials">
 	<Title>Testimonials</Title>
 	<div
 		class="my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10"
@@ -69,7 +72,8 @@
 </Section>
 
 <Section
-	class="relative min-h-[80vh]"
+	id="contact"
+	class="relative min-h-[80vh] overflow-hidden"
 	fill="fill-neutral-50-800 bg-neutral-50-800"
 >
 	<Divider
@@ -79,13 +83,12 @@
 		reverse
 		height="240px"
 		width="150%"
-		top
 	/>
 	<Title>Contact Us</Title>
 	<Map
 		address="5385 Laurel, Beaumont, TX, 77707"
 		zoom={12}
-		class="absolute inset-0 -z-10"
+		class="absolute inset-0 -z-10 scale-[2] translate-y-1/8"
 	/>
 	<Divider
 		class="z-20"
@@ -97,7 +100,7 @@
 	/>
 </Section>
 
-<Section>
+<Section id="faq">
 	<Title>FAQ</Title>
 
 	<Container>
