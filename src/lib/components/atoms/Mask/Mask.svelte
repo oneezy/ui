@@ -1,4 +1,5 @@
 <script>
+	import { Image } from '$lib';
 	let {
 		src = 'https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/field.jpg',
 		mask = 'https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png',
@@ -10,6 +11,7 @@
 		invert = false,
 		children = null,
 		unstyled = false,
+		ratio,
 		bg,
 		img,
 		...props
@@ -27,20 +29,22 @@
 			mask-position: {position};
 			mask-repeat: {repeat ? 'repat' : 'no-repeat'};"
 	>
-		{@render children()	}
+		{@render children()}
 	</div>
 {:else}
 	<img
 		{...props}
 		{src}
 		{alt}
-		class="{props.class}"
+		class={props.class}
 		style="
 			width: {full ? '100%' : ''};
 			max-width: 100%;
+			object-fit: cover;
 			mask-image: url({mask});
 			mask-position: {position};
 			mask-repeat: {repeat ? 'repat' : 'no-repeat'};
-			mask-size: {size};"
-		/>
+			mask-size: {size};
+			aspect-ratio:{ratio};"
+	/>
 {/if}

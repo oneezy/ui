@@ -45,7 +45,7 @@
 	{isIntersecting ? classInactive : classActive} {props.class}"
 >
 	<Container
-		class="{children ? '' : classContainer} {isIntersecting
+		class="{children ? '' : classContainer} {containerClass} {isIntersecting
 			? ''
 			: 'preset-glass'}"
 	>

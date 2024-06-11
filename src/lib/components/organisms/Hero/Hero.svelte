@@ -32,16 +32,21 @@
 		<Effect
 			{...props}
 			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
+			linear="170deg"
+		/>
+		<Effect
+			{...props}
+			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
 			linear="180deg"
 		/>
 	</Image>
 
 	<Container {...props} class="flex flex-col items-center justify-center">
-		<Title {...props} {title} {tagline} class="text-center" />
+		<Title {...props} {title} {tagline} class="text-center text-white" />
 
 		<div class="flex gap-4">
 			<Button {...props} href={button1Link} primary>{button1}</Button>
-			<Button {...props} href={button2Link} outline>{button2}</Button>
+			<Button {...props} href={button2Link} neutral>{button2}</Button>
 		</div>
 	</Container>
 

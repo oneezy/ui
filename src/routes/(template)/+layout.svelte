@@ -10,7 +10,7 @@
 		Copyright
 	} from '$lib';
 
-	let { children, ...props } = $props();
+	let { data, children, ...props } = $props();
 
 	let links = [
 		{ label: 'home', href: '#home' },
@@ -21,10 +21,20 @@
 	];
 </script>
 
+<svelte:head>
+	{#each data.metaData as { seoTitle, seoDescription, seoKeywords }}
+		<title>{seoTitle}</title>
+		<meta name="description" content={seoDescription} />
+		<meta name="keywords" content={seoKeywords} />
+	{/each}
+</svelte:head>
+
 <Template>
 	{#snippet header()}
-		<Header>
-			{#snippet left()}<Logo />{/snippet}
+		<Header class="p-0" containerClass="relative">
+			{#snippet left()}
+				<Logo src="/logo.svg" class="absolute top-[-23px] left-4" />
+			{/snippet}
 			{#snippet center()}<Nav {links} />{/snippet}
 			{#snippet right()}<ThemeDark />{/snippet}
 		</Header>
