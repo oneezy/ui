@@ -37,6 +37,7 @@ export { default as ThemeDark } from './components/molecules/Theme/ThemeDark.sve
 export { default as ThemeColor } from './components/molecules/Theme/ThemeColor.svelte';
 
 /* {organisms} */
+export { default as Page } from './components/organisms/Page/Page.svelte'
 export { default as Map } from './components/organisms/Map/Map.svelte';
 export { default as Hero } from './components/organisms/Hero/Hero.svelte';
 // export { default as Stats } from './components/organisms/Stats/Stats.svelte'
