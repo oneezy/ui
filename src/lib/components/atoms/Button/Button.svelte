@@ -35,44 +35,47 @@
 	let classNames = [baseClass];
 
 	const getClassNames = () => {
-  const styles = [
-		// outline
-    { condition: primary && outline, className: 'preset-outline-primary' },
-    { condition: secondary && outline, className: 'preset-outline-secondary' },
-    { condition: accent && outline, className: 'preset-outline-accent' },
-    { condition: neutral && outline, className: 'preset-outline-accent' },
-    { condition: outline, className: 'preset-outline' },
-		// tonal
-    { condition: primary && tonal, className: 'preset-tonal-primary' },
-    { condition: secondary && tonal, className: 'preset-tonal-secondary' },
-    { condition: tonal, className: 'preset-tonal' },
-		// ghost
-    { condition: primary && ghost, className: 'preset-ghost-primary' },
-    { condition: secondary && ghost, className: 'preset-ghost-secondary' },
-    { condition: ghost, className: 'preset-ghost' },
-		// glass
-		{ condition: glass && invert, className: 'preset-glass-invert' },
-		{ condition: glass, className: 'preset-glass' },
-		// filled
-    { condition: primary, className: 'preset-filled-primary' },
-    { condition: secondary, className: 'preset-filled-secondary' },
-    { condition: accent, className: 'preset-filled-accent' },
-    { condition: neutral, className: 'preset-filled-neutral' },
-		// default
-    { condition: true, className: 'preset-filled' }, // Default case
-  ];
+		const styles = [
+			// outline
+			{ condition: primary && outline, className: 'preset-outline-primary' },
+			{
+				condition: secondary && outline,
+				className: 'preset-outline-secondary'
+			},
+			{ condition: accent && outline, className: 'preset-outline-accent' },
+			{ condition: neutral && outline, className: 'preset-outline-accent' },
+			{ condition: outline, className: 'preset-outline' },
+			// tonal
+			{ condition: primary && tonal, className: 'preset-tonal-primary' },
+			{ condition: secondary && tonal, className: 'preset-tonal-secondary' },
+			{ condition: tonal, className: 'preset-tonal' },
+			// ghost
+			{ condition: primary && ghost, className: 'preset-ghost-primary' },
+			{ condition: secondary && ghost, className: 'preset-ghost-secondary' },
+			{ condition: ghost, className: 'preset-ghost' },
+			// glass
+			{ condition: glass && invert, className: 'preset-glass-invert' },
+			{ condition: glass, className: 'preset-glass' },
+			// filled
+			{ condition: primary, className: 'preset-filled-primary' },
+			{ condition: secondary, className: 'preset-filled-secondary' },
+			{ condition: accent, className: 'preset-filled-accent' },
+			{ condition: neutral, className: 'preset-filled-neutral' },
+			// default
+			{ condition: true, className: '' } // Default case
+		];
 
-  const matchedStyle = styles.find(style => style.condition);
-  return matchedStyle ? matchedStyle.className : '';
-};
+		const matchedStyle = styles.find((style) => style.condition);
+		return matchedStyle ? matchedStyle.className : '';
+	};
 
-classNames.push(getClassNames());
+	classNames.push(getClassNames());
 
 	// states
 	if (disabled) {
 		classNames.push('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
 	}
-	
+
 	// icon
 	if (icon) {
 		classNames.push('btn-icon');
@@ -89,7 +92,7 @@ classNames.push(getClassNames());
 		classNames.push('btn-lg');
 	} else if (xl) {
 		classNames.push('btn-xl');
-	} 
+	}
 
 	const finalClass = `${classNames.join(' ')}`;
 </script>
@@ -110,11 +113,7 @@ classNames.push(getClassNames());
 		{/if}
 	</a>
 {:else}
-	<button
-		{...props}
-		class="{finalClass} {props.class}"
-		{disabled}
-	>
+	<button {...props} class="{finalClass} {props.class}" {disabled}>
 		{#if icon}
 			{@render children()}
 		{:else}
@@ -129,7 +128,8 @@ classNames.push(getClassNames());
 	.btn {
 		transition-duration: 200ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-		transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+		transition-property: color, background-color, border-color, opacity,
+			box-shadow, transform;
 	}
 	@media (prefers-reduced-motion: no-preference) {
 		.btn {

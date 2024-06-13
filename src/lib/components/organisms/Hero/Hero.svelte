@@ -6,17 +6,32 @@
 		Effect,
 		Title,
 		Button,
-		Divider
+		Divider,
+		Logo
 	} from '$lib';
+
+	import SolarPhoneBold from '~icons/solar/phone-bold';
+	import SolarMapPointBold from '~icons/solar/map-point-bold';
+
 	let {
+		logo = true,
+		logoEffect = true,
+		logoSrc = 'https://oneezy.com/logo.svg',
+		logoSmall = 'https://oneezy.com/logo.svg',
+		logoLarge = 'https://oneezy.com/logo.svg',
 		title = 'Title',
 		tagline = 'Your awesome tagline goes here',
+		company = 'Company Name',
 		button1 = 'Button 1',
-		button1Link = '#button1',
+		button1Link = '#',
 		button2 = 'Button 2',
-		button2Link = '#button2',
-		src = 'https://www.ronaldcitranodds.com/custom/images/banner-1.jpg',
+		button2Link = '#',
+		src = 'https://picsum.photos/1920/1080',
 		divider = true,
+		dividerFill = 'fill-neutral-50-800',
+		dividerWidth = '150%',
+		dividerHeight = '240px',
+		dividerStuck = false,
 		children,
 		...props
 	} = $props();
@@ -26,36 +41,47 @@
 :::::::::::::::::::::::::::::::: -->
 <Section
 	{...props}
-	class="relative grid grid-rows-[1fr_auto] items-end overflow-hidden"
+	class="relative grid grid-rows-[1fr_auto] place-items-center items-center justify-center overflow-hidden lg:place-items-end lg:items-end lg:justify-end {props.class}"
 >
-	<Image {...props} bg cover {src}>
+	<Image bg cover {src}>
 		<Effect
-			{...props}
 			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
 			linear="170deg"
 		/>
 		<Effect
-			{...props}
 			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
 			linear="180deg"
 		/>
 	</Image>
 
-	<Container {...props} class="flex flex-col items-center justify-center">
-		<Title {...props} {title} {tagline} class="text-center text-white" />
+	<Container
+		class="flex flex-col items-center justify-center gap-20 md:max-h-[50svh]"
+	>
+		<Title title={company} class="sr-only text-center text-white" />
+		{#if logo}
+			<Logo effect={logoEffect} class="flex w-full lg:hidden" src={logoSmall} />
+			<Logo effect={logoEffect} class="hidden w-full lg:flex" src={logoLarge} />
+			<!-- <Title {tagline} class="text-center text-white" /> -->
+		{:else}
+			<Title {title} {tagline} class="text-center text-white" />
+		{/if}
 
-		<div class="flex gap-4">
-			<Button {...props} href={button1Link} primary>{button1}</Button>
-			<Button {...props} href={button2Link} neutral>{button2}</Button>
+		<div class="flex flex-col justify-center gap-4 lg:flex-row">
+			<Button class="min-w-96 flex-1" href={button1Link} primary xl
+				><SolarPhoneBold class="text-4xl" />{button1}</Button
+			>
+			<Button class="min-w-96 flex-1" href={button2Link} neutral xl
+				><SolarMapPointBold class="text-4xl" />{button2}</Button
+			>
 		</div>
 	</Container>
 
 	{#if divider}
 		<Divider
-			{...props}
-			height="240px"
-			fill="fill-neutral-50-800"
-			width="150%"
+			class="mb-[-1px]"
+			fill={dividerFill}
+			width={dividerWidth}
+			height={dividerHeight}
 			flip={true}
 		/>
 	{/if}

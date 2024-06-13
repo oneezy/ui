@@ -40,6 +40,8 @@ export async function load({ fetch }) {
 				time: hour.time
 			})),
 			brandLogo: page.brand.logo,
+			brandLogoSmall: page.brand.logoSmall,
+			brandLogoLarge: page.brand.logoLarge,
 			brandIcon: page.brand.icon,
 			brandColors: page.brand.color.map((color) => ({
 				name: color.name,

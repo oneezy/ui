@@ -23,6 +23,7 @@ export { default as Image } from './components/atoms/Image/Image.svelte';
 export { default as Logo } from './components/atoms/Logo/Logo.svelte';
 
 /* {molecules} */
+export { default as Review } from './components/molecules/Review/Review.svelte';
 export { default as Accordion } from './components/molecules/Accordion/Accordion.svelte';
 export { default as AccordionItem } from './components/molecules/Accordion/AccordionItem.svelte';
 // export { default as AppBar } from './components/molecules/AppBar/AppBar.svelte'
@@ -37,7 +38,7 @@ export { default as ThemeDark } from './components/molecules/Theme/ThemeDark.sve
 export { default as ThemeColor } from './components/molecules/Theme/ThemeColor.svelte';
 
 /* {organisms} */
-export { default as Page } from './components/organisms/Page/Page.svelte'
+export { default as Page } from './components/organisms/Page/Page.svelte';
 export { default as Map } from './components/organisms/Map/Map.svelte';
 export { default as Hero } from './components/organisms/Hero/Hero.svelte';
 // export { default as Stats } from './components/organisms/Stats/Stats.svelte'

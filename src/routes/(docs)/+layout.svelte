@@ -11,7 +11,7 @@
 		ThemeColor
 	} from '$lib';
 	import { getRoutes } from '$lib/utils/getRoutes.js';
-	import { convertPathToTitle } from '$lib/utils/convertPathToTitle.js';
+	import { convertPathToTitle } from '$root/src/lib/utils/utils.js';
 	import IconMenu from '~icons/hugeicons/menu-02';
 	import IconClose from '~icons/material-symbols/close-rounded';
 

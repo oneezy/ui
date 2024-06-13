@@ -12,9 +12,16 @@
 		Accordion,
 		AccordionItem
 	} from '$lib';
-	// let { children, ...props } = $props();
-	let { data, pageData, aboutData, servicesData, faqData, children, ...props } =
-		$props();
+	let {
+		data,
+		metaData,
+		pageData,
+		aboutData,
+		servicesData,
+		faqData,
+		children,
+		...props
+	} = $props();
 
 	let classes = 'card grid items-center justify-start flex-1';
 
@@ -23,6 +30,7 @@
 	let dividerHeight = 'calc(14vw + 1px)';
 
 	// Extract the "Home" page data and the rest of the pages
+	let meta = data.metaData[0];
 	let homePage = data.pageData.find((page) => page.pageSlug === 'home');
 	let otherPages = data.pageData.filter((page) => page.pageSlug !== 'home');
 </script>
@@ -30,24 +38,37 @@
 <!-- Home -->
 {#if homePage}
 	<Hero
+		class="min-h-[100vh] lg:min-h-[80svh]"
+		logo
+		effect={true}
+		logoSrc={meta.brandLogo}
+		logoSmall={meta.brandLogoSmall}
+		logoLarge={meta.brandLogoLarge}
 		id={homePage.pageSlug}
 		title={homePage.pageTitle}
 		tagline={homePage.pageTagline}
+		company={meta.companyName}
 		button1="Schedule Appointment"
-		button1Link="tel:8888888888"
+		button1Link="tel:{meta.companyPhone}"
 		button2="Get Directions"
-		button2Link="/contact"
+		button2Link="#contact"
 		src="/images/office.jpg"
 		gradient="var(--color-primary), transparent, var(--color-secondary)"
 		divider
+		{dividerFill}
+		{dividerWidth}
+		{dividerHeight}
 	/>
 {/if}
 
 <!-- Quick Links -->
+<!-- <Section
+	class="relative z-10 -mt-52 mb-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 "
+> -->
 <Section
-	class="my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 "
+	class="relative z-10 my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 "
 >
-	<Card total="4" />
+	<Card total="4" glass />
 </Section>
 
 {#each otherPages as page}

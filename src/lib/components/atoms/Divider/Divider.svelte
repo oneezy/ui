@@ -12,6 +12,7 @@
 		flip = false,
 		invert = false,
 		reverse = false,
+		classSvg = '',
 		children,
 		...props
 	} = $props();
@@ -81,7 +82,7 @@
 		style={containerStyle}
 	>
 		<svg
-			class="{svgClass} {flip ? 'rotate-180' : ''} {invert
+			class="{classSvg} {svgClass} {flip ? 'rotate-180' : ''} {invert
 				? 'scale-y-[-1]'
 				: ''}"
 			viewBox="0 0 1200 120"
@@ -98,15 +99,42 @@
 {#if children}
 	<Section {...props}>
 		<!-- SVG Divider (top) -->
-		{@render divider({ shape, height, width, flip: false, invert, reverse })}
+		{@render divider({
+			shape,
+			height,
+			width,
+			flip: false,
+			invert,
+			reverse,
+			svgClass,
+			classSvg
+		})}
 		<!-- Children -->
 		<div class={bg}>
 			{@render children()}
 		</div>
 		<!-- SVG Divider (bottom) -->
-		{@render divider({ shape, height, width, flip: true, invert, reverse })}
+		{@render divider({
+			shape,
+			height,
+			width,
+			flip: true,
+			invert,
+			reverse,
+			svgClass,
+			classSvg
+		})}
 	</Section>
 {:else}
 	<!-- SVG Divider -->
-	{@render divider({ shape, height, width, flip: false, invert, reverse })}
+	{@render divider({
+		shape,
+		height,
+		width,
+		flip: false,
+		invert,
+		reverse,
+		svgClass,
+		classSvg
+	})}
 {/if}

@@ -6,7 +6,7 @@
 			{ label: 'home', href: '/' },
 			{ label: 'about', href: '/about' },
 			{ label: 'contact', href: '/contact' },
-			{ label: 'docs', href: '/docs' }
+			{ label: 'docs', href: '/docs' },
 		],
 		classLink = null,
 		classLinkActive = null,

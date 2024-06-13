@@ -9,7 +9,10 @@
 	isObserving(
 		() => target,
 		() => root,
-		(value) => (isIntersecting = value)
+		(value) => {
+			isIntersecting = value;
+			isHeaderActive = !isIntersecting;
+		}
 	);
 
 	let {
@@ -23,15 +26,16 @@
 		centerClass,
 		rightClass,
 		children = null,
+		isHeaderActive = false, // Define the prop here
 		...props
 	} = $props();
 
 	let classHeader =
-		'header w-full transition-all duration-500 z-20 translate-y-0 fixed top-0';
+		'header w-full transition-all duration-500 z-20 translate-y-0 fixed top-0 left-0 right-0 p-6';
 	let classContainer =
-		'grid grid-cols-[auto_1fr_auto] justify-center gap-4 md:grid-cols-[200px_1fr_200px] py-3 transition-opacity duration-500';
+		'grid grid-cols-[auto_1fr_auto] justify-center lg:gap-4 lg:grid-cols-[200px_1fr_200px] py-1 px-6 lg:p-2 transition-opacity duration-500';
 	let classLeft = 'self-center justify-self-start';
-	let classCenter = 'hidden h-full items-center justify-center md:flex';
+	let classCenter = 'h-full items-center justify-center flex';
 	let classRight = 'self-center justify-self-end';
 
 	// active
@@ -50,16 +54,28 @@
 			: 'preset-glass'}"
 	>
 		{#if children}
-			{@render children()}
+			{@render children({ isHeaderActive })}
 		{:else}
 			<section class="{classLeft} {leftClass}">
-				{#if typeof left === 'function'}{@render left()}{:else}{left}{/if}
+				{#if typeof left === 'function'}
+					{@render left({ isHeaderActive })}
+				{:else}
+					{left}
+				{/if}
 			</section>
 			<section class="{classCenter} {centerClass}">
-				{#if typeof center === 'function'}{@render center()}{:else}{center}{/if}
+				{#if typeof center === 'function'}
+					{@render center({ isHeaderActive })}
+				{:else}
+					{center}
+				{/if}
 			</section>
 			<section class="{classRight} {rightClass}">
-				{#if typeof right === 'function'}{@render right()}{:else}{right}{/if}
+				{#if typeof right === 'function'}
+					{@render right({ isHeaderActive })}
+				{:else}
+					{right}
+				{/if}
 			</section>
 		{/if}
 	</Container>

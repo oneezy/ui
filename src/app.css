@@ -3,6 +3,7 @@
 
 /* Add any custom CSS here */
 [data-theme] {
+	--meh: #009488 #00fffb;
 	/* colors */
 	--theme-color: var(--color-slate-500);
 	--theme-color-neutral: var(--color-slate-500);
