@@ -15,7 +15,7 @@
 {#snippet template()}
 	<Link
 		href="#"
-		class="rounded-box border-neutral-200-800 bg-neutral-50-950 align-center grid max-w-xs place-items-center items-center justify-center border p-6 text-center shadow"
+		class="card rounded-box preset-glass align-center grid max-w-xs place-items-center items-center justify-center border p-6 text-center shadow"
 	>
 		<svg
 			class="text-primary-400-500 size-14"

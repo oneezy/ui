@@ -51,7 +51,7 @@
 	<Container
 		class="{children ? '' : classContainer} {containerClass} {isIntersecting
 			? ''
-			: 'preset-glass'}"
+			: 'preset-glass rounded-base'}"
 	>
 		{#if children}
 			{@render children({ isHeaderActive })}

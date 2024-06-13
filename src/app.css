@@ -21,6 +21,8 @@
 
 	/* radius */
 	--theme-corners: 9999px;
+	--theme-corners-box: var(--radius-2xl);
+	--theme-corners-button: 9999px;
 }
 
 [data-theme='blue'] {

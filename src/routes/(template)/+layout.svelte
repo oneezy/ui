@@ -57,8 +57,8 @@
 			{#snippet left({ isHeaderActive })}
 				<div class="lg:translate-x-4">
 					{#if !isHeaderActive}
-						<Logo {href} src="icon.svg" class="flex lg:hidden" />
-						<Logo {href} src="logo.svg" class="hidden lg:flex" />
+						<Logo {href} src="icon.svg" class="opacit-0 flex lg:hidden" />
+						<Logo {href} src="logo.svg" class="opacit-0 hidden lg:flex" />
 					{:else}
 						<Logo {href} src="icon.svg" class="flex lg:hidden" />
 						<Logo

@@ -41,7 +41,7 @@
 :::::::::::::::::::::::::::::::: -->
 <Section
 	{...props}
-	class="relative grid grid-rows-[1fr_auto] place-items-center items-center justify-center overflow-hidden lg:place-items-end lg:items-end lg:justify-end {props.class}"
+	class="relative grid grid-rows-[1fr_auto] place-items-center items-center justify-center overflow-hidden {props.class}"
 >
 	<Image bg cover {src}>
 		<Effect
@@ -54,9 +54,7 @@
 		/>
 	</Image>
 
-	<Container
-		class="flex flex-col items-center justify-center gap-20 md:max-h-[50svh]"
-	>
+	<Container class="flex flex-col items-center justify-center gap-20 pt-20">
 		<Title title={company} class="sr-only text-center text-white" />
 		{#if logo}
 			<Logo effect={logoEffect} class="flex w-full lg:hidden" src={logoSmall} />

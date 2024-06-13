@@ -84,14 +84,32 @@
 
 /* glass */
 .preset-glass {
-	@apply rounded-base text-neutral-950-950/90 isolate border-2 border-white/25 bg-white/50 ring-1 shadow-lg ring-black/5 backdrop-blur-2xl;
+	@apply text-neutral-950-950/90 isolate border-2 border-white/25 bg-white/50 ring-1 shadow-lg ring-black/5 backdrop-blur-2xl transition-all duration-200;
+	&:is(.btn) {
+		@apply rounded-base;
+	}
 	&:is(.btn:hover, .btn:active) {
 		@apply text-neutral-950-950/100 border-white/50 bg-white/50;
+	}
+	&:is(.card) {
+		@apply rounded-box;
+	}
+	&:is(.card:hover, .card:active) {
+		@apply text-neutral-950-950/100 border-white/50 bg-white/80;
 	}
 }
 .preset-glass-invert {
 	@apply text-neutral-50-50/90 isolate border-2 border-black/25 bg-black/70 ring-1 shadow-lg ring-white/5 backdrop-blur-2xl;
+	&:is(.btn) {
+		@apply rounded-button;
+	}
 	&:is(.btn:hover, .btn:active) {
+		@apply text-neutral-50-50/100 border-black/80 bg-black/50;
+	}
+	&:is(.card) {
+		@apply rounded-box;
+	}
+	&:is(.card:hover, .card:active) {
 		@apply text-neutral-50-50/100 border-black/80 bg-black/50;
 	}
 }

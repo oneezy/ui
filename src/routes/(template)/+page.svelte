@@ -38,7 +38,7 @@
 <!-- Home -->
 {#if homePage}
 	<Hero
-		class="min-h-[100vh] lg:min-h-[80svh]"
+		class="min-h-[90vh] lg:min-h-[80svh]"
 		logo
 		effect={true}
 		logoSrc={meta.brandLogo}
@@ -62,11 +62,8 @@
 {/if}
 
 <!-- Quick Links -->
-<!-- <Section
-	class="relative z-10 -mt-52 mb-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 "
-> -->
 <Section
-	class="relative z-10 my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 "
+	class="relative z-10 my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 lg:-mt-52 lg:mb-20 "
 >
 	<Card total="4" glass />
 </Section>
