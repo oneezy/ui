@@ -1,8 +1,10 @@
 <script lang="ts" context="module">
 	const accordionCtxKey = Symbol();
 
-	export const getAccordionCtx = () => getContext<AccordionContext>(accordionCtxKey);
-	export const setAccordionCtx = (ctx: AccordionContext) => setContext(accordionCtxKey, ctx);
+	export const getAccordionCtx = () =>
+		getContext<AccordionContext>(accordionCtxKey);
+	export const setAccordionCtx = (ctx: AccordionContext) =>
+		setContext(accordionCtxKey, ctx);
 </script>
 
 <script lang="ts">
@@ -14,9 +16,9 @@
 		value = $bindable([]),
 		animDuration = 200,
 		// Root
-		base = '',
+		base = 'divide-y divide-neutral-200-700',
 		padding = '',
-		spaceY = 'space-y-2',
+		spaceY = '',
 		rounded = 'rounded',
 		width = 'w-full',
 		classes = '',
@@ -66,6 +68,9 @@
 
 <!-- @component An Accordion parent component. -->
 
-<div class="{base} {padding} {spaceY} {rounded} {width} {classes}" data-testid="accordion">
+<div
+	class="{base} {padding} {spaceY} {rounded} {width} {classes}"
+	data-testid="accordion"
+>
 	{@render children()}
 </div>

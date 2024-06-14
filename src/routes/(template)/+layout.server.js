@@ -77,6 +77,13 @@ export async function load({ fetch }) {
 			description: service.description
 		}));
 
+		const reviewData = pagesData.reviews.map((review) => ({
+			name: review.name,
+			image: review.image,
+			rating: review.rating,
+			description: review.description
+		}));
+
 		const faqData = pagesData.faq.map((faq) => ({
 			question: faq.question,
 			answer: faq.answer
@@ -87,6 +94,7 @@ export async function load({ fetch }) {
 			pageData,
 			aboutData,
 			servicesData,
+			reviewData,
 			faqData
 		};
 	} catch (error) {
@@ -96,6 +104,7 @@ export async function load({ fetch }) {
 			pageData: [],
 			aboutData: [],
 			servicesData: [],
+			reviewData: [],
 			faqData: []
 		};
 	}

@@ -1,5 +1,11 @@
 <script>
+	import { Divider } from '$lib';
 	let {
+		divider,
+		dividerFill = 'fill-primary-500-500',
+		dividerWidth = '150%',
+		dividerHeight = '14vw',
+		containerClass = '',
 		left = '⬜ footer left',
 		center = '⬜ footer center',
 		right = '⬜ footer right',
@@ -8,12 +14,21 @@
 	} = $props();
 </script>
 
-<div {...props} class="footer bg-blue-300 {props.class}">
+{#if divider}
+	<Divider
+		class="mb-[-1px]"
+		fill={dividerFill}
+		width={dividerWidth}
+		height={dividerHeight}
+	/>
+{/if}
+
+<div {...props} class="footer {props.class}">
 	<div
 		class="container
-		{children
-			? ''
-			: 'grid grid-cols-[auto_1fr_auto] md:grid-cols-[200px_1fr_200px] justify-center gap-4'}"
+	{children
+			? containerClass
+			: 'grid grid-cols-[auto_1fr_auto] justify-center gap-4 md:grid-cols-[200px_1fr_200px]'}"
 	>
 		{#if children}
 			{@render children()}
@@ -21,7 +36,7 @@
 			<section class="self-center justify-self-start">
 				{#if typeof left === 'function'}{@render left()}{:else}{left}{/if}
 			</section>
-			<section class="hidden md:flex items-center justify-center h-full">
+			<section class="hidden h-full items-center justify-center md:flex">
 				{#if typeof center === 'function'}{@render center()}{:else}{center}{/if}
 			</section>
 			<section class="self-center justify-self-end">

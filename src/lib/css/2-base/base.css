@@ -1,6 +1,7 @@
 html {
 	color-scheme: light dark;
 	scroll-behavior: smooth;
+	scroll-padding: 	10rem;
 }
 
 html[style='color-scheme: light;'] {

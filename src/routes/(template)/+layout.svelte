@@ -8,6 +8,7 @@
 		Nav,
 		ThemeDark,
 		Footer,
+		Social,
 		Copyright
 	} from '$lib';
 
@@ -23,6 +24,7 @@
 		{ label: 'home', href: '#home' },
 		{ label: 'about', href: '#about' },
 		{ label: 'services', href: '#services' },
+		{ label: 'testimonials', href: '#testimonials' },
 		{ label: 'contact', href: '#contact' },
 		{ label: 'FAQ', href: '#faq' }
 	];
@@ -57,8 +59,8 @@
 			{#snippet left({ isHeaderActive })}
 				<div class="lg:translate-x-4">
 					{#if !isHeaderActive}
-						<Logo {href} src="icon.svg" class="opacit-0 flex lg:hidden" />
-						<Logo {href} src="logo.svg" class="opacit-0 hidden lg:flex" />
+						<Logo {href} src="icon.svg" class="flex lg:hidden" />
+						<Logo {href} src="logo.svg" class="hidden lg:flex" />
 					{:else}
 						<Logo {href} src="icon.svg" class="flex lg:hidden" />
 						<Logo
@@ -124,11 +126,25 @@
 	{/snippet}
 
 	{#snippet footer()}
-		<Divider width="150%" fill="fill-primary" />
-		<Footer class="bg-primary text-primary-50-50 p-4">
-			{#snippet left()}<Logo />{/snippet}
-			{#snippet center()}Social{/snippet}
-			{#snippet right()}<Copyright>Oneezy</Copyright>{/snippet}
+		<Footer
+			divider
+			class="bg-primary text-primary-50-50 p-4"
+			containerClass="grid md:grid-cols-2 grid-flow-dense items-center justify-center gap-4"
+		>
+			<div
+				class="flex flex-col items-center justify-center md:col-span-1 md:col-start-1 md:flex-row md:justify-start"
+			>
+				<Logo
+					{href}
+					src="icon.svg"
+					class="mr-2 flex size-20 items-center justify-center opacity-100 grayscale"
+				/>
+				<Copyright>{meta.companyName}</Copyright>
+			</div>
+			<Social
+				classContainer="md:-col-end-1 md:ml-auto"
+				socials={meta.socialLinks}
+			/>
 		</Footer>
 	{/snippet}
 </Template>

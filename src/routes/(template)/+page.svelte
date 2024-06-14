@@ -10,7 +10,8 @@
 		Image,
 		Mask,
 		Accordion,
-		AccordionItem
+		AccordionItem,
+		Review
 	} from '$lib';
 	let {
 		data,
@@ -18,6 +19,7 @@
 		pageData,
 		aboutData,
 		servicesData,
+		reviewData,
 		faqData,
 		children,
 		...props
@@ -33,6 +35,8 @@
 	let meta = data.metaData[0];
 	let homePage = data.pageData.find((page) => page.pageSlug === 'home');
 	let otherPages = data.pageData.filter((page) => page.pageSlug !== 'home');
+
+	$inspect(data.reviewData);
 </script>
 
 <!-- Home -->
@@ -70,14 +74,20 @@
 
 {#each otherPages as page}
 	<Page
+		class="relative relative min-h-[80vh] overflow-hidden {page.pageSlug ===
+		'services'
+			? 'bg-neutral-200-700'
+			: ''}"
 		id={page.pageSlug}
 		title={page.pageTitle}
 		tagline={page.pageTagline}
-		class="relative"
+		titleOutside={page.pageSlug === 'contact' ? true : false}
+		dividerTop={page.pageSlug === 'contact' || 'services' ? true : false}
+		dividerStuck={page.pageSlug === 'contact' ? true : false}
 		dividerBottom
-		{dividerFill}
 		{dividerWidth}
 		{dividerHeight}
+		{dividerFill}
 	>
 		<!-- About -->
 		{#if page.pageSlug === 'about'}
@@ -102,6 +112,25 @@
 			{/each}
 		{/if}
 
+		{#if page.pageSlug === 'testimonials'}
+			<!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"> -->
+			<!-- <div class="flex flex-wrap gap-4"> -->
+			<div class="columns-1 gap-4 sm:columns-2 md:columns-3">
+				<Review
+					reviews={data.reviewData}
+					class="mx-2 my-8 break-inside-avoid"
+				/>
+			</div>
+		{/if}
+
+		{#if page.pageSlug === 'contact'}
+			<Map
+				address={meta.companyAddress}
+				zoom={14}
+				class="absolute inset-0 -z-10 translate-y-1/8 scale-[2]"
+			/>
+		{/if}
+
 		<!-- Services -->
 		{#if page.pageSlug === 'services'}
 			<div
@@ -121,29 +150,8 @@
 						{#snippet control()}{faq.question}{/snippet}
 						{#snippet panel()}{faq.answer}{/snippet}
 					</AccordionItem>
-					<hr class="hr" />
 				{/each}
 			</Accordion>
 		{/if}
 	</Page>
 {/each}
-
-<!-- Contact Us -->
-<Page
-	id="contact"
-	title="Contact Us"
-	titleOutside
-	tagline="Call us today to schedule an appointment"
-	class="relative min-h-[80vh] overflow-hidden"
-	dividerTop
-	dividerBottom
-	dividerStuck
-	{dividerWidth}
-	{dividerHeight}
->
-	<Map
-		address="5385 Laurel, Beaumont, TX, 77707"
-		zoom={12}
-		class="absolute inset-0 -z-10 translate-y-1/8 scale-[2]"
-	/>
-</Page>

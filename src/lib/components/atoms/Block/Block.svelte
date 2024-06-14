@@ -1,12 +1,15 @@
 <script>
-	import { Box } from '$lib';
 	let { children = null, ...props } = $props();
 </script>
 
-<Box {...props} class="w-full">
+<div {...props} class="{props.class}">
 	{#if children}
 		{@render children()}
 	{:else}
-		Block
+		{#if typeof someName === 'function'}
+			{@render someName()}
+		{:else}
+			default
+		{/if}
 	{/if}
-</Box>
+</div>

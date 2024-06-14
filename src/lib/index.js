@@ -23,6 +23,9 @@ export { default as Image } from './components/atoms/Image/Image.svelte';
 export { default as Logo } from './components/atoms/Logo/Logo.svelte';
 
 /* {molecules} */
+export { default as Indicator } from './components/molecules/Indicator/Indicator.svelte'
+export { default as Avatar } from './components/molecules/Avatar/Avatar.svelte'
+export { default as Rating } from './components/molecules/Rating/Rating.svelte'
 export { default as Review } from './components/molecules/Review/Review.svelte';
 export { default as Accordion } from './components/molecules/Accordion/Accordion.svelte';
 export { default as AccordionItem } from './components/molecules/Accordion/AccordionItem.svelte';
@@ -32,7 +35,7 @@ export { default as Card } from './components/molecules/Card/Card.svelte';
 export { default as Copyright } from './components/molecules/Copyright/Copyright.svelte';
 // export { default as Dialog } from './components/molecules/Dialog/Dialog.svelte'
 export { default as Nav } from './components/molecules/Nav/Nav.svelte';
-// export { default as Social } from './components/molecules/Social/Social.svelte'
+export { default as Social } from './components/molecules/Social/Social.svelte';
 // export { default as CountUp } from './components/molecules/CountUp/CountUp.svelte'
 export { default as ThemeDark } from './components/molecules/Theme/ThemeDark.svelte';
 export { default as ThemeColor } from './components/molecules/Theme/ThemeColor.svelte';
