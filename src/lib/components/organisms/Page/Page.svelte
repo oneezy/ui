@@ -17,14 +17,14 @@
 </script>
 
 {#snippet titleEl()}
-	<Title {...props} {title} {tagline} class="text-center" />
+	<Title {...props} {id} {title} {tagline} class="text-center" />
 {/snippet}
 
 {#if titleOutside}
 	{@render titleEl()}
 {/if}
 
-<section {...props} {id} class="relative {props.class}" use:observer>
+<section {...props} class="relative {props.class}" use:observer>
 	{#if dividerTop}
 		<Divider
 			width={dividerWidth}
@@ -47,11 +47,6 @@
 	</Container>
 
 	{#if dividerBottom}
-		<Divider
-			width={dividerWidth}
-			height={dividerHeight}
-			fill={dividerFill}
-			bottom={dividerStuck ? true : false}
-		/>
+		<Divider width={dividerWidth} height={dividerHeight} fill={dividerFill} bottom={dividerStuck ? true : false} />
 	{/if}
 </section>

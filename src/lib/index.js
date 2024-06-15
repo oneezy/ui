@@ -23,6 +23,7 @@ export { default as Image } from './components/atoms/Image/Image.svelte';
 export { default as Logo } from './components/atoms/Logo/Logo.svelte';
 
 /* {molecules} */
+export { default as Stat } from './components/molecules/Stat/Stat.svelte'
 export { default as Indicator } from './components/molecules/Indicator/Indicator.svelte'
 export { default as Avatar } from './components/molecules/Avatar/Avatar.svelte'
 export { default as Rating } from './components/molecules/Rating/Rating.svelte'

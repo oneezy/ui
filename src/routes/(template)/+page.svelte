@@ -11,19 +11,13 @@
 		Mask,
 		Accordion,
 		AccordionItem,
-		Review
+		Button,
+		Review,
+		Stat
 	} from '$lib';
-	let {
-		data,
-		metaData,
-		pageData,
-		aboutData,
-		servicesData,
-		reviewData,
-		faqData,
-		children,
-		...props
-	} = $props();
+	import StarIcon from '~icons/material-symbols/kid-star';
+	import ReviewIcon from '~icons/material-symbols/android-messages';
+	let { data, metaData, pageData, aboutData, servicesData, reviewData, faqData, children, ...props } = $props();
 
 	let classes = 'card grid items-center justify-start flex-1';
 
@@ -35,8 +29,6 @@
 	let meta = data.metaData[0];
 	let homePage = data.pageData.find((page) => page.pageSlug === 'home');
 	let otherPages = data.pageData.filter((page) => page.pageSlug !== 'home');
-
-	$inspect(data.reviewData);
 </script>
 
 <!-- Home -->
@@ -74,10 +66,7 @@
 
 {#each otherPages as page}
 	<Page
-		class="relative relative min-h-[80vh] overflow-hidden {page.pageSlug ===
-		'services'
-			? 'bg-neutral-200-700'
-			: ''}"
+		class="relative relative min-h-[80vh] overflow-hidden {page.pageSlug === 'services' ? 'bg-neutral-200-700' : ''}"
 		id={page.pageSlug}
 		title={page.pageTitle}
 		tagline={page.pageTagline}
@@ -92,9 +81,7 @@
 		<!-- About -->
 		{#if page.pageSlug === 'about'}
 			{#each data.aboutData as about}
-				<div
-					class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse"
-				>
+				<div class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse">
 					<Content text>
 						<h2>{about.title}</h2>
 						<p>{about.description}</p>
@@ -112,30 +99,30 @@
 			{/each}
 		{/if}
 
+		<!-- Testimonials -->
 		{#if page.pageSlug === 'testimonials'}
-			<!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"> -->
-			<!-- <div class="flex flex-wrap gap-4"> -->
-			<div class="columns-1 gap-4 sm:columns-2 md:columns-3">
-				<Review
-					reviews={data.reviewData}
-					class="mx-2 my-8 break-inside-avoid"
-				/>
+			<div class="mb-20 flex gap-20">
+				<Stat title="Rating" value="4.8">
+					<StarIcon class="text-accent" />
+				</Stat>
+				<Stat title="Reviews" value="38">
+					<ReviewIcon class="text-accent" />
+				</Stat>
 			</div>
+			<div class="columns-1 gap-4 lg:columns-2 xl:columns-3">
+				<Review reviews={data.reviewData} class="mx-2 my-8 break-inside-avoid" />
+			</div>
+			<Button class="my-20" href="#testimonials" neutral xl>Write us a review?</Button>
 		{/if}
 
+		<!-- Contact -->
 		{#if page.pageSlug === 'contact'}
-			<Map
-				address={meta.companyAddress}
-				zoom={14}
-				class="absolute inset-0 -z-10 translate-y-1/8 scale-[2]"
-			/>
+			<Map address={meta.companyAddress} zoom={14} class="absolute inset-0 -z-10 translate-y-1/8 scale-[2]" />
 		{/if}
 
 		<!-- Services -->
 		{#if page.pageSlug === 'services'}
-			<div
-				class="grid auto-rows-fr grid-cols-1 gap-10 p-4 pb-20 md:grid-cols-3"
-			>
+			<div class="grid auto-rows-fr grid-cols-1 gap-10 p-4 pb-20 md:grid-cols-3">
 				{#each data.servicesData as service}
 					<Card title={service.title} description={service.description} />
 				{/each}
