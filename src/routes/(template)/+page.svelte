@@ -11,13 +11,17 @@
 		Mask,
 		Accordion,
 		AccordionItem,
+		Link,
 		Button,
 		Review,
-		Stat
+		Stat,
+		Slider,
+		Team
 	} from '$lib';
 	import StarIcon from '~icons/material-symbols/kid-star';
 	import ReviewIcon from '~icons/material-symbols/android-messages';
-	let { data, metaData, pageData, aboutData, servicesData, reviewData, faqData, children, ...props } = $props();
+	let { data, metaData, pageData, teamData, aboutData, servicesData, reviewData, faqData, children, ...props } =
+		$props();
 
 	let classes = 'card grid items-center justify-start flex-1';
 
@@ -59,7 +63,7 @@
 
 <!-- Quick Links -->
 <Section
-	class="relative z-10 my-20 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 lg:-mt-52 lg:mb-20 "
+	class="relative z-10 grid grid-cols-2 items-center justify-center gap-4 p-4 md:flex md:flex-row md:gap-10 lg:-mt-52 lg:mb-20 "
 >
 	<Card total="4" glass />
 </Section>
@@ -80,8 +84,20 @@
 	>
 		<!-- About -->
 		{#if page.pageSlug === 'about'}
+			<!-- Team -->
+			<Slider arrows autoplay duration="3000" class="gap-10">
+				{#each data.teamData as team}
+					<Team
+						id={team.id}
+						name={team.name}
+						position={team.position}
+						image={team.image}
+						class="md:min-w-1/4 relative flex w-full shrink-0 snap-center snap-normal items-center justify-center gap-4 overflow-hidden md:w-1/4"
+					/>
+				{/each}
+			</Slider>
 			{#each data.aboutData as about}
-				<div class="flex flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse">
+				<div class="flex items-center flex-col flex-col-reverse md:flex-row md:gap-10 md:even:flex-row-reverse">
 					<Content text>
 						<h2>{about.title}</h2>
 						<p>{about.description}</p>
@@ -112,7 +128,13 @@
 			<div class="columns-1 gap-4 lg:columns-2 xl:columns-3">
 				<Review reviews={data.reviewData} class="mx-2 my-8 break-inside-avoid" />
 			</div>
-			<Button class="my-20" href="#testimonials" neutral xl>Write us a review?</Button>
+			<Button
+				class="my-20"
+				href="https://search.google.com/local/writereview?placeid=ChIJx-FnYE_LPoYRubNNIk7tdn0"
+				target="_blank"
+				neutral
+				xl>Write us a review?</Button
+			>
 		{/if}
 
 		<!-- Contact -->

@@ -7,14 +7,9 @@ export async function load({ fetch }) {
 
 	try {
 		// Fetch data from both URLs concurrently
-		const [generalResponse, pagesResponse] = await Promise.all(
-			urls.map((url) => fetch(url))
-		);
+		const [generalResponse, pagesResponse] = await Promise.all(urls.map((url) => fetch(url)));
 
-		const [generalData, pagesDataArray] = await Promise.all([
-			generalResponse.json(),
-			pagesResponse.json()
-		]);
+		const [generalData, pagesDataArray] = await Promise.all([generalResponse.json(), pagesResponse.json()]);
 
 		// Extract the first element of pagesDataArray
 		const pagesData = pagesDataArray[0];
@@ -65,6 +60,14 @@ export async function load({ fetch }) {
 			pageSeoKeywords: page.seo_keywords
 		}));
 
+		const teamData = pagesData.team.map((team) => ({
+			image: team.id,
+			image: team.image,
+			name: team.name,
+			position: team.position,
+			description: team.description
+		}));
+
 		const aboutData = pagesData.about.map((about) => ({
 			image: about.image,
 			title: about.title,
@@ -93,6 +96,7 @@ export async function load({ fetch }) {
 			metaData,
 			pageData,
 			aboutData,
+			teamData,
 			servicesData,
 			reviewData,
 			faqData
@@ -103,6 +107,7 @@ export async function load({ fetch }) {
 			metaData: [],
 			pageData: [],
 			aboutData: [],
+			teamData: [],
 			servicesData: [],
 			reviewData: [],
 			faqData: []

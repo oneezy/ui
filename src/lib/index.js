@@ -23,6 +23,7 @@ export { default as Image } from './components/atoms/Image/Image.svelte';
 export { default as Logo } from './components/atoms/Logo/Logo.svelte';
 
 /* {molecules} */
+export { default as Team } from './components/molecules/Team/Team.svelte'
 export { default as Stat } from './components/molecules/Stat/Stat.svelte'
 export { default as Indicator } from './components/molecules/Indicator/Indicator.svelte'
 export { default as Avatar } from './components/molecules/Avatar/Avatar.svelte'
@@ -42,6 +43,7 @@ export { default as ThemeDark } from './components/molecules/Theme/ThemeDark.sve
 export { default as ThemeColor } from './components/molecules/Theme/ThemeColor.svelte';
 
 /* {organisms} */
+export { default as Slider } from './components/organisms/Slider/Slider.svelte'
 export { default as Page } from './components/organisms/Page/Page.svelte';
 export { default as Map } from './components/organisms/Map/Map.svelte';
 export { default as Hero } from './components/organisms/Hero/Hero.svelte';
