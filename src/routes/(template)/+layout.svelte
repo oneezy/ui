@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import { Template, Divider, Header, Logo, Button, Nav, ThemeDark, Footer, Social, Copyright } from '$lib';
 
 	import { formatPhoneNumber } from '$lib/utils/utils.js';
@@ -26,6 +27,24 @@
 	<title>{meta.seoTitle}</title>
 	<meta name="description" content={meta.seoDescription} />
 	<meta name="keywords" content={meta.seoKeywords} />
+	<meta name="author" content={meta.companyName} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content={meta.seoDescription} />
+	<meta name="twitter:title" content={meta.seoTitle} />
+	<meta name="twitter:description" content={meta.seoDescription} />
+	<meta name="twitter:image" content="{$page.url.origin}/images/og.png" />
+	<meta name="twitter:image:alt" content={meta.companyName} />
+	<meta name="twitter:creator" content={meta.companyName} />
+	<meta property="og:title" content={meta.seoTitle} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={meta.companyWebsite} />
+	<meta property="og:image" content="{$page.url.origin}/images/og.png" />
+	<meta property="og:image:alt" content={meta.companyName} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:description" content={meta.seoDescription} />
+	<meta property="og:site_name" content={meta.companyName} />
+	<meta property="og:locale" content="EN_US" />
 </svelte:head>
 
 {#snippet phoneIcon()}
