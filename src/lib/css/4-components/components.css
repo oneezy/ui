@@ -25,7 +25,7 @@
 			@apply py-4 px-8 text-xl;
 		}
 		&:is(.btn-xl) {
-			@apply py-5 px-10 text-2xl;
+			@apply py-4 px-8 text-xl md:py-5 md:px-10 md:text-2xl;
 		}
 	}
 	&:is(.btn-icon) {

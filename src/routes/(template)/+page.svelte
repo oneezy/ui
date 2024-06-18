@@ -252,7 +252,7 @@
 {/each}
 
 <!-- CTA -->
-<Container class="p-20 pt-10">
+<Container class="">
 	<Title>Ready for an appointment?</Title>
 	<div class="flex flex-col justify-center gap-4 lg:flex-row">
 		<Button class="min-w-96 flex-1" href="tel:{meta.companyPhone}" xl neutral
