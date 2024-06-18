@@ -26,7 +26,7 @@
 	@apply bg-primary-500-500 text-primary-950-950;
 }
 .preset-filled-secondary {
-	@apply bg-secondary-500-500 text-secondary-50-50;
+	@apply bg-secondary-500-500 text-secondary-950-950;
 }
 .preset-filled-accent {
 	@apply bg-accent-500-500 text-accent-50-50;
