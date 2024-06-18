@@ -56,11 +56,21 @@
 	import SmileIcon from '~icons/streamline/chat-bubble-oval-smiley-2-solid';
 	import EmailIcon from '~icons/ic/round-mail';
 
-	let classIcons = 'text-primary text-5xl';
+	// let classIcons = 'text-primary-500-500 text-6xl p-2 contrast-70';
+	// let classIcons = 'text-primary-600-600 text-6xl p-2';
+	// let classIcons = 'text-secondary-500-500 text-6xl p-2';
+	let classIcons = 'text-secondary text-6xl p-2';
 </script>
 
 {#snippet toothIcon(classes)}
-	<svg class={classes} xmlns="http://www.w3.org/2000/svg" fill="none" width="1.2em" height="1.2em" viewBox="0 0 32 32">
+	<svg
+		class={classIcons}
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		width="1.2em"
+		height="1.2em"
+		viewBox="0 0 32 32"
+	>
 		<path
 			fill="currentColor"
 			fill-rule="evenodd"
@@ -112,7 +122,7 @@
 			{:else if quicklinks.icon === 'office'}
 				<OfficeIcon class={classIcons} />
 			{:else if quicklinks.icon === 'services'}
-				{@render toothIcon('text-primary size-14')}
+				{@render toothIcon(' size-14')}
 			{:else if quicklinks.icon === 'appointment'}
 				<SmileIcon class={classIcons} />
 			{/if}

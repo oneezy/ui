@@ -128,9 +128,15 @@
 			class="bg-accent text-primary-50-50 p-4"
 			containerClass="grid md:grid-cols-2 grid-flow-dense items-center justify-center gap-4"
 		>
-			<div class="flex flex-col items-center justify-center md:col-span-1 md:col-start-1 md:flex-row md:justify-start">
-				<Logo {href} src="logos/icon-black.svg" class="mr-2 flex size-24 items-center justify-center opacity-60" />
-				<Copyright>{meta.companyName}</Copyright>
+			<div
+				class="flex flex-col items-center justify-center text-left md:col-span-1 md:col-start-1 md:flex-row md:justify-start"
+			>
+				<Logo
+					{href}
+					src="logos/icon-black.svg"
+					class="mr-2 flex size-36 items-center justify-center opacity-60 md:size-24"
+				/>
+				<Copyright class="text-center md:text-nowrap">{meta.companyName}</Copyright>
 			</div>
 			<Social classContainer="md:-col-end-1 md:ml-auto" socials={meta.socialLinks} />
 		</Footer>

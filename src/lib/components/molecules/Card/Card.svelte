@@ -20,7 +20,7 @@
 </script>
 
 {#snippet iconEl()}
-	<svg class="text-primary-400-500 size-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+	<svg class="text-secondary size-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
 		<path
 			fill="currentColor"
 			fill-rule="evenodd"
