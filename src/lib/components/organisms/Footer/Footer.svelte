@@ -2,7 +2,7 @@
 	import { Divider } from '$lib';
 	let {
 		divider,
-		dividerFill = 'fill-primary-500-500',
+		dividerFill = 'fill-accent-500-500',
 		dividerWidth = '150%',
 		dividerHeight = '14vw',
 		containerClass = '',

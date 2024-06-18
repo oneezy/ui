@@ -3,12 +3,13 @@
 
 /* Add any custom CSS here */
 [data-theme] {
-	--meh: #009488 #00fffb;
 	/* colors */
 	--theme-color: var(--color-slate-500);
 	--theme-color-neutral: var(--color-slate-500);
-	--theme-color-primary: rgb(64, 158, 185);
-	--theme-color-secondary: rgb(0, 98, 128);
+	/* --theme-color-primary: rgb(64, 158, 185); */
+	/* --theme-color-secondary: rgb(0, 98, 128); */
+	--theme-color-primary: #00fff7;
+	--theme-color-secondary: #22b6b1;
 	--theme-color-accent: #ed1c24;
 
 	/* fonts */

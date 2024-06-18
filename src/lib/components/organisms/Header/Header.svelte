@@ -30,10 +30,9 @@
 		...props
 	} = $props();
 
-	let classHeader =
-		'header w-full transition-all duration-500 z-20 translate-y-0 fixed top-0 left-0 right-0 p-6';
+	let classHeader = 'header w-full transition-all duration-500 z-20 translate-y-0 fixed top-0 left-0 right-0 p-6';
 	let classContainer =
-		'grid grid-cols-[auto_1fr_auto] justify-center lg:gap-4 lg:grid-cols-[200px_1fr_200px] py-1 px-6 lg:p-2 transition-opacity duration-500';
+		'grid grid-cols-[auto_1fr_auto] justify-center lg:gap-4 lg:grid-cols-[200px_1fr_200px] py-1 px-6 lg:p-2 transition-opacity duration-500 preset-glass rounded-base';
 	let classLeft = 'self-center justify-self-start';
 	let classCenter = 'h-full items-center justify-center flex';
 	let classRight = 'self-center justify-self-end';
@@ -50,8 +49,8 @@
 >
 	<Container
 		class="{children ? '' : classContainer} {containerClass} {isIntersecting
-			? ''
-			: 'preset-glass rounded-base'}"
+			? 'pointer-events-none opacity-0 '
+			: 'pointer-events-all opacity-100'}"
 	>
 		{#if children}
 			{@render children({ isHeaderActive })}

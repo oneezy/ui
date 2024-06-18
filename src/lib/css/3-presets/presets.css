@@ -2,13 +2,17 @@
 *************************************************************************/
 /* active */
 .active {
+	/* 		
 	&:is(a) {
-		@apply bg-primary text-neutral-50-50;
-	}
+		@apply text-accent-800;
+	} */
 	/* 	
 	&:is(section) {
 		@apply ring-primary-500-500 bg-primary fill-primary ring-2;
 	} */
+}
+.active .bar {
+	@apply bg-accent opacity-100;
 }
 
 /* filled */
@@ -19,7 +23,7 @@
 	@apply bg-neutral-900-100 text-neutral-50-950;
 }
 .preset-filled-primary {
-	@apply bg-primary-500-500 text-primary-50-50;
+	@apply bg-primary-500-500 text-primary-950-950;
 }
 .preset-filled-secondary {
 	@apply bg-secondary-500-500 text-secondary-50-50;

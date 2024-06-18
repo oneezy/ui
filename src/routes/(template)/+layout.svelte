@@ -1,16 +1,5 @@
 <script>
-	import {
-		Template,
-		Divider,
-		Header,
-		Logo,
-		Button,
-		Nav,
-		ThemeDark,
-		Footer,
-		Social,
-		Copyright
-	} from '$lib';
+	import { Template, Divider, Header, Logo, Button, Nav, ThemeDark, Footer, Social, Copyright } from '$lib';
 
 	import { formatPhoneNumber } from '$lib/utils/utils.js';
 	import SolarPhoneBold from '~icons/solar/phone-bold';
@@ -63,11 +52,7 @@
 						<Logo {href} src="logo.svg" class="hidden lg:flex" />
 					{:else}
 						<Logo {href} src="icon.svg" class="flex lg:hidden" />
-						<Logo
-							{href}
-							src="/logos/logo-black-horizontal.svg"
-							class="hidden lg:flex"
-						/>
+						<Logo {href} src="/logos/logo-black-horizontal-noborder.svg" class="hidden lg:flex" />
 					{/if}
 				</div>
 			{/snippet}
@@ -89,10 +74,7 @@
 					</Button>
 
 					<!-- phone button full -->
-					<Button
-						href="tel:{meta.companyPhone}"
-						class="text-primary-50-50 hidden hidden bg-transparent lg:flex"
-					>
+					<Button href="tel:{meta.companyPhone}" class="text-primary-50-50 hidden hidden bg-transparent lg:flex">
 						<SolarPhoneBold class="text-3xl" />
 						{formatPhoneNumber(meta.companyPhone)}
 					</Button>
@@ -103,12 +85,7 @@
 					</Button>
 
 					<!-- phone button icon -->
-					<Button
-						href="tel:{meta.companyPhone}"
-						class="hidden md:flex lg:hidden"
-						icon
-						ghost
-					>
+					<Button href="tel:{meta.companyPhone}" class="hidden md:flex lg:hidden" icon ghost>
 						<SolarPhoneBold class="text-3xl" />
 					</Button>
 					<!-- phone button full -->
@@ -128,23 +105,15 @@
 	{#snippet footer()}
 		<Footer
 			divider
-			class="bg-primary text-primary-50-50 p-4"
+			dividerFill="fill-accent-500-500"
+			class="bg-accent text-primary-50-50 p-4"
 			containerClass="grid md:grid-cols-2 grid-flow-dense items-center justify-center gap-4"
 		>
-			<div
-				class="flex flex-col items-center justify-center md:col-span-1 md:col-start-1 md:flex-row md:justify-start"
-			>
-				<Logo
-					{href}
-					src="icon.svg"
-					class="mr-2 flex size-20 items-center justify-center opacity-100 grayscale"
-				/>
+			<div class="flex flex-col items-center justify-center md:col-span-1 md:col-start-1 md:flex-row md:justify-start">
+				<Logo {href} src="logos/icon-black.svg" class="mr-2 flex size-24 items-center justify-center opacity-60" />
 				<Copyright>{meta.companyName}</Copyright>
 			</div>
-			<Social
-				classContainer="md:-col-end-1 md:ml-auto"
-				socials={meta.socialLinks}
-			/>
+			<Social classContainer="md:-col-end-1 md:ml-auto" socials={meta.socialLinks} />
 		</Footer>
 	{/snippet}
 </Template>

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { Button } from '$lib';
 
 	let {
 		slides = [],
@@ -165,16 +166,30 @@
 	</div>
 {/snippet}
 
+{#snippet arrowIcon(rotate)}
+	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 12 12" style="rotate: {rotate}deg;"
+		><path
+			fill="currentColor"
+			d="M4.7 10c-.2 0-.4-.1-.5-.2c-.3-.3-.3-.8 0-1.1L6.9 6L4.2 3.3c-.3-.3-.3-.8 0-1.1s.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7q-.3.3-.6.3"
+		/></svg
+	>
+{/snippet}
 <!-- Arrows -->
 {#snippet arrowsEl()}
-	<button
+	<Button
+		icon
 		onclick={prevClick}
-		class="arrow back bg-opacity-50 absolute top-2/5 left-10 rounded-full bg-black p-2 text-white">←</button
+		class="arrow back bg-opacity-50 text-primary-50-50 hover:bg-primary-500 hover:text-primary-950 absolute top-2/5 left-10 rounded-full bg-black p-2"
 	>
-	<button
+		{@render arrowIcon(180)}
+	</Button>
+	<Button
+		icon
 		onclick={nextClick}
-		class="arrow forward bg-opacity-50 absolute top-2/5 right-10 rounded-full bg-black p-2 text-white">→</button
+		class="arrow forward bg-opacity-50 text-primary-50-50 hover:bg-primary-500 hover:text-primary-950 absolute top-2/5 right-10 rounded-full bg-black p-2"
 	>
+		{@render arrowIcon()}
+	</Button>
 {/snippet}
 
 <!-- Indicators -->

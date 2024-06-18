@@ -30,7 +30,7 @@
 </script>
 
 {#snippet reviewEl({ description, name, rating, image })}
-	<Card {...props} class="rounded-box preset-glass grid place-items-start items-start justify-start p-8 {props.class}">
+	<Card {...props} class="text-left {props.class}">
 		<!-- Icon -->
 		<div>
 			<svg
@@ -45,10 +45,10 @@
 			</svg>
 
 			<!-- Review -->
-			<p class="mb-6 text-pretty leading-relaxed">{description}</p>
+			<p class="mb-6 text-pretty leading-relaxed text-left">{description}</p>
 		</div>
 
-		<a href="#testimonials" class="flex items-center">
+		<a href="#testimonials" class="flex items-center text-left">
 			<!-- Profile -->
 			<Avatar src={image} alt={name} class="h-20 w-20" />
 			<div class="flex-grow flex flex-col pl-4">

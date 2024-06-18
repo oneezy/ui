@@ -3,6 +3,7 @@
 	/* Default Props
 	 *************************/
 	let {
+		nostyle = false,
 		title = null,
 		subtitle = null,
 		subheader = null,
@@ -22,7 +23,9 @@
 		<!-- Title -->
 		{#if title}
 			<h1
-				class="text-neutral-950-50 text-center text-6xl font-black tracking-tight md:text-[14vw] lg:text-[12vw] xl:text-[8vw]"
+				class="{nostyle
+					? ''
+					: 'text-neutral-950-50'} text-center text-6xl font-black tracking-tight md:text-[14vw] lg:text-[12vw] xl:text-[8vw]"
 			>
 				{title}
 			</h1>
@@ -30,14 +33,14 @@
 
 		<!-- Subtitle -->
 		{#if subtitle}
-			<h2 class="text-neutral-950-50 text-center text-5xl font-extrabold tracking-tight md:text-6xl">
+			<h2 class="{nostyle ? '' : 'text-neutral-950-50'} text-center text-5xl font-extrabold tracking-tight md:text-6xl">
 				{subtitle}
 			</h2>
 		{/if}
 
 		<!-- Subtitle -->
 		{#if subheader || subheading}
-			<h3 class="text-neutral-950-50 text-3xl font-medium tracking-tight">
+			<h3 class="{nostyle ? '' : 'text-neutral-950-50'} text-3xl font-medium tracking-tight">
 				{subheader || subheading}
 			</h3>
 		{/if}
@@ -52,7 +55,7 @@
 			</p>
 		{/if}
 	{:else}
-		<h2 class="text-neutral-950-50 text-center text-5xl font-extrabold tracking-tight md:text-6xl">
+		<h2 class="{nostyle ? '' : 'text-neutral-950-50'} text-center text-5xl font-extrabold tracking-tight md:text-6xl">
 			{#snippet content()}
 				Title
 			{/snippet}

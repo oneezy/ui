@@ -60,8 +60,15 @@ export async function load({ fetch }) {
 			pageSeoKeywords: page.seo_keywords
 		}));
 
+		const quicklinksData = pagesData.quicklinks.map((quicklinks) => ({
+			icon: quicklinks.icon,
+			title: quicklinks.title,
+			description: quicklinks.description,
+			href: quicklinks.href
+		}));
+
 		const teamData = pagesData.team.map((team) => ({
-			image: team.id,
+			id: team.id,
 			image: team.image,
 			name: team.name,
 			position: team.position,
@@ -96,6 +103,7 @@ export async function load({ fetch }) {
 			metaData,
 			pageData,
 			aboutData,
+			quicklinksData,
 			teamData,
 			servicesData,
 			reviewData,
@@ -107,6 +115,7 @@ export async function load({ fetch }) {
 			metaData: [],
 			pageData: [],
 			aboutData: [],
+			quicklinksData,
 			teamData: [],
 			servicesData: [],
 			reviewData: [],

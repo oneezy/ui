@@ -1,18 +1,9 @@
 <script>
-	import {
-		Section,
-		Container,
-		Image,
-		Effect,
-		Title,
-		Button,
-		Divider,
-		Logo
-	} from '$lib';
+	import { Section, Container, Image, Effect, Title, Button, Divider, Logo } from '$lib';
 
-	import SolarPhoneBold from '~icons/solar/phone-bold';
-	import SolarMapPointBold from '~icons/solar/map-point-bold';
-
+	import PhoneIcon from '~icons/solar/phone-bold';
+	import MapIcon from '~icons/solar/map-point-bold';
+	
 	let {
 		logo = true,
 		logoEffect = true,
@@ -45,11 +36,7 @@
 >
 	<Image bg cover {src}>
 		<Effect
-			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
-			linear="170deg"
-		/>
-		<Effect
-			gradient="var(--color-primary-500), transparent, transparent, transparent, var(--color-primary-500)"
+			gradient="var(--color-primary-700), transparent, transparent, transparent, var(--color-primary-500)"
 			linear="180deg"
 		/>
 	</Image>
@@ -65,22 +52,15 @@
 		{/if}
 
 		<div class="flex flex-col justify-center gap-4 lg:flex-row">
-			<Button class="min-w-96 flex-1" href={button1Link} primary xl
-				><SolarPhoneBold class="text-4xl" />{button1}</Button
+			<Button class="min-w-96 flex-1" href={button1Link} xl primary><PhoneIcon class="text-4xl" />{button1}</Button
 			>
 			<Button class="min-w-96 flex-1" href={button2Link} neutral xl
-				><SolarMapPointBold class="text-4xl" />{button2}</Button
+				><MapIcon class="text-4xl" />{button2}</Button
 			>
 		</div>
 	</Container>
 
 	{#if divider}
-		<Divider
-			class="mb-[-1px]"
-			fill={dividerFill}
-			width={dividerWidth}
-			height={dividerHeight}
-			flip={true}
-		/>
+		<Divider class="mb-[-1px]" fill={dividerFill} width={dividerWidth} height={dividerHeight} flip={true} />
 	{/if}
 </Section>

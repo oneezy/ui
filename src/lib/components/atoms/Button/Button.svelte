@@ -31,7 +31,7 @@
 		...props
 	} = $props();
 
-	let baseClass = 'btn relative z-10';
+	let baseClass = 'btn';
 	let classNames = [baseClass];
 
 	const getClassNames = () => {
@@ -43,7 +43,7 @@
 				className: 'preset-outline-secondary'
 			},
 			{ condition: accent && outline, className: 'preset-outline-accent' },
-			{ condition: neutral && outline, className: 'preset-outline-accent' },
+			{ condition: neutral && outline, className: 'preset-outline-neutral' },
 			{ condition: outline, className: 'preset-outline' },
 			// tonal
 			{ condition: primary && tonal, className: 'preset-tonal-primary' },
@@ -98,12 +98,7 @@
 </script>
 
 {#if href}
-	<a
-		{...props}
-		{href}
-		class="{finalClass} {props.class}"
-		aria-disabled={disabled}
-	>
+	<a {...props} {href} class="{finalClass} {props.class}" aria-disabled={disabled}>
 		{#if icon}
 			{@render children()}
 		{:else}
@@ -128,8 +123,7 @@
 	.btn {
 		transition-duration: 200ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-		transition-property: color, background-color, border-color, opacity,
-			box-shadow, transform;
+		transition-property: color, background-color, border-color, opacity, box-shadow, transform;
 	}
 	@media (prefers-reduced-motion: no-preference) {
 		.btn {

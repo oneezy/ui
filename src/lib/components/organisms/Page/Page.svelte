@@ -1,6 +1,7 @@
 <script>
 	import { Section, Container, Title, Divider, observer } from '$lib';
 	let {
+		classContainer = '',
 		title = 'Title',
 		titleOutside = false,
 		tagline = 'Your awesome tagline goes here',
@@ -40,7 +41,7 @@
 		{@render titleEl()}
 	{/if}
 
-	<Container class="flex flex-col items-center justify-center">
+	<Container class="flex flex-col items-center justify-center {classContainer}">
 		{#if children}
 			{@render children()}
 		{/if}
