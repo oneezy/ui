@@ -52,9 +52,9 @@
 		{/if}
 
 		<div class="flex flex-col justify-center gap-4 lg:flex-row">
-			<Button class="min-w-96 flex-1" href={button1Link} xl secondary><PhoneIcon class="text-4xl" />{button1}</Button
+			<Button class="w-full lg:min-w-96 flex-1" href={button1Link} xl secondary><PhoneIcon class="text-4xl" />{button1}</Button
 			>
-			<Button class="min-w-96 flex-1" href={button2Link} neutral xl
+			<Button class="w-full lg:min-w-96 flex-1" href={button2Link} neutral xl
 				><MapIcon class="text-4xl" />{button2}</Button
 			>
 		</div>

@@ -14,7 +14,7 @@
 		spaceY = 'py-2',
 		classes = '',
 		// Control
-		controlBase = 'flex text-start items-center space-x-4 w-full group',
+		controlBase = 'flex text-start items-center justify-between space-x-4 w-full group',
 		controlHover = '',
 		controlPadding = 'py-2 px-4',
 		controlRounded = 'rounded',

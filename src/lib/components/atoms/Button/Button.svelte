@@ -31,7 +31,7 @@
 		...props
 	} = $props();
 
-	let baseClass = 'btn';
+	let baseClass = 'btn overflow-hidden';
 	let classNames = [baseClass];
 
 	const getClassNames = () => {
@@ -94,7 +94,7 @@
 		classNames.push('btn-xl');
 	}
 
-	const finalClass = `${classNames.join(' ')}`;
+	const finalClass = `${classNames.join(' ')} text-wrap`;
 </script>
 
 {#if href}

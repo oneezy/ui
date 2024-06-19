@@ -255,10 +255,10 @@
 <Container class="">
 	<Title>Ready for an appointment?</Title>
 	<div class="flex flex-col justify-center gap-4 lg:flex-row">
-		<Button class="min-w-96 flex-1" href="tel:{meta.companyPhone}" xl neutral
+		<Button class="max-w-full w-full flex-1" href="tel:{meta.companyPhone}" xl neutral
 			><PhoneIcon class="text-4xl" />Call {formatPhoneNumber(meta.companyPhone)}</Button
 		>
-		<Button class="min-w-96 flex-1" href="https://maps.app.goo.gl/qKAxhCoYnzYBpVqv9" target="_blank" neutral outline xl
+		<Button class="max-w-full w-full flex-1" href="https://maps.app.goo.gl/qKAxhCoYnzYBpVqv9" target="_blank" neutral outline xl
 			><MapIcon class="text-4xl" />Get Directions</Button
 		>
 	</div>

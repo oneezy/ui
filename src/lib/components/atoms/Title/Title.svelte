@@ -48,7 +48,7 @@
 		<!-- Tagline -->
 		{#if tagline}
 			<p
-				class={`text-neutral-500-300 mt-4 text-center text-lg font-medium md:text-xl ${props.class}`}
+				class={`text-neutral-500-300 mt-4 text-pretty text-center text-lg font-medium md:text-xl ${props.class}`}
 				style={`${props.style}`}
 			>
 				{tagline}
