@@ -59,10 +59,7 @@
 
 <!-- children
 :::::::::::::::::::::::::::::::: -->
-<Section
-	{...props}
-	class="relative grid grid-rows-[1fr_auto] place-items-center items-center justify-center overflow-hidden {props.class}"
->
+<Section {...props} class="relative grid grid-rows-[1fr_auto] overflow-hidden {props.class}">
 	<Image bg cover {src}>
 		<Effect gradient={heroGradient} linear="180deg" />
 	</Image>
