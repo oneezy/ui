@@ -45,7 +45,10 @@
     "./svelte.config.js": "./dist/config/svelte.config.js",
     "./svelte.config.d.ts": "./dist/config/svelte.config.d.ts",
     "./ui.css": "./dist/ui.css",
-    "./ui": "./dist/ui.css"
+    "./ui": "./dist/ui.css",
+    "./config": "./dist/config",
+    "./fonts": "./dist/fonts",
+    "./utils": "./dist/utils"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
