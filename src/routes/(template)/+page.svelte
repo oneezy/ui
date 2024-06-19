@@ -46,19 +46,15 @@
 	let homePage = data.pageData.find((page) => page.pageSlug === 'home');
 	let otherPages = data.pageData.filter((page) => page.pageSlug !== 'home');
 
-	import StarIcon from '~icons/material-symbols/kid-star';
-	import ReviewIcon from '~icons/material-symbols/android-messages';
 	import PhoneIcon from '~icons/solar/phone-bold';
 	import MapIcon from '~icons/solar/map-point-bold';
+	import StarIcon from '~icons/material-symbols/kid-star';
+	import ReviewIcon from '~icons/material-symbols/android-messages';
 	import DoctorIcon from '~icons/fa6-solid/user-doctor';
 	import OfficeIcon from '~icons/ph/building-office-fill';
-	import CalendarIcon from '~icons/material-symbols/event-rounded';
 	import SmileIcon from '~icons/streamline/chat-bubble-oval-smiley-2-solid';
 	import EmailIcon from '~icons/ic/round-mail';
 
-	// let classIcons = 'text-primary-500-500 text-6xl p-2 contrast-70';
-	// let classIcons = 'text-primary-600-600 text-6xl p-2';
-	// let classIcons = 'text-secondary-500-500 text-6xl p-2';
 	let classIcons = 'text-secondary text-6xl p-2';
 </script>
 
@@ -255,11 +251,16 @@
 <Container class="">
 	<Title>Ready for an appointment?</Title>
 	<div class="flex flex-col justify-center gap-4 lg:flex-row">
-		<Button class="max-w-full w-full flex-1" href="tel:{meta.companyPhone}" xl neutral
+		<Button class="w-full max-w-full flex-1" href="tel:{meta.companyPhone}" xl neutral
 			><PhoneIcon class="text-4xl" />Call {formatPhoneNumber(meta.companyPhone)}</Button
 		>
-		<Button class="max-w-full w-full flex-1" href="https://maps.app.goo.gl/qKAxhCoYnzYBpVqv9" target="_blank" neutral outline xl
-			><MapIcon class="text-4xl" />Get Directions</Button
+		<Button
+			class="w-full max-w-full flex-1"
+			href="https://maps.app.goo.gl/qKAxhCoYnzYBpVqv9"
+			target="_blank"
+			neutral
+			outline
+			xl><MapIcon class="text-4xl" />Get Directions</Button
 		>
 	</div>
 </Container>

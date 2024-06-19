@@ -1,8 +1,6 @@
 <script>
 	import { ModeWatcher, setMode, mode, toggleMode } from 'mode-watcher';
 	import { Button } from '$lib';
-	// import IconSun from '~icons/solar/sun-2-bold';
-	// import IconMoon from '~icons/solar/moon-stars-bold';
 
 	function handleModeChange() {
 		if ($mode === 'light') {

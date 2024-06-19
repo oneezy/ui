@@ -15,8 +15,6 @@
 		children = null,
 		...props
 	} = $props();
-	// import IconDentistOutline from '~icons/fluent/dentist-20-regular';
-	// import IconDentistFilled from '~icons/fluent/dentist-20-filled';
 </script>
 
 {#snippet iconEl()}

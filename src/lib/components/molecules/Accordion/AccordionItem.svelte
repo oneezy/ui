@@ -3,9 +3,6 @@
 	import { slide } from 'svelte/transition';
 	import type { AccordionItemProps } from './types.js';
 	import { Button } from '$lib';
-	import SolarAltArrowRightBroken from '~icons/solar/alt-arrow-right-broken';
-	import SolarAltArrowDownBroken from '~icons/solar/alt-arrow-down-broken';
-
 	let {
 		id = '',
 		disabled = false,

@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.44",
+  "version": "2.0.0-next.46",
   "description": "A UI library for Tailwind CSS v4 and Svelte v5",
   "keywords": [
     "tailwindcss",
@@ -48,7 +48,7 @@
     "./ui": "./dist/ui.css",
     "./config": "./dist/config",
     "./fonts": "./dist/fonts",
-    "./utils": "./dist/utils"
+    "./utils/*": "./dist/utils/*"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
