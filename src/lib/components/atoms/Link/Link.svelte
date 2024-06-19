@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	let { nav, slug, href, label, active, state, children, ...props } = $props();
+	let { bar, slug, href, label, active, state, children, ...props } = $props();
 
 	let classLink = 'p-2 px-4 capitalize';
 	let classLinkActive = '';
@@ -20,7 +20,7 @@
 		{:else}
 			{@render children()}
 		{/if}
-		{#if nav}
+		{#if bar}
 			<b class="{classLinkBar} bar"></b>
 		{/if}
 	</a>

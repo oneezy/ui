@@ -94,7 +94,7 @@
 		button2="Get Directions"
 		button2Link="#contact"
 		src="/images/office.jpg"
-		gradient="var(--color-primary), transparent, var(--color-secondary)"
+		heroGradient="white, transparent, transparent, transparent, var(--color-secondary-500)"
 		divider
 		{dividerFill}
 		{dividerWidth}
@@ -146,6 +146,10 @@
 	>
 		{#if page.pageSlug === 'about'}
 			<!-- Team -->
+			<!-- 			 
+			{#each data.teamData as team}
+				<img src={team.drive} alt={team.name} />
+			{/each} -->
 			<Slider arrows autoplay duration="3000" class="gap-10">
 				{#each data.teamData as team}
 					<Team

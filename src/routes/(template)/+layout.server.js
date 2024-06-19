@@ -2,7 +2,8 @@
 export async function load({ fetch }) {
 	const urls = [
 		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/general',
-		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/pages'
+		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/pages',
+		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/photos'
 	];
 
 	try {
@@ -13,6 +14,17 @@ export async function load({ fetch }) {
 
 		// Extract the first element of pagesDataArray
 		const pagesData = pagesDataArray[0];
+
+		// Helper function to convert Google Drive URL to proxy URL
+		const getProxyUrl = (driveUrl) => {
+			const url = new URL(driveUrl);
+			const fileId = url.searchParams.get('id');
+			if (fileId) {
+				return `/proxy/${fileId}`;
+			}
+			console.error('Failed to extract file ID from URL:', driveUrl);
+			return null;
+		};
 
 		// Map the fetched data to match the expected structure
 		const metaData = generalData.map((page) => ({
@@ -69,6 +81,8 @@ export async function load({ fetch }) {
 
 		const teamData = pagesData.team.map((team) => ({
 			id: team.id,
+			url: team.drive,
+			drive: getProxyUrl(team.drive),
 			image: team.image,
 			name: team.name,
 			position: team.position,

@@ -20,6 +20,7 @@
 		dividerWidth = '150%',
 		dividerHeight = '240px',
 		dividerStuck = false,
+		heroGradient = 'white, transparent, transparent, transparent, var(--color-secondary-500)',
 		children,
 		...props
 	} = $props();
@@ -63,10 +64,7 @@
 	class="relative grid grid-rows-[1fr_auto] place-items-center items-center justify-center overflow-hidden {props.class}"
 >
 	<Image bg cover {src}>
-		<Effect
-			gradient="var(--color-primary-700), transparent, transparent, transparent, var(--color-primary-500)"
-			linear="180deg"
-		/>
+		<Effect gradient={heroGradient} linear="180deg" />
 	</Image>
 
 	<Container class="flex flex-col items-center justify-center gap-20 pt-20">

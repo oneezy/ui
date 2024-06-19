@@ -107,7 +107,7 @@
 					{/if}
 				</div>
 			{/snippet}
-			{#snippet center()}<Nav {links} class="hidden md:flex" />{/snippet}
+			{#snippet center()}<Nav {links} row class="hidden md:flex" />{/snippet}
 			{#snippet right({ isHeaderActive })}
 				{#if !isHeaderActive}
 					<!-- mobile menu -->

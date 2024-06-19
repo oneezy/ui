@@ -2,6 +2,8 @@
 	import { Link } from '$lib';
 
 	let {
+		row,
+		col,
 		links = [
 			{ label: 'home', href: '/' },
 			{ label: 'about', href: '/about' },
@@ -17,6 +19,12 @@
 
 <nav {...props} class="navigation flex h-full items-start {props.class}">
 	{#each links as link}
-		<Link nav {...props} class="flex h-full items-center font-medium" href={link.href} label={link.label} />
+		<Link
+			bar
+			{...props}
+			class="flex items-center font-medium {row ? 'h-full' : ''}"
+			href={link.href}
+			label={link.label}
+		/>
 	{/each}
 </nav>

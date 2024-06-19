@@ -8,6 +8,10 @@
 	--theme-color-neutral: var(--color-slate-500);
 	/* --theme-color-primary: rgb(64, 158, 185); */
 	/* --theme-color-secondary: rgb(0, 98, 128); */
+
+	/* --theme-color-primary: #75C8C5; */
+	/* --theme-color-secondary: #22B6B1; */
+
 	--theme-color-primary: #00fff7;
 	--theme-color-secondary: #00c4de;
 	--theme-color-accent: #ed1c24;
