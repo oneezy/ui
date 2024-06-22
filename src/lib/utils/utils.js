@@ -29,47 +29,21 @@ export function formatPhoneNumber(phoneNumber) {
 	return null;
 }
 
-const cache = new Map();
-
-function setCache(key, value, ttl = 3600) {
-	const expiry = Date.now() + ttl * 1000;
-	cache.set(key, { value, expiry });
-}
-
-function getCache(key) {
-	const cached = cache.get(key);
-	if (!cached) return null;
-
-	if (Date.now() > cached.expiry) {
-		cache.delete(key);
-		return null;
-	}
-
-	return cached.value;
-}
-
 // Helper function to convert Google Drive URL to proxy URL
 export function getProxyUrl(urls) {
-	const cacheKey = `proxy_${urls}`;
-	const cachedUrl = getCache(cacheKey);
-
-	if (cachedUrl) {
-		console.log('Serving from cache:', cachedUrl);
-		return cachedUrl;
-	}
-
 	try {
 		const url = new URL(urls);
 		const fileId = url.searchParams.get('id');
 
 		if (fileId) {
 			const proxyUrl = `/api/photos/${fileId}`;
-			setCache(cacheKey, proxyUrl, 3600); // Cache for 1 hour
 			return proxyUrl;
 		} else {
-			console.error('Failed to extract file ID from URL:', urls);
+			// console.error('Failed to extract file ID from URL:', urls);
+			// return '/api/photos/fallback'; // Return a fallback URL
 		}
 	} catch (error) {
-		console.error('Invalid URL provided to getProxyUrl:', urls, error);
+		// console.error('Invalid URL provided to getProxyUrl:', urls, error);
+		// return '/api/photos/fallback'; // Return a fallback URL
 	}
 }
