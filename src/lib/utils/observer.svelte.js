@@ -4,7 +4,7 @@ let activeNode = null;
 
 export function observer(node) {
 	if (!node.id) {
-		console.warn('Element used with observer must have an id');
+		// console.warn('Element used with observer must have an id');
 		return;
 	}
 

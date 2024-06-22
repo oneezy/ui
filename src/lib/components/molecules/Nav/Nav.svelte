@@ -22,7 +22,7 @@
 		<Link
 			bar
 			{...props}
-			class="flex items-center font-medium {row ? 'h-full' : ''}"
+			class="flex items-center py-2 px-4 font-medium capitalize {row ? 'h-full' : ''}"
 			href={link.href}
 			label={link.label}
 		/>

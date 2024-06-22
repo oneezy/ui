@@ -1,35 +1,50 @@
 <script>
 	import { Card, Rating, Avatar } from '$lib';
-	let { name = '', image = '', rating = '', description = '', reviews = [], children = null, ...props } = $props();
+	let {
+		name = '',
+		src = '',
+		image = '',
+		rating = '',
+		description = '',
+		reviews = [],
+		children = null,
+		...props
+	} = $props();
 
 	const dummyData = [
 		{
 			name: 'sum yung gui',
 			rating: 5,
 			description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-			image: '/images/reviews/google/AprilWalker.png'
+			src: '/images/reviews/AprilWalker.png',
+			image: '/images/reviews/AprilWalker.png'
 		},
 		{
 			name: 'mi wan sup',
 			rating: 5,
 			description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-			image: '/images/reviews/google/CharlesMarie.png'
+			src: '/images/reviews/CharlesMarie.png',
+			image: '/images/reviews/CharlesMarie.png'
 		},
 		{
 			name: 'fu lon thyme',
 			rating: 5,
 			description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-			image: '/images/reviews/google/ChasityCalcote.png'
+			src: '/images/reviews/ChasityCalcote.png',
+			image: '/images/reviews/ChasityCalcote.png'
 		}
 	];
 
 	// Use dummy data if no props are provided
-	if (reviews.length === 0 && !name && !image && !rating && !description) {
+	if (reviews.length === 0 && !name && !src && !image && !rating && !description) {
 		reviews = dummyData;
 	}
+
+	// Log the values
+	console.log('Review component props:', { name, src, image, rating, description, reviews });
 </script>
 
-{#snippet reviewEl({ description, name, rating, image })}
+{#snippet reviewEl({ description, name, rating, image, src })}
 	<Card {...props} class="text-left {props.class}">
 		<!-- Icon -->
 		<div>
@@ -45,12 +60,12 @@
 			</svg>
 
 			<!-- Review -->
-			<p class="mb-6 text-pretty leading-relaxed text-left">{description}</p>
+			<p class="mb-6 text-pretty text-left leading-relaxed">{description}</p>
 		</div>
 
 		<a href="#testimonials" class="flex items-center text-left">
 			<!-- Profile -->
-			<Avatar src={image} alt={name} class="h-20 w-20" />
+			<Avatar src={src || image} alt={name} class="h-20 w-20" />
 			<div class="flex-grow flex flex-col pl-4">
 				<!-- Rating -->
 				<Rating {rating} />
@@ -63,17 +78,18 @@
 
 {#if children}
 	{@render children()}
-{:else if reviews.length === 0 && (name || image || rating || description)}
-	{@render reviewEl({ description, name, rating, image })}
+{:else if reviews.length === 0 && (name || src || image || rating || description)}
+	{@render reviewEl({ description, name, rating, src, image })}
 {:else if reviews.length > 0}
 	{#each reviews as review}
 		{@render reviewEl({
 			description: review.description,
 			name: review.name,
 			rating: review.rating,
+			src: review.src,
 			image: review.image
 		})}
 	{/each}
 {:else}
-	{@render reviewEl({ description, name, rating, image })}
+	{@render reviewEl({ description, name, rating, src, image })}
 {/if}

@@ -11,7 +11,7 @@
 </script>
 
 <div class={props.class}>
-	<Image {id} src={image} alt={name} class="relative w-56 rounded-lg shadow-lg" cover ratio="12/16">
+	<Image {id} src={image ? image : undefined} alt={name} class="relative w-56 rounded-lg shadow-lg" cover ratio="12/16">
 		<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
 		<div class="absolute inset-0 grid items-end justify-center p-4 text-white">
 			<div class="text-center">

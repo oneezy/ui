@@ -35,27 +35,14 @@
 </script>
 
 {#snippet svg({ path })}
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="36"
-		height="36"
-		viewBox="0 0 24 24"
-		fill="currentColor"
-	>
+	<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
 		{@html path}
 	</svg>
 {/snippet}
 
 <div class="socials flex items-center justify-center gap-2 {classContainer}">
 	{#each socials as social}
-		<Button
-			href={social.url}
-			class="social-icon {props.class}"
-			icon
-			target="_blank"
-			rel="noreferrer"
-			aria-label={social.name}
-		>
+		<Button href={social.url} class="social-icon {props.class}" icon rel="noreferrer" aria-label={social.name}>
 			{@render svg({ path: iconPaths[social.name] })}
 		</Button>
 	{/each}

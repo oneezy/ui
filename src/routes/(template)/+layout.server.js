@@ -1,9 +1,11 @@
+import { getProxyUrl } from '$lib/utils/utils.js';
+
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({ fetch }) {
+	// URLs to fetch data from created by Google Sheets
 	const urls = [
 		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/general',
-		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/pages',
-		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/photos'
+		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/pages'
 	];
 
 	try {
@@ -14,17 +16,6 @@ export async function load({ fetch }) {
 
 		// Extract the first element of pagesDataArray
 		const pagesData = pagesDataArray[0];
-
-		// Helper function to convert Google Drive URL to proxy URL
-		const getProxyUrl = (driveUrl) => {
-			const url = new URL(driveUrl);
-			const fileId = url.searchParams.get('id');
-			if (fileId) {
-				return `/proxy/${fileId}`;
-			}
-			console.error('Failed to extract file ID from URL:', driveUrl);
-			return null;
-		};
 
 		// Map the fetched data to match the expected structure
 		const metaData = generalData.map((page) => ({
@@ -81,8 +72,7 @@ export async function load({ fetch }) {
 
 		const teamData = pagesData.team.map((team) => ({
 			id: team.id,
-			url: team.drive,
-			drive: getProxyUrl(team.drive),
+			src: getProxyUrl(team.src),
 			image: team.image,
 			name: team.name,
 			position: team.position,
@@ -90,6 +80,7 @@ export async function load({ fetch }) {
 		}));
 
 		const aboutData = pagesData.about.map((about) => ({
+			src: getProxyUrl(about.src),
 			image: about.image,
 			title: about.title,
 			subtitle: about.subtitle,
@@ -103,6 +94,7 @@ export async function load({ fetch }) {
 
 		const reviewData = pagesData.reviews.map((review) => ({
 			name: review.name,
+			src: getProxyUrl(review.src),
 			image: review.image,
 			rating: review.rating,
 			description: review.description

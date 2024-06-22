@@ -12,9 +12,9 @@
 	/* --theme-color-primary: #75C8C5; */
 	/* --theme-color-secondary: #22B6B1; */
 
-	--theme-color-primary: #00fff7;
-	--theme-color-secondary: #00c4de;
-	--theme-color-accent: #ed1c24;
+  --theme-color-primary: #00fff7;
+  --theme-color-secondary: var(--color-teal-400);
+  --theme-color-accent: #ed1c24;
 
 	/* fonts */
 	--theme-font: 'Comic Sans MS';

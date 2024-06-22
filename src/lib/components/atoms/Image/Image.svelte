@@ -26,7 +26,7 @@
 	const hiRes = 'https://picsum.photos/id/420/1920/1080';
 
 	function onLoad() {
-		console.log('High-res image loaded');
+		// console.log('High-res image loaded');
 		loaded = true;
 	}
 
@@ -44,7 +44,7 @@
 	}
 
 	function getValidSrc(imageSrc) {
-		console.log('Validating src:', imageSrc);
+		// console.log('Validating src:', imageSrc);
 		return imageSrc ? imageSrc : loRes;
 	}
 

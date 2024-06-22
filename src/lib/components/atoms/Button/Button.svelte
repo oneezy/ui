@@ -1,4 +1,5 @@
 <script>
+	import { Link } from '$lib';
 	let {
 		icon = null,
 		// type
@@ -98,7 +99,7 @@
 </script>
 
 {#if href}
-	<a {...props} {href} class="{finalClass} {props.class}" aria-disabled={disabled}>
+	<Link {...props} {href} class="{finalClass} {props.class}" aria-disabled={disabled}>
 		{#if icon}
 			{@render children()}
 		{:else}
@@ -106,7 +107,7 @@
 				{@render children()}
 			</span>
 		{/if}
-	</a>
+	</Link>
 {:else}
 	<button {...props} class="{finalClass} {props.class}" {disabled}>
 		{#if icon}
