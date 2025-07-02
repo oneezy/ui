@@ -15,7 +15,7 @@
 		...props
 	} = $props();
 
-	const isExternalLink = href.includes('http://') || href.includes('https://');
+	const isExternalLink = href && (href.includes('http://') || href.includes('https://'));
 </script>
 
 {#snippet linkEl()}

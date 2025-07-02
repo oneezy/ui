@@ -70,7 +70,7 @@
 		if (slideshow) {
 			setInterval(() => {
 				currentImageIndex = (currentImageIndex + 1) % imageSources.length;
-			}, 3000); // change image every 3 seconds
+			}, 3000);
 		}
 	});
 </script>

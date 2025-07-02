@@ -179,6 +179,7 @@
 	<Button
 		icon
 		onclick={prevClick}
+		aria-label="Previous slide"
 		class="arrow back bg-opacity-50 text-primary-50-50 hover:bg-primary-500 hover:text-primary-950 absolute top-2/5 left-10 rounded-full bg-black p-2"
 	>
 		{@render arrowIcon(180)}
@@ -186,6 +187,7 @@
 	<Button
 		icon
 		onclick={nextClick}
+		aria-label="Next slide"
 		class="arrow forward bg-opacity-50 text-primary-50-50 hover:bg-primary-500 hover:text-primary-950 absolute top-2/5 right-10 rounded-full bg-black p-2"
 	>
 		{@render arrowIcon()}
@@ -198,6 +200,7 @@
 		{#each Array(slides.length || slideContainerEl?.children.length || 0) as _, index}
 			<button
 				onclick={() => goToSlide(index)}
+				aria-label="Go to slide {index + 1}"
 				class="slide-indicator size-4 cursor-pointer rounded-full {index === currentSlide
 					? 'bg-accent-500'
 					: 'bg-neutral-200/50'}"

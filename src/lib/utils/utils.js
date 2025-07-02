@@ -1,6 +1,6 @@
 export function convertPathToTitle(path) {
-	const parts = path.split('/').filter(Boolean);
-	if (parts.length === 0) return 'Home';
+	const parts = path.split("/").filter(Boolean);
+	if (parts.length === 0) return "Home";
 
 	const lastPart = parts[parts.length - 1];
 	return lastPart.charAt(0).toUpperCase() + lastPart.slice(1);
@@ -8,16 +8,16 @@ export function convertPathToTitle(path) {
 
 export function formatPhoneNumber(phoneNumber) {
 	// Remove all non-digit characters
-	let cleaned = phoneNumber.replace(/\D/g, '');
+	let cleaned = phoneNumber.replace(/\D/g, "");
 
 	// Remove leading '1' if present
-	if (cleaned.startsWith('1')) {
+	if (cleaned.startsWith("1")) {
 		cleaned = cleaned.substring(1);
 	}
 
 	// Check if the input is of correct length
 	if (cleaned.length !== 10) {
-		throw new Error('Invalid phone number length. Expected 10 digits.');
+		throw new Error("Invalid phone number length. Expected 10 digits.");
 	}
 
 	// Format the cleaned number
@@ -50,26 +50,34 @@ function getCache(key) {
 
 // Helper function to convert Google Drive URL to proxy URL
 export function getProxyUrl(urls) {
+	// Handle undefined, null, or empty values
+	if (!urls || typeof urls !== "string") {
+		console.warn("Invalid URL provided to getProxyUrl:", urls);
+		return null;
+	}
+
 	const cacheKey = `proxy_${urls}`;
 	const cachedUrl = getCache(cacheKey);
 
 	if (cachedUrl) {
-		console.log('Serving from cache:', cachedUrl);
+		console.log("Serving from cache:", cachedUrl);
 		return cachedUrl;
 	}
 
 	try {
 		const url = new URL(urls);
-		const fileId = url.searchParams.get('id');
+		const fileId = url.searchParams.get("id");
 
 		if (fileId) {
 			const proxyUrl = `/api/photos/${fileId}`;
 			setCache(cacheKey, proxyUrl, 3600); // Cache for 1 hour
 			return proxyUrl;
 		} else {
-			console.error('Failed to extract file ID from URL:', urls);
+			console.error("Failed to extract file ID from URL:", urls);
+			return null;
 		}
 	} catch (error) {
-		console.error('Invalid URL provided to getProxyUrl:', urls, error);
+		console.error("Invalid URL provided to getProxyUrl:", urls, error);
+		return null;
 	}
 }

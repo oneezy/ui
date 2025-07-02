@@ -7,7 +7,7 @@
 		rating = '',
 		description = '',
 		reviews = [],
-		href = '#',
+		href,
 		icon,
 		title,
 		card,
@@ -40,7 +40,7 @@
 			{@render iconEl()}
 		{/if}
 
-		<h3 class="mb-3 text-balance text-nowrap text-2xl font-medium">Meet Our Doctor</h3>
+		<h3 class="mb-3 text-nowrap text-2xl font-medium">Meet Our Doctor</h3>
 		<p class="text-neutral-500-300 text-balance" resizable>
 			Trusted local dentist in Beaumont, providing expert and compassionate care.
 		</p>
@@ -49,23 +49,42 @@
 
 <!-- Card -->
 {#snippet cardEl()}
-	<Link
-		{href}
-		class="card rounded-box {classCard
-			? classCard
-			: 'preset-glass border'} align-center grid-cols-auto grid place-items-center items-center justify-center p-6 text-center shadow {classCard}"
-	>
-		{#if children}
-			{@render children()} <!-- Render children if provided -->
-		{:else}
-			{@render iconEl()}
-		{/if}
+	{#if href}
+		<Link
+			{href}
+			class="card rounded-box {classCard
+				? classCard
+				: 'preset-glass border'} align-center grid-cols-auto grid place-items-center items-center justify-center p-6 text-center shadow {classCard}"
+		>
+			{#if children}
+				{@render children()} <!-- Render children if provided -->
+			{:else}
+				{@render iconEl()}
+			{/if}
 
-		<h3 class="mb-3 text-balance text-nowrap text-2xl font-medium">{title}</h3>
-		<p class="text-neutral-500-300 text-balance">
-			{description}
-		</p>
-	</Link>
+			<h3 class="mb-3 text-nowrap text-2xl font-medium">{title}</h3>
+			<p class="text-neutral-500-300 text-balance">
+				{description}
+			</p>
+		</Link>
+	{:else}
+		<div
+			class="card rounded-box {classCard
+				? classCard
+				: 'preset-glass border'} align-center grid-cols-auto grid place-items-center items-center justify-center p-6 text-center shadow {classCard}"
+		>
+			{#if children}
+				{@render children()} <!-- Render children if provided -->
+			{:else}
+				{@render iconEl()}
+			{/if}
+
+			<h3 class="mb-3 text-nowrap text-2xl font-medium">{title}</h3>
+			<p class="text-neutral-500-300 text-balance">
+				{description}
+			</p>
+		</div>
+	{/if}
 {/snippet}
 
 <!-- Review -->

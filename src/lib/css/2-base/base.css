@@ -14,7 +14,7 @@ html[style='color-scheme: dark;'] {
 
 body {
 	scroll-behavior: smooth;
-	@apply bg-neutral-50-800 text-neutral-950-50 font-base overflow-x-hidden text-base;
+	@apply bg-neutral-50-800 text-neutral-950-50 font-sans overflow-x-hidden text-base;
 }
 
 h1,
@@ -23,5 +23,5 @@ h3,
 h4,
 h5,
 h6 {
-	@apply font-headings;
+	@apply font-sans;
 }

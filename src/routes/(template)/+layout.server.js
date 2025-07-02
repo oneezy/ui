@@ -1,18 +1,23 @@
-import { getProxyUrl } from '$lib/utils/utils.js';
+import { getProxyUrl } from "$lib/utils/utils.js";
 
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({ fetch }) {
 	// URLs to fetch data from created by Google Sheets
 	const urls = [
-		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/general',
-		'https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/pages'
+		"https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/general",
+		"https://opensheet.justinoneill2007.workers.dev/1UX84JSmYUXdmRUsmNxHptNh-1Y-gwG02aLzh9kvlYjE/pages",
 	];
 
 	try {
 		// Fetch data from both URLs concurrently
-		const [generalResponse, pagesResponse] = await Promise.all(urls.map((url) => fetch(url)));
+		const [generalResponse, pagesResponse] = await Promise.all(
+			urls.map((url) => fetch(url)),
+		);
 
-		const [generalData, pagesDataArray] = await Promise.all([generalResponse.json(), pagesResponse.json()]);
+		const [generalData, pagesDataArray] = await Promise.all([
+			generalResponse.json(),
+			pagesResponse.json(),
+		]);
 
 		// Extract the first element of pagesDataArray
 		const pagesData = pagesDataArray[0];
@@ -30,12 +35,12 @@ export async function load({ fetch }) {
 			companyInsurance: page.company.insurance,
 			companyEmails: page.company.email.map((email) => ({
 				type: email.type,
-				email: email.email
+				email: email.email,
 			})),
 			companyPayments: page.company.payment.map((payment) => payment.type),
 			companyHours: page.company.hours.map((hour) => ({
 				day: hour.day,
-				time: hour.time
+				time: hour.time,
 			})),
 			brandLogo: page.brand.logo,
 			brandLogoSmall: page.brand.logoSmall,
@@ -43,12 +48,12 @@ export async function load({ fetch }) {
 			brandIcon: page.brand.icon,
 			brandColors: page.brand.color.map((color) => ({
 				name: color.name,
-				value: color.value
+				value: color.value,
 			})),
 			socialLinks: page.social.map((social) => ({
 				name: social.name,
-				url: social.url
-			}))
+				url: social.url,
+			})),
 		}));
 
 		const pageData = pagesData.site.page.map((page) => ({
@@ -60,49 +65,49 @@ export async function load({ fetch }) {
 			pageImage: page.image,
 			pageSeoTitle: page.seo_title,
 			pageSeoDescription: page.seo_decription,
-			pageSeoKeywords: page.seo_keywords
+			pageSeoKeywords: page.seo_keywords,
 		}));
 
 		const quicklinksData = pagesData.quicklinks.map((quicklinks) => ({
 			icon: quicklinks.icon,
 			title: quicklinks.title,
 			description: quicklinks.description,
-			href: quicklinks.href
+			href: quicklinks.href,
 		}));
 
 		const teamData = pagesData.team.map((team) => ({
 			id: team.id,
-			src: getProxyUrl(team.src),
+			src: team.src ? getProxyUrl(team.src) : null,
 			image: team.image,
 			name: team.name,
 			position: team.position,
-			description: team.description
+			description: team.description,
 		}));
 
 		const aboutData = pagesData.about.map((about) => ({
-			src: getProxyUrl(about.src),
+			src: about.src ? getProxyUrl(about.src) : null,
 			image: about.image,
 			title: about.title,
 			subtitle: about.subtitle,
-			description: about.description
+			description: about.description,
 		}));
 
 		const servicesData = pagesData.services.map((service) => ({
 			title: service.title,
-			description: service.description
+			description: service.description,
 		}));
 
 		const reviewData = pagesData.reviews.map((review) => ({
 			name: review.name,
-			src: getProxyUrl(review.src),
+			src: review.src ? getProxyUrl(review.src) : null,
 			image: review.image,
 			rating: review.rating,
-			description: review.description
+			description: review.description,
 		}));
 
 		const faqData = pagesData.faq.map((faq) => ({
 			question: faq.question,
-			answer: faq.answer
+			answer: faq.answer,
 		}));
 
 		return {
@@ -113,19 +118,19 @@ export async function load({ fetch }) {
 			teamData,
 			servicesData,
 			reviewData,
-			faqData
+			faqData,
 		};
 	} catch (error) {
-		console.error('Failed to fetch pages:', error);
+		console.error("Failed to fetch pages:", error);
 		return {
 			metaData: [],
 			pageData: [],
 			aboutData: [],
-			quicklinksData,
+			quicklinksData: [],
 			teamData: [],
 			servicesData: [],
 			reviewData: [],
-			faqData: []
+			faqData: [],
 		};
 	}
 }
