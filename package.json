@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.19",
+  "version": "2.0.20",
   "description": "A UI library for Tailwind CSS v4 and Svelte v5",
   "keywords": [
     "tailwindcss",
