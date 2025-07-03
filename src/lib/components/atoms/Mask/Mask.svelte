@@ -4,7 +4,7 @@
 		src = 'https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/field.jpg',
 		mask = 'https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png',
 		alt = 'Mask Image',
-		position = 'center',
+		position = 'center center',
 		size = '100% 100%',
 		full = false,
 		repeat = false,
@@ -14,37 +14,65 @@
 		ratio,
 		bg,
 		img,
+		debug = false,
 		...props
 	} = $props();
+
+	// Debug info
+	if (debug) {
+		console.log('Mask component props:', { src, mask, alt, position, size, ratio });
+	}
+
+	// Event handlers
+	function handleLoad(event) {
+		console.log('Mask image loaded:', event.target.src);
+	}
+
+	function handleError(event) {
+		console.error('Mask image failed:', event.target.src);
+	}
 </script>
 
 {#if bg}
 	<div
 		{...props}
-		class="{bg} {props.class}"
+		class="{bg} {props.class} {full ? 'w-full' : ''} max-w-full"
 		style="
-			width: {full ? '100%' : ''};
-			max-width: 100%;
+			-webkit-mask-image: url({mask});
+			-webkit-mask-position: {position};
+			-webkit-mask-repeat: {repeat ? 'repeat' : 'no-repeat'};
+			-webkit-mask-size: {size};
 			mask-image: url({mask});
 			mask-position: {position};
-			mask-repeat: {repeat ? 'repat' : 'no-repeat'};"
+			mask-repeat: {repeat ? 'repeat' : 'no-repeat'};
+			mask-size: {size};"
 	>
 		{@render children()}
 	</div>
 {:else}
-	<img
-		{...props}
-		{src}
-		{alt}
-		class={props.class}
-		style="
-			width: {full ? '100%' : ''};
-			max-width: 100%;
-			object-fit: cover;
-			mask-image: url({mask});
-			mask-position: {position};
-			mask-repeat: {repeat ? 'repat' : 'no-repeat'};
-			mask-size: {size};
-			aspect-ratio:{ratio};"
-	/>
+	<!-- Better cross-browser mask solution with Image component -->
+	<div 
+		class="{props.class} {full ? 'w-full' : ''} max-w-full relative overflow-hidden"
+		style="aspect-ratio: {ratio};"
+	>
+		<div
+			class="absolute inset-0"
+			style="
+				-webkit-mask-image: url({mask});
+				-webkit-mask-position: {position};
+				-webkit-mask-repeat: {repeat ? 'repeat' : 'no-repeat'};
+				-webkit-mask-size: {size};
+				mask-image: url({mask});
+				mask-position: {position};
+				mask-repeat: {repeat ? 'repeat' : 'no-repeat'};
+				mask-size: {size};"
+		>
+			<Image
+				{src}
+				{alt}
+				cover
+				class="w-full h-full"
+			/>
+		</div>
+	</div>
 {/if}

@@ -26,4 +26,7 @@
 	--font-size-8xl--line-height: 1;
 	--font-size-9xl: calc(var(--theme-scale, 1) * 8rem);
 	--font-size-9xl--line-height: 1;
+
+	/* disable built-in container utility */
+	--container: initial;
 }

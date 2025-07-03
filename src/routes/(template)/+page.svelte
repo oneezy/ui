@@ -163,19 +163,19 @@
 			</Slider>
 
 			<!-- About -->
-			{#each data.aboutData as about}
-				<div class="flex flex-col flex-col-reverse items-center md:flex-row md:gap-10 md:even:flex-row-reverse">
+			{#each data.aboutData as about, index}
+				<div class="flex flex-col-reverse items-center md:flex-row md:gap-10 md:even:flex-row-reverse">
 					<Content text>
 						<h2>{about.title}</h2>
 						<p>{about.description}</p>
 					</Content>
-					<Content class={classes}>
+					<Content class="{classes} not-prose">
 						<Mask
-							ratio="2/1"
+							ratio="1/1"
 							mask="/masks/rounded.svg"
 							src={about.src}
 							alt={about.title}
-							class="size-96 rounded-lg shadow-lg"
+							class="size-96 rounded-lg"
 						/>
 					</Content>
 				</div>
