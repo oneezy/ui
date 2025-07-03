@@ -1,5 +1,5 @@
 <script>
-	import { Container, Title } from '$lib';
+	import { Container, Title} from '$lib';
 	let { name = 'Preview', children = null, ...props } = $props();
 
 	let classes =
