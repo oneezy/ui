@@ -1,6 +1,6 @@
 {
   "name": "@oneezy/ui",
-  "version": "2.0.0-next.50",
+  "version": "2.0.0",
   "description": "A UI library for Tailwind CSS v4 and Svelte v5",
   "keywords": [
     "tailwindcss",
@@ -31,7 +31,8 @@
     "format": "prettier --write .",
     "copy-package": "node ./+scripts/copy-package.js",
     "remove-tag": "node ./+scripts/remove-tag.js",
-    "next": "node ./+scripts/version-bump.js && npm run build && npm publish --tag next",
+    "publish": "node ./+scripts/publish.js",
+    "version-bump": "node ./+scripts/version-bump.js",
     "clean": "git clean -fXd"
   },
   "exports": {
